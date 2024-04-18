@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("IntroToStrings")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6b4dbc5089f86e001475feda4c5104464405748c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+be4c5da6bdbe1af4d0a187857e12a1fdfeee26a5")]
 [assembly: System.Reflection.AssemblyProductAttribute("IntroToStrings")]
 [assembly: System.Reflection.AssemblyTitleAttribute("IntroToStrings")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
