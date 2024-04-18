@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\U713PY\\RevatureTraining.NET\\Revature.NetRebeccaCRepository\\Week1 -CS-Basics\\IntroToStrings\\IntroToStrings\\IntroToStrings.csproj": {}
+    "C:\\Users\\U713PY\\RevatureTraining.NET\\Revature.NetRebeccaCRepository\\Week1 -CS-Basics\\IntroToStrings\\IntroToStrings.csproj": {}
   },
   "projects": {
-    "C:\\Users\\U713PY\\RevatureTraining.NET\\Revature.NetRebeccaCRepository\\Week1 -CS-Basics\\IntroToStrings\\IntroToStrings\\IntroToStrings.csproj": {
+    "C:\\Users\\U713PY\\RevatureTraining.NET\\Revature.NetRebeccaCRepository\\Week1 -CS-Basics\\IntroToStrings\\IntroToStrings.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\U713PY\\RevatureTraining.NET\\Revature.NetRebeccaCRepository\\Week1 -CS-Basics\\IntroToStrings\\IntroToStrings\\IntroToStrings.csproj",
+        "projectUniqueName": "C:\\Users\\U713PY\\RevatureTraining.NET\\Revature.NetRebeccaCRepository\\Week1 -CS-Basics\\IntroToStrings\\IntroToStrings.csproj",
         "projectName": "IntroToStrings",
-        "projectPath": "C:\\Users\\U713PY\\RevatureTraining.NET\\Revature.NetRebeccaCRepository\\Week1 -CS-Basics\\IntroToStrings\\IntroToStrings\\IntroToStrings.csproj",
+        "projectPath": "C:\\Users\\U713PY\\RevatureTraining.NET\\Revature.NetRebeccaCRepository\\Week1 -CS-Basics\\IntroToStrings\\IntroToStrings.csproj",
         "packagesPath": "C:\\Users\\U713PY\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\U713PY\\RevatureTraining.NET\\Revature.NetRebeccaCRepository\\Week1 -CS-Basics\\IntroToStrings\\IntroToStrings\\obj\\",
+        "outputPath": "C:\\Users\\U713PY\\RevatureTraining.NET\\Revature.NetRebeccaCRepository\\Week1 -CS-Basics\\IntroToStrings\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
