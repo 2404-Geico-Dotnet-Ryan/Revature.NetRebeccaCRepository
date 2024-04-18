@@ -1,4 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
+using System.Dynamic;
 using System.Threading.Tasks.Dataflow;
 
 Console.WriteLine("Hello, World!");
@@ -95,7 +96,26 @@ int num2 = 2;
 System.Console.WriteLine("Num1 = "+ num1);
 System.Console.WriteLine("Num2 = "+ num2);
 
-System.Console.WriteLine("1" + 1); // performs concatention , NOT addition! (output will be num1  1 and a 1 so 11)
+System.Console.WriteLine("1" + 1); // performs concatention ,NOT addition! (output will be num1  1 and a 1 so 11)
 
+// C# is very similar but different from Java
+// value types -> "==" measures if the have the same value
+
+System.Console.WriteLine(num1 == 1);
+
+// reference types for Objects "==" will check to see if they have the SAME object in memory. 
+
+Object obj1 = new (); //this sets aside memory for this
+Object obj2 = new (); // this sets aside memory for this -- these are separate in Memory even though they look the same they separate memory
+
+System.Console.WriteLine(obj1 == obj2); //why false it is checking to see if exact same object in memory and they are not
+//System.Console.WriteLine(obj1.GetHashCode()); --this did not show any difference as both are same title in memory
+
+string word1 = "Hello";
+string word2 = "Hello";
+System.Console.WriteLine(word1 == word2); // this will show true -- trainer does not suggest this type of string
+// Strings utilize what is called the String Pool 
+// Strings that are assigned the same value will point to the same location in memory 
+// this is done to conserve on memory space for string see revature project for screen explaination 
 
 
