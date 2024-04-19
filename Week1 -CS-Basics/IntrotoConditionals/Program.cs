@@ -1,4 +1,4 @@
-﻿/*
+/*
 Control Flow - fundamental aspect of programming 
 
 // ***Get notes from trainer folder asap 
@@ -40,4 +40,6 @@ string input = Console.Readlin();
 System.Console.WriteLine("Your Favorite number is: " + input);
 
 //converting Data Types
+//if(input !=null)
+//{
 int number = int.Parse(input);
