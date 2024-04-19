@@ -85,3 +85,19 @@ else
 {
     System.Console.WriteLine("<5 .... wahtever .....");
 }
+
+// Ternary Operator
+// It is an alternative to simple Ef=Else Statements where the tasks/outcomes are very similiar
+//syntax (condition) ? <option if true > : <option is false>
+
+if (number > 10)
+{
+    System.Console.WriteLine("Your number is greater than 10");
+}
+else
+{
+    System.Console.WriteLine("Your number is not greater than 10");
+}
+//emample of concatenation and Ternart Operator
+string phrase = "Your number is " + ((number > 10) ? "greater than 10."  ? "Not greater than 10.")
+System.Console.WriteLine(Phrase);
