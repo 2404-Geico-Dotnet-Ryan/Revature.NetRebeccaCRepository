@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("IntrotoConditionals")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f30ba6d36df54ef7f965745f11bf36c71fd30a0e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+63fc118ced5361f20670138936bb4486b3bb133e")]
 [assembly: System.Reflection.AssemblyProductAttribute("IntrotoConditionals")]
 [assembly: System.Reflection.AssemblyTitleAttribute("IntrotoConditionals")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
