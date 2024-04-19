@@ -11,5 +11,6 @@ Control Flow - Loops allow us to execute a chunk of code for as long as the cond
             - For each loop
             - best used the number of iterations by the loop is known or could be calculated (calculatable)
             - Finite  
-
 */
+
+//Print the numbers 1-100
