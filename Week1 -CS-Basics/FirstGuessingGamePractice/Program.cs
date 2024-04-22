@@ -28,7 +28,7 @@ if (input != null)
     }
 else 
 {
-    System.Console.WriteLine("You failed to enter only digits, you suck.");
+    System.Console.WriteLine("You failed to enter only digits."); //need to add loop to allow to try again
     number = -1;
 }
 
@@ -36,7 +36,8 @@ else
 
 if (number > 25)
     {
-        System.Console.WriteLine("Sorry, You are a not a winner! Your number is greater than the number of the day.");
+        System.Console.WriteLine("Sorry, You are a not a winner! Your number is greater than the number of the day. Please try again.");
+//need to add looping 
     }
 else if (number == 25)
     {
@@ -44,5 +45,6 @@ else if (number == 25)
     }
 else 
     {  
-        System.Console.WriteLine("Sorry, You are a not a winner! Your number is lower than the number of the day.");
+        System.Console.WriteLine("Sorry, You are a not a winner! Your number is lower than the number of the day. Please try again.");
     }
+// pick up on looping part 

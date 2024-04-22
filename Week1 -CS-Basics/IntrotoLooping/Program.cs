@@ -48,6 +48,63 @@ while (counter <= end)
 }
 System.Console.WriteLine("The sum of the numbers 1-" + end + " is " + sum); // answer is bigger than int so need to change long
 
+//Input Validation (registering new account, Guess Game, Verification)
+//  User has to put in information in order for program to execute 
+
+//Tell teh user to print out the number : 5
+
+System.Console.WriteLine("Please inout the number : 5");
+string? input = Console.ReadLine();
+
+int num = 0;
+if (input != null) numb = int.Parse(input);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*
 
