@@ -1,9 +1,9 @@
 ﻿/*
 Guessing Game - make a new project 
-    - Start with teh asumed range of numbers 1-100
-    - Prompt the user to Enter number in set range
-    - Tell the user if the number is higher or lower or equal to number you program
-    - If they are = they win the guessing game
+    - Start with teh asumed range of numbers 1-100 - done
+    - Prompt the user to Enter number in set range - done
+    - Tell the user if the number is higher or lower or equal to number you program- done
+    - If they are = they win the guessing game - done
     - IF higher or lower let them guess again
     - The while loop essentially need to contain 
         - Prompt the user
