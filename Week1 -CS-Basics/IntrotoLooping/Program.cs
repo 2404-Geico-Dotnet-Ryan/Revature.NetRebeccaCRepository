@@ -144,8 +144,13 @@ for(int count = 1; count <= 100; count++) //start at 1; go up to 100; add 1 each
     System.Console.WriteLine(count);
 }
 
-
-
+//Print the sum of the numbers 1-10000
+int result = 0;
+for(int count =1, count <=10000; count++)
+{
+    result += count;
+}
+System.Console.WriteLine(result);
 
 
 
