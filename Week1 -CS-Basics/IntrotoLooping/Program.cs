@@ -214,7 +214,7 @@ for(int i = 1; i <= size; i++)
 //Solve all with single loop
 System.Console.WriteLine("----------RIGHT Facing Stairs------------");
 //add code
-int size = 5;
+
 for(int i = 5; i <= size; i++)
 {
     for (int k = 1; k <= size -1; k++)
