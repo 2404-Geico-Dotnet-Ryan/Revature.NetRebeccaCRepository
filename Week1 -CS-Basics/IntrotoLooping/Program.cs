@@ -177,7 +177,7 @@ for (int i = 50; i >= 5; i--)
         -Nested loop -> 100 iterations inside 100 iterations -> 10,000 processes
             -This is often called Quardratic Growth of Time 
 */
-System.Console.WriteLine("---------------");
+System.Console.WriteLine("-------Building a Square--------");
 //Build a Square out of '*' of whatever size we want 
 int size = 4;
 
@@ -206,10 +206,7 @@ for(int i = 1; i <= size; i++)
     System.Console.WriteLine(); //moves curser down to next row
 }   
 
-System.Console.WriteLine("----------BEFORE FOREACH------------");
-
 // NEED TO WATCH Recording for Debugging-- I could not get variable to use the bugging tool 
-
 
 //StairCase challenge continued 
 //There are 3 other directioins that the staircase can face
@@ -217,6 +214,21 @@ System.Console.WriteLine("----------BEFORE FOREACH------------");
 //Solve all with single loop
 System.Console.WriteLine("----------RIGHT Facing Stairs------------");
 //add code
+int size = 5;
+for(int i = 5; i <= size; i++)
+{
+    for (int k = 1; k <= size -1; k++)
+    {
+      System.Console.Write(" ");  
+    }
+    for (int j = 1; j <= i; j++)
+    {
+        System.Console.WriteLine("*");
+    }   
+    System.Console.WriteLine();
+}
+
+System.Console.WriteLine("----------BEFORE FOREACH------------");
 System.Console.WriteLine("----------INVERTED LEFT Facing Stairs------------");
 //add code
 System.Console.WriteLine("----------INVErTED RIGHT Facing Stairs------------");
