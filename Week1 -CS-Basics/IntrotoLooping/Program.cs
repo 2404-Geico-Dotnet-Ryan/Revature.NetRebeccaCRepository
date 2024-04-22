@@ -26,7 +26,7 @@ while (condition)
 } 
 */
 //Print the numbers 1-100
-
+/*
 int counter = 1;
 System.Console.WriteLine(counter);
 while (counter <= 100)
@@ -47,26 +47,102 @@ while (counter <= end)
     counter++;
 }
 System.Console.WriteLine("The sum of the numbers 1-" + end + " is " + sum); // answer is bigger than int so need to change long
+*/
 
 //Input Validation (registering new account, Guess Game, Verification)
 //  User has to put in information in order for program to execute 
 
 //Tell teh user to print out the number : 5
 
-System.Console.WriteLine("Please inout the number : 5");
-string? input = Console.ReadLine();
+int counter = 1;
+while (counter <= 100)
+{
+    System.Console.WriteLine(counter);
+    counter++;
+}
+System.Console.WriteLine("End of Program");
 
-int num = 0;
-if (input != null) numb = int.Parse(input);
+// Print the Sum of the numbers 1-1000000
+counter = 1;
+int end = 1000000;
+long sum = 0;
+while (counter <= end)
+{
+    sum += counter;
+    counter++;
+}
+System.Console.WriteLine("The sum of the numbers 1-" + end + " is: " + sum);
 
 
+//Start of class on Monday 4-22-2024
+
+//Tell the user to print out the number 5
+int num = 0; // if this number is 5 then it already mets condition for while loop then it will skip the while loop and only run do loop
+while (num != 5) 
+{
+    System.Console.WriteLine("Please input the number : 5");
+    string? input = Console.ReadLine();
+     if (input != null) num = int.Parse(input);
+
+     if (num != 5)
+     {
+        System.Console.WriteLine("Please try again");
+     }
+ }
+
+// Down here is for when the loop is done
+// -> they finally inputted the correct value
+System.Console.WriteLine("You finally got it correct! You entered " + num);
+System.Console.WriteLine("Proceeding to next step.");
+
+//Do-While Loop
+//Do-while loop , as opposed to just while loops, will alway 
+/*
+Syntax
+do
+{
+    //whatever we want the loop to do 
+}
+while (condition);
+
+*/
+
+//Rebranding the last example
+
+do
+{
+    System.Console.WriteLine("Do: Please input the number : 5");
+    string? input = Console.ReadLine();
+     if (input != null) num = int.Parse(input);
+
+     if (num != 5)
+     {
+        System.Console.WriteLine("Please try again");
+     }
+}
+while(num != 5);
+
+System.Console.WriteLine("You finally got it correct! You entered " + num + "Proceeding to next step!"). ;
 
 
+//---------------------------
+// For Loop
+// Best used when the number of iterations is known / calculable. 
 
+//benifit this makes code inside of the loop much simpler
+/*
+for (initallization;(executed1st) condition (techinically check executed2nd); update (executed 3rd and is the change that is made before we check condition again) )
+{
 
+}
+*/
 
+//Print the numbers 1-100
 
-
+for(int count = 1; count <= 100; count++) //start at 1; go up to 100; add 1 each time 
+{
+    System.Console.WriteLine(count);
+}
 
 
 
