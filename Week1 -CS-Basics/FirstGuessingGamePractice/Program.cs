@@ -17,23 +17,32 @@ Guessing Game - make a new project
 
         for self study for loops? 
 */
-System.Console.WriteLine("Please enter a number between -100: ");
+System.Console.WriteLine("Please enter a numerical digit between 1 - 100: ");
 string input = Console.ReadLine();
 
 
 int number = 0; 
 if (input != null)
-{
-    number = int.Parse(input);
-}
-else (number > 25)
-{
-    System.Console.WriteLine("Sorry, You are a not a winner! Your number is lower than the number of the day.");
-}
-else
-{
-    if (number == 25)
     {
-        System.Console.WriteLine("Congratulations! You chose the number of the day 251 You are a winner1");
+    number = int.Parse(input);
     }
+else 
+{
+    System.Console.WriteLine("You failed to enter only digits, you suck.");
+    number = -1;
 }
+
+
+
+if (number > 25)
+    {
+        System.Console.WriteLine("Sorry, You are a not a winner! Your number is greater than the number of the day.");
+    }
+else if (number == 25)
+    {
+         System.Console.WriteLine("Congratulations! You chose the number of the day 251 You are a winner1");
+    }
+else 
+    {  
+        System.Console.WriteLine("Sorry, You are a not a winner! Your number is lower than the number of the day.");
+    }
