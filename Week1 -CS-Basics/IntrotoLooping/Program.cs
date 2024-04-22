@@ -190,13 +190,13 @@ for(int i=1; i<=size; i++)
     System.Console.WriteLine(); //moves curser down to next row
 }   
 
-System.Console.WriteLine("----------------------");
+System.Console.WriteLine("----------LEFT Facing Stairs------------");
 
 //Staicase Challenge
 //Print 1"*" for the first row and then 2 "*" for the second row , etc etc
 size = 5;
 //the outer loop deals with managing additional rows (stairs)
-for(int i=1; i<=size; i++)
+for(int i = 1; i <= size; i++)
 {
     //The inner loop deals with printig the contents or each row/"step"
     for (int j = 1; j <= i; j++)// need to change j <= size to j <= i so that each time it adds 1 to initial starting number 1
@@ -206,35 +206,69 @@ for(int i=1; i<=size; i++)
     System.Console.WriteLine(); //moves curser down to next row
 }   
 
-System.Console.WriteLine("----------------------");
+System.Console.WriteLine("----------BEFORE FOREACH------------");
+
+// NEED TO WATCH Recording for Debugging-- I could not get variable to use the bugging tool 
+
+
+//StairCase challenge continued 
+//There are 3 other directioins that the staircase can face
+//Build them all 
+//Solve all with single loop
+System.Console.WriteLine("----------RIGHT Facing Stairs------------");
+//add code
+System.Console.WriteLine("----------INVERTED LEFT Facing Stairs------------");
+//add code
+System.Console.WriteLine("----------INVErTED RIGHT Facing Stairs------------");
+//add code
+
+//After you solve them go back to game challenge with extra bonuses
+
+
+// FOREACH LOOP 
+//  Best used wtih iterating (once) over each item of a collection of values. 
+
+//Before Foreach
+string word = "Hello";
+for (int i = 0; i < word.Length; i++)
+{
+    System.Console.WriteLine(word[i]);//[] allows you to pick the particular character to start at - 0 which would be the H in Hello
+    //using the i here allows it to increase to the next positiion each time
+}
+System.Console.WriteLine("------FOREACH LOOP---------");
+//Foreach Loop
+foreach (char c in word)
+{
+    System.Console.WriteLine(c);
+}
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//Stair Cases should look like the below:
+/*
+left facing stairs
+*
+**
+***
+****
+Right Facing stairs 
+   *
+  **
+ ***
+****
+Inverted left Stairs
+****
+***
+**
+*
+inverted right stairs
+****
+ ***
+  **
+   *
+*/
 
 /*
-
 Guessing Game - make a new project 
     - Start with teh asumed range of numbers 1-100
     - Prompt the user to Enter number in set range
@@ -245,11 +279,15 @@ Guessing Game - make a new project
         - Prompt the user
         -retrieve their quess 
         -tell them higher or lower or if correct
-        - while (gues !=correctChoice) -> run the loop again
+        - while (guess !=correctChoice) -> run the loop again
     Bonus
     - create your own library/Random Class (Random number genearator) that way you can play too
     - The user is prompted to play again with out having to re run the program 
         - involves (likely) another (outer) while loop
+    Bonus Bonuses;
+        -Adjust the range in which you tell the user to guess based on their previous wrong answers (assist them in the process when they try to guess again.)
+        -Allow the user to pick the numbers that they will guess between when the game starts (1-1000 :: )
+        -Keep track of guesses and tell them how many times they guessed at the end of the game
 
-        for self study for loops? 
+        Self study for loops
 */  

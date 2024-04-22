@@ -119,3 +119,6 @@ System.Console.WriteLine(word1 == word2); // this will show true -- trainer does
 // this is done to conserve on memory space for string see revature project for screen explaination 
 
 
+//GOT DISCONNECTED FROM VPN Need to review files and recording 
+
+//need to create intro to Array folder /Project

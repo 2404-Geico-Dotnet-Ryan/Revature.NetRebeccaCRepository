@@ -1,0 +1,15 @@
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Week2 -CS-Fundamentals\IntroToArrays\bin\Debug\net8.0\IntroToArrays.exe
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Week2 -CS-Fundamentals\IntroToArrays\bin\Debug\net8.0\IntroToArrays.deps.json
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Week2 -CS-Fundamentals\IntroToArrays\bin\Debug\net8.0\IntroToArrays.runtimeconfig.json
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Week2 -CS-Fundamentals\IntroToArrays\bin\Debug\net8.0\IntroToArrays.dll
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Week2 -CS-Fundamentals\IntroToArrays\bin\Debug\net8.0\IntroToArrays.pdb
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Week2 -CS-Fundamentals\IntroToArrays\obj\Debug\net8.0\IntroToArrays.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Week2 -CS-Fundamentals\IntroToArrays\obj\Debug\net8.0\IntroToArrays.AssemblyInfoInputs.cache
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Week2 -CS-Fundamentals\IntroToArrays\obj\Debug\net8.0\IntroToArrays.AssemblyInfo.cs
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Week2 -CS-Fundamentals\IntroToArrays\obj\Debug\net8.0\IntroToArrays.csproj.CoreCompileInputs.cache
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Week2 -CS-Fundamentals\IntroToArrays\obj\Debug\net8.0\IntroToArrays.sourcelink.json
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Week2 -CS-Fundamentals\IntroToArrays\obj\Debug\net8.0\IntroToArrays.dll
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Week2 -CS-Fundamentals\IntroToArrays\obj\Debug\net8.0\refint\IntroToArrays.dll
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Week2 -CS-Fundamentals\IntroToArrays\obj\Debug\net8.0\IntroToArrays.pdb
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Week2 -CS-Fundamentals\IntroToArrays\obj\Debug\net8.0\IntroToArrays.genruntimeconfig.cache
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Week2 -CS-Fundamentals\IntroToArrays\obj\Debug\net8.0\ref\IntroToArrays.dll
