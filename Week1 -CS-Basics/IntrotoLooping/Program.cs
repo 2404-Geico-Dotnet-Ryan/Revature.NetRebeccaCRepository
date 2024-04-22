@@ -146,13 +146,15 @@ for(int count = 1; count <= 100; count++) //start at 1; go up to 100; add 1 each
 
 //Print the sum of the numbers 1-10000
 int result = 0;
-for(int count =1, count <=10000; count++)
+for(int count = 1, count <=10000; count++)
 {
     result += count;
 }
 System.Console.WriteLine(result);
 
-
+//On break until 11:15 try this 
+//Print only even nummbers 2-200
+//Print all numbers starting with 50 going to 25
 
 
 
