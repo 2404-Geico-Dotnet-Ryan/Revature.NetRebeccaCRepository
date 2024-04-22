@@ -1,14 +1,15 @@
 ﻿/*
 Control Flow - fundamental aspect of programming 
-
-// ***Get notes from trainer folder asap 
-
-
-
-
-
-
-
+in which the developer
+adds in concepts to further gain control over what will or will not happen
+within the program. And/or how often. Often a Condition/Check is used to
+assess whether or not a chunk of code will proceed.
+    - Condition -> Boolean Expression -> Any statement that evaluates to true/false
+    - Examples: 
+        - true
+        - false
+        - boolean variable
+        - expression: numberOfBooks > 5
 */
 
 /* 

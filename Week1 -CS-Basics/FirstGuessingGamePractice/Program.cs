@@ -17,17 +17,30 @@ Guessing Game - make a new project
 
         for self study for loops? 
 */
+System.Console.WriteLine("Please enter your favorite number: ");
+string input = Console.ReadLine();
+System.Console.WriteLine("Your Favorite number is: " + input);
 
-int counter = 1;
-int end = 100;
-long sum = 0;
-while (counter <= 100)
+
+int number = 0; 
+if (input != null)
 {
-    System.Console.WriteLine(counter); 
-    counter++;
+    number = int.Parse(input);
 }
-System.Console.WriteLine("End of Program");
+else
+{
+    System.Console.WriteLine("You failed to enter only digits, please enter digit between 1 and 100.");
+    number = -1;
+}
 
-counter = 1;
-int end = 1000;
-long sum = 0;
+if (number > 25)
+{
+    System.Console.WriteLine("Sorry, You are a not a winner! Your number is lower than the number of the day.");
+}
+else
+{
+    if (number == 25)
+    {
+        System.Console.WriteLine("Congratulations! You chose the number of the day 251 You are a winner1");
+    }
+}
