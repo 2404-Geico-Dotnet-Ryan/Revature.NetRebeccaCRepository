@@ -122,8 +122,7 @@ do
 }
 while(num != 5);
 
-System.Console.WriteLine("You finally got it correct! You entered " + num + "Proceeding to next step!"). ;
-
+System.Console.WriteLine("You finally got it correct! You entered " + num + "Proceeding to next step!");
 
 //---------------------------
 // For Loop
@@ -146,23 +145,68 @@ for(int count = 1; count <= 100; count++) //start at 1; go up to 100; add 1 each
 
 //Print the sum of the numbers 1-10000
 int result = 0;
-for(int count = 1, count <=10000; count++)
+for(int count = 1; count <=10000; count++)
 {
     result += count;
 }
 System.Console.WriteLine(result);
 
 //On break until 11:15 try this 
+//**Need to practice
 //Print only even nummbers 2-200
+for(int i = 2; i <= 200; i += 2)
+{   
+    System.Console.WriteLine(i);
+}
+System.Console.WriteLine("-----------");
+
 //Print all numbers starting with 50 going to 25
+for (int i = 50; i >= 5; i--)
+{
+    System.Console.WriteLine(i);
+}
 
+//Nesting Loops
+/*
+    -Any control flow can put coded/ nested into any other control flow.
+        -therefore Loops can be built inside other loops 
+        -However , we should exercise caution, we could potentially develop
+            scenario that will drastically increase processing time.
+    - Problem: 
+        -Single loop -> 100 iterations -> 100 processes 
+        -Nested loop -> 100 iterations inside 100 iterations -> 10,000 processes
+            -This is often called Quardratic Growth of Time 
+*/
+System.Console.WriteLine("---------------");
+//Build a Square out of '*' of whatever size we want 
+int size = 4;
 
+for(int i=1; i<=size; i++)
+{
+    for (int j = 1; j <= size; j++)
+    {
+      System.Console.Write("* ");  
+    }
+    System.Console.WriteLine(); //moves curser down to next row
+}   
 
+System.Console.WriteLine("----------------------");
 
+//Staicase Challenge
+//Print 1"*" for the first row and then 2 "*" for the second row , etc etc
+size = 5;
+//the outer loop deals with managing additional rows (stairs)
+for(int i=1; i<=size; i++)
+{
+    //The inner loop deals with printig the contents or each row/"step"
+    for (int j = 1; j <= i; j++)// need to change j <= size to j <= i so that each time it adds 1 to initial starting number 1
+    {
+      System.Console.Write("* ");  
+    }
+    System.Console.WriteLine(); //moves curser down to next row
+}   
 
-
-
-
+System.Console.WriteLine("----------------------");
 
 
 
