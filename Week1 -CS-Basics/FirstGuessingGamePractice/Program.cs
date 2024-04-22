@@ -17,9 +17,8 @@ Guessing Game - make a new project
 
         for self study for loops? 
 */
-System.Console.WriteLine("Please enter your favorite number: ");
+System.Console.WriteLine("Please enter a number between -100: ");
 string input = Console.ReadLine();
-System.Console.WriteLine("Your Favorite number is: " + input);
 
 
 int number = 0; 
@@ -27,13 +26,7 @@ if (input != null)
 {
     number = int.Parse(input);
 }
-else
-{
-    System.Console.WriteLine("You failed to enter only digits, please enter digit between 1 and 100.");
-    number = -1;
-}
-
-if (number > 25)
+else (number > 25)
 {
     System.Console.WriteLine("Sorry, You are a not a winner! Your number is lower than the number of the day.");
 }
