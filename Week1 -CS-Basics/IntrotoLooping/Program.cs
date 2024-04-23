@@ -212,27 +212,52 @@ for(int i = 1; i <= size; i++)
 //There are 3 other directioins that the staircase can face
 //Build them all 
 //Solve all with single loop
-System.Console.WriteLine("----------RIGHT Facing Stairs------------");
-//add code
-
-for(int i = 5; i <= size; i++)
+System.Console.WriteLine("----------Inverted Left Facing Stairs------------");
+int size1 = 6;
+for(int i = 1; i <= size1; i++)
 {
-    for (int k = 1; k <= size -1; k++)
+     for (int k = 1; k <= size1 - i; k++)
+        {
+            System.Console.Write("* ");  
+        }
+    Console.WriteLine();
+}
+
+System.Console.WriteLine("----------RIGHT Facing Stairs------------");
+//my code
+int size2 = 5;
+for (int i = 1; i <= size2; i++)
+{
+    for (int k = 1; k <= size2 - i; k++)
     {
-      System.Console.Write(" ");  
+        System.Console.Write(" ");
     }
     for (int j = 1; j <= i; j++)
     {
-        System.Console.WriteLine("*");
-    }   
+        System.Console.Write("*");
+    }
+    System.Console.WriteLine(); 
+} 
+
+
+System.Console.WriteLine("----------INVERTED RIGHT Facing Stairs--still needs work------------");
+//my code
+int size3 = 6;
+for(int i = 1; i <= size3; i++)
+{
+     for (int k = 1; k <= size3 - i; k++)
+        {
+            System.Console.Write("*");  
+        }
+    for (int j = 1;j <= i;j++) 
+        {
+            Console.Write(" ");
+        }
     System.Console.WriteLine();
 }
 
-System.Console.WriteLine("----------BEFORE FOREACH------------");
-System.Console.WriteLine("----------INVERTED LEFT Facing Stairs------------");
-//add code
-System.Console.WriteLine("----------INVErTED RIGHT Facing Stairs------------");
-//add code
+
+
 
 //After you solve them go back to game challenge with extra bonuses
 
@@ -241,6 +266,7 @@ System.Console.WriteLine("----------INVErTED RIGHT Facing Stairs------------");
 //  Best used wtih iterating (once) over each item of a collection of values. 
 
 //Before Foreach
+System.Console.WriteLine("--------------BEFORE EACH--------");
 string word = "Hello";
 for (int i = 0; i < word.Length; i++)
 {

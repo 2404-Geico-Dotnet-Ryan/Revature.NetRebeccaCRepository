@@ -39,12 +39,26 @@ if (number > 25)
         System.Console.WriteLine("Sorry, You are a not a winner! Your number is greater than the number of the day. Please try again.");
 //need to add looping 
     }
+
 else if (number == 25)
     {
-         System.Console.WriteLine("Congratulations! You chose the number of the day 251 You are a winner1");
+         System.Console.WriteLine("Congratulations! You chose the number of the day 25 You are a winner!");
     }
 else 
     {  
         System.Console.WriteLine("Sorry, You are a not a winner! Your number is lower than the number of the day. Please try again.");
     }
 // pick up on looping part 
+
+do
+{
+    System.Console.WriteLine("Please try again!Pick a number between 1-100.");
+    string? input1 = Console.ReadLine();
+    if (input != null) number = int.Parse(input);
+    if (number != 25)
+    {
+        System.Console.WriteLine("Please try again!Pick a number between 1-100.");
+    }
+}
+while (number != 25);
+System.Console.WriteLine("Congratulations! You chose the number of the day 25 You are a winner!");
