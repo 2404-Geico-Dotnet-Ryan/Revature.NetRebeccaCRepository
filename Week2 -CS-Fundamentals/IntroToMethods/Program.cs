@@ -1,6 +1,5 @@
 ﻿using System;
-using System.Net.NetworkInformation;
-using System.Windows.Markup; //this is where it imports code from 
+
 
 class Program
 {
@@ -9,10 +8,10 @@ class Program
         // Main method code here
         PrintMenu();      //Prints the main Menu 
         int cmd = GetCmd(); //Retrieves input from user  
-        ProcessCmd(cmd);      
-        
+        ProcessCmd(cmd);
+
         //based on input execute
-       
+
         switch (cmd)
         {
             case 1:
@@ -21,11 +20,11 @@ class Program
                 }
             case 2:
                 {
-                    ProcessAddNumber();
+                    ProcessAddNumber(); break;
                 }
             case 3:
                 {
-                    ProcessSquareNumber();
+                    SquareNumber(); break;
                 }
         }
 
@@ -41,9 +40,9 @@ class Program
         simultaneuosly abstracting away the implementations behind archieving such functionaliy, allowing
         us to focus solely on the intention of said chunk of code.
         */
-        //AddNumbers(4, 5);
-        //AddNumbers(6, 10);
-        // AddNumbers(7, 9);
+        AddNumbers(4, 5);
+        AddNumbers(6, 10);
+        AddNumbers(7, 9);
 
         //int result = SquareNumber (5); //we also needd to have something to store the returned info. from the method below 
         //int result not needed above due to we are not returning any information 
@@ -62,6 +61,7 @@ class Program
         int num1 = 0, num2 = 0;
         if (value1 != null) num1 = int.Parse(value1);
         if (value1 != null) num1 = int.Parse(value2);
+
     }
 
     public static void PrintMenu()
@@ -74,6 +74,7 @@ class Program
         System.Console.WriteLine("[3] Square Number");
         System.Console.WriteLine("===================");
     }
+
 
     //lets make a method that simply adds two numbers togeher and print it out
     //Method Signature Syntax: 
@@ -94,10 +95,10 @@ class Program
     }
     //this will run the number of times that you have in the main method so 3 AddNumbers will give 3 results
     // papa john's example of adding items to cart\\\maybe a good example for when this would be used
-//********** This is end of 4/23/2024 lesson*****************
+    //********** This is end of 4/23/2024 lesson*****************
     //Start of class 4/24/2024 lession 
     // Lets make a method that reeturns the squared value of a number 
-    public static int SquareNumber(int num1) 
+    public static int SquareNumber(int num1)
     {
         int square = num1 * num1;
         return square;
@@ -106,7 +107,7 @@ class Program
     {
         //Print out this welcome message
         System.Console.WriteLine("Please enter your name: ");
-        string? input =Console.ReadLine();
+        string? input = Console.ReadLine();
         System.Console.WriteLine("==================");
         System.Console.WriteLine("Hello, " + input + "!");
         System.Console.WriteLine("==================");
