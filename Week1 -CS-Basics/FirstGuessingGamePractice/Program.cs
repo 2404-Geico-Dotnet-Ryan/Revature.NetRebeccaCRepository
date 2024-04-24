@@ -72,48 +72,43 @@ System.Console.WriteLine("**********Ryans Solution****************");
 Inserting Ryan's Solution
 */
 bool again = true;
+
 while (again)
 {
-Random random = new Random();//picks random number 
-int correctNum = random.Next (1, 101);
-int guess = 0;
-string? input;
-// something needs to go here///
-System.Console.WriteLine("Please enter a number between 1-100");
-input = Console.ReadLine();
-if (input != null) guess = int.Parse(input);
-//guess = input.Parse(Console.ReadLine()) ?? "0"); //Null Coalescing Operator is another choice - helps with any potional null value output
-while (guess != correctNum)
-{
-    if (guess > correctNum)
+    //The entire game starts here
+    Random random = new Random();
+    int correctNum = random.Next(1, 101);
+    int guess = 0;
+    string? input;
+
+    while (guess != correctNum)
     {
-        System.Console.WriteLine("Your number is too high");
+        System.Console.WriteLine("Please enter a number between 1-100: ");
+        input = Console.ReadLine();
+        if (input != null) guess = int.Parse(input);
+        // guess = int.Parse(Console.ReadLine() ?? "0"); //Null Coalescing Operator
+
+        if (guess > correctNum)
+        {
+            System.Console.WriteLine("Your guess was Too High!");
+        }
+        else if (guess < correctNum)
+        {
+            System.Console.WriteLine("Your guess was Too Low!");
+        }
     }
-    else if (guess < correctNum)
+
+    System.Console.WriteLine("Your guess was correct! The number was: " + correctNum);
+    //The entire game ends here
+
+    System.Console.WriteLine("Would you like to play again? (Y) or (N)?");
+    input = Console.ReadLine();
+
+    if (!"Y".Equals(input))
     {
-        System.Console.WriteLine("Your number is too low");
-    }
-    else
-    {
-        System.Console.WriteLine("Congratulations! You picked the correct number : 40!");
+        again = false;
     }
 }
-System.Console.WriteLine("");
-System.Console.WriteLine("Would you like to play again? (Y) or (N)?");
-input = Console.ReadLine();
 
-
-
-//if ("Y".Equals(input)) //if (input.Equals("Y)) or if ("Y".Equals(input)) or if (input == "Y")  )
-//{
-//    again = true;
-//}
-//else
-//{
-// again = false;
-//}
-
-//**GET REST OF SOLUTION AND REWATCH VIDEO***
-}
-System.Console.WriteLine("Thanks for playing. Goodbye");
+System.Console.WriteLine("Thanks for Playing! Goodbye!");
 //Bonus Bonuses are not included in this solution 
