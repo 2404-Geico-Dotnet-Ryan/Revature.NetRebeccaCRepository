@@ -4,8 +4,8 @@ class Program
 {
     static void Main(string[] args)
     {
-        int num = 1;
-        string word= "Hello";
+        //int num = 1;
+        //string word= "Hello";
 
         //Object Declaration and Instantiation (new instance of a class)(Intialization)
         Object obj1 = new Object();
@@ -27,7 +27,8 @@ class Program
         System.Console.WriteLine(car1.year);
         System.Console.WriteLine(car1.mileage);//not set so defaults to 0 when run 
 
-        System.Console.WriteLine("color: " + car1.color );
+        System.Console.WriteLine("color: " + car1.color + ": Year:" + car1.year);
+        System.Console.WriteLine(car1.color + car1.year);// not as pretty as above wont have spaces or anything
 
         car1.Honk(); //need the car to honk the car 
         car1.Drive(100);
@@ -38,7 +39,11 @@ class Program
         //Copying Object references 
         //Properties 
         //Constructors 
-        //Scopes ()
+        //Scopes (static keyword as well)
+        //Access Modifiers
+
+        //Inheritance
+        //Polymorphism 
         
     }
 }

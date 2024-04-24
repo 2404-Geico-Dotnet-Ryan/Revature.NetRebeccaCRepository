@@ -74,8 +74,8 @@ while (counter <= end)
 System.Console.WriteLine("The sum of the numbers 1-" + end + " is: " + sum);
 
 
-//Start of class on Monday 4-22-2024
-
+//start of class/ 4-22-2024
+//Input Validation
 //Tell the user to print out the number 5
 int num = 0; // if this number is 5 then it already mets condition for while loop then it will skip the while loop and only run do loop
 while (num != 5) 
