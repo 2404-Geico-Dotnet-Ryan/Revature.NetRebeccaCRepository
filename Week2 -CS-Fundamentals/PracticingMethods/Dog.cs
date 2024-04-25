@@ -5,9 +5,9 @@ class Dog
   public string? color;
   public string? lengthOfHair; 
   public int age;
-  public int numberOfLegs;
+ public int numberOfLegs;
 }
-
+/*
 //no arguement constructor (can set default values)
 public Dog() 
 {
@@ -22,3 +22,4 @@ public Dog(string breed, string color, string lengthOfHair, int age, int numberO
         this.age = age;
         this.numberOfLegs = numberOfLegs;
     }
+    */
