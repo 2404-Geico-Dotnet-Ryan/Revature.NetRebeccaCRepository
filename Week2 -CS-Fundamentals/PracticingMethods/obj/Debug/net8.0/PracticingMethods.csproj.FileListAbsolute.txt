@@ -1,0 +1,5 @@
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Week2 -CS-Fundamentals\PracticingMethods\obj\Debug\net8.0\PracticingMethods.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Week2 -CS-Fundamentals\PracticingMethods\obj\Debug\net8.0\PracticingMethods.AssemblyInfoInputs.cache
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Week2 -CS-Fundamentals\PracticingMethods\obj\Debug\net8.0\PracticingMethods.AssemblyInfo.cs
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Week2 -CS-Fundamentals\PracticingMethods\obj\Debug\net8.0\PracticingMethods.csproj.CoreCompileInputs.cache
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Week2 -CS-Fundamentals\PracticingMethods\obj\Debug\net8.0\PracticingMethods.sourcelink.json
