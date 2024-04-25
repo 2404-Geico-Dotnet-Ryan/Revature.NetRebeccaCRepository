@@ -6,8 +6,7 @@
 //assignment practice methods 
 
 using System;
-namespace PracticingMethods
-{
+
     class Program
     {
         public static void Main(string[] args)
@@ -20,8 +19,18 @@ namespace PracticingMethods
             dog1.lengthOfHair = "Short";
             dog1.age = 5;
             dog1.numberOfLegs = 3;
-            System.Console.WriteLine(dog1.lengthOfHair);
+            System.Console.WriteLine("Dog 1; " + dog1.lengthOfHair);
+
+            Dog dog2 = new Dog();
+            System.Console.WriteLine(dog1);
+
+            dog2.color = "Red and White";
+            dog2.breed = "Pointer";
+            dog2.lengthOfHair = "Long";
+            dog2.age = 20;
+            dog2.numberOfLegs = 4;
+            System.Console.WriteLine("Dog 2: " +dog2.lengthOfHair);
         }
     }
-}
+
 
