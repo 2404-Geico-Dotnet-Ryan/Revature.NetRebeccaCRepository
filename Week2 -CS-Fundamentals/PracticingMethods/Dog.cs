@@ -1,20 +1,20 @@
 class Dog
 {
-  //Fields
-  public string? breed;
-  public string? color;
-  public string? lengthOfHair; 
-  public int age;
- public int numberOfLegs;
-}
-/*
-//no arguement constructor (can set default values)
-public Dog() 
-{
+    public string? breed;
+    public string? color;
+    public string? lengthOfHair;
+    public int age;
+    public int numberOfLegs;
+    public int steps;
 
-}
-//Full-Arguement Constructor
-public Dog(string breed, string color, string lengthOfHair, int age, int numberOfLegs)//these parameters only override the orginial in this method not outside the method
+
+    //no arguement constructor (can set default values)
+    public Dog()
+    {
+
+    }
+    //Full-Arguement Constructor
+    public Dog(string breed, string color, string lengthOfHair, int age, int steps, int numberOfLegs)
     {
         this.breed = breed;
         this.color = color;
@@ -22,4 +22,16 @@ public Dog(string breed, string color, string lengthOfHair, int age, int numberO
         this.age = age;
         this.numberOfLegs = numberOfLegs;
     }
-    */
+    //METHODS
+    public void Bark()    
+    {
+       System.Console.WriteLine("Whoof, whoof!"); 
+    }
+
+    /*public void walk(int steps)
+    {
+        steps += walk;
+        System.Console.WriteLine("The new total milage is: " + walk);
+    }*/
+
+}

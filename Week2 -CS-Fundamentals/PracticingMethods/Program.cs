@@ -7,7 +7,7 @@
 
 using System;
 
-    class Program
+    class PracticingMethods
     {
         public static void Main(string[] args)
         {
@@ -18,8 +18,9 @@ using System;
             dog1.breed = "PitBull";
             dog1.lengthOfHair = "Short";
             dog1.age = 5;
+            dog1.steps = 75;
             dog1.numberOfLegs = 3;
-            System.Console.WriteLine("Dog 1; " + dog1.lengthOfHair);
+            System.Console.WriteLine("Dog 1: " + dog1.lengthOfHair);
 
             Dog dog2 = new Dog();
             System.Console.WriteLine(dog1);
@@ -28,8 +29,21 @@ using System;
             dog2.breed = "Pointer";
             dog2.lengthOfHair = "Long";
             dog2.age = 20;
+            dog2.steps = 50;
             dog2.numberOfLegs = 4;
             System.Console.WriteLine("Dog 2: " +dog2.lengthOfHair);
+
+            Dog dog3=new();
+
+            Dog dog4 = new("White", "GreatDane", "Short", 10, 500, 4);
+
+
+            dog2.Bark();
+
+
+
+
+
         }
     }
 
