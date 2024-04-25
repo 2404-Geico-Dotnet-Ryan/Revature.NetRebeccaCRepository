@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("IntroToMethods")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5ffbe9f010b488daff4ae8c0ed56a169ec2351f0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9c5f5cf2f2833bcbeee61e20296d43cb7ad38982")]
 [assembly: System.Reflection.AssemblyProductAttribute("IntroToMethods")]
 [assembly: System.Reflection.AssemblyTitleAttribute("IntroToMethods")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
