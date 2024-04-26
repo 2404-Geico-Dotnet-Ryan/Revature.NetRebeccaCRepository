@@ -38,7 +38,12 @@ using System;
             Dog dog4 = new("White", "GreatDane", "Short", 10, 500, 4);
 
 
-            dog2.Bark();
+            dog1.Bark();
+            dog1.NewSteps(50);
+
+            System.Console.WriteLine("Dog 1 information: " +dog1);
+            System.Console.WriteLine("Dog 2 information: "+ dog2);
+
 
 
 

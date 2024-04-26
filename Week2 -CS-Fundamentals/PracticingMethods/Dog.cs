@@ -19,6 +19,7 @@ class Dog
         this.breed = breed;
         this.color = color;
         this.lengthOfHair = lengthOfHair;
+        this.steps = steps;
         this.age = age;
         this.numberOfLegs = numberOfLegs;
     }
@@ -28,10 +29,21 @@ class Dog
        System.Console.WriteLine("Whoof, whoof!"); 
     }
 
-    /*public void walk(int steps)
+    public void NewSteps(int addedsteps)
     {
-        steps += walk;
-        System.Console.WriteLine("The new total milage is: " + walk);
-    }*/
-
+        addedsteps += steps;
+        System.Console.WriteLine("The new total steps is: " + steps);
+    }
+   public override string ToString()
+    {
+        string str = "";  
+        str += "{Breed= '" + breed + "'";  //"{Breed=\"" + breed + "\"";
+        str += "; Color= '" + color +  "'";
+        str += "; Lengeth of Hair= '" + lengthOfHair + "'";
+        str += "; Age= '" + age + "'";
+        str += "; Steps= '" + steps + "'";
+        str += "; Number of Legs= '" + steps + "'" +  "}";
+       
+       return str;
+    }
 }
