@@ -1,7 +1,9 @@
 ﻿using System;
+//---check instructor files-- think he has to use Media here 
 using System.Configuration.Assemblies;
 using System.Runtime.InteropServices;
 using System.Security.Cryptography.X509Certificates;
+using media;
 
 class Program
 {
@@ -10,6 +12,9 @@ public static void PracticeObjects()
     
     static void Main(string[] args)
     {
+        //PracticeObject();
+        //PracticeProperties();
+        
         //int num = 1;
         //string word= "Hello";
 
@@ -144,9 +149,9 @@ public static void PracticeObjects()
         //Inheritance
         //Polymorphism 
         
-    }
-}
-    /////////new day Friday 4-25-2024 Books files - no longer working with cars//////////
+    }   
+    
+/////////new day Friday 4-25-2024 Books files - no longer working with cars//////////
 
 public static void PracticeProperties()
 {
@@ -154,8 +159,6 @@ public static void PracticeProperties()
     //book1.SetTitle("Dracula"); --would only use when useing getter and setter wtih alternative would not need this 
     book1.Title= "Dracula";  ///this is what the alternative solution allows since we did the get set for title (lower case field and upper case Property)
     System.Console.WriteLine(book1.Title);//Techinically using the undderlying Getter in this Property
-
-
 }
 public static void PracticeScopes()
 {
@@ -168,13 +171,21 @@ public static void PracticeScopes()
    thing1.objectNum++;
    thing2.objectNum--;
 
+    //Showing that objecct Scoped can be =====================
    System.Console.WriteLine(thing1.objectNum);
    System.Console.WriteLine(thing1.objectNum);
-
+    // ================
    System.Console.WriteLine(Thing.classNum);
    Thing.StaticMethod();
+   System.Console.WriteLine(DateTime.Now);
 
+   thing1.SomeMethod(25);
 }
 
-
+public static void PracticeNameSpaces()
+{
+    Movie movie1 =new("The Avengers",90, 10.50);
+    System.Console.WriteLine();
+    System.Console.WriteLine();
+    System.Console.WriteLine(movie1.Price);
 }
