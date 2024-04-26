@@ -110,7 +110,7 @@ class Program
         //System.Console.WriteLine("Car4: " + car4.ToString());
         //System.Console.WriteLine("Car5: " + car5.ToString());
        
-       System.Console.WriteLine(car7.color.ToUpper()); //this prints a blank line out put 
+       //System.Console.WriteLine(car7.color.ToUpper()); //this prints a blank line out put 
        System.Console.WriteLine(car7);     
         
         //How to copy over one objects values to another object 
@@ -123,7 +123,7 @@ class Program
 
 
         //Full Arguemnet --methods in car ca file
-        Car car9= new(car6.color, car6.make, car6.model, car6.year, car6.mileage);
+        //Car car9= new(car6.color, car6.make, car6.model, car6.year, car6.mileage);
         
         //Copy --methods in car ca file
         Car car10 = new Car(car6);
