@@ -1,7 +1,13 @@
 ﻿using System;
+using System.Configuration.Assemblies;
+using System.Runtime.InteropServices;
+using System.Security.Cryptography.X509Certificates;
 
 class Program
 {
+public static void PracticeObjects()
+{
+    
     static void Main(string[] args)
     {
         //int num = 1;
@@ -139,4 +145,36 @@ class Program
         //Polymorphism 
         
     }
+}
+    /////////new day Friday 4-25-2024 Books files - no longer working with cars//////////
+
+public static void PracticeProperties()
+{
+    Book book1=new Book();
+    //book1.SetTitle("Dracula"); --would only use when useing getter and setter wtih alternative would not need this 
+    book1.Title= "Dracula";  ///this is what the alternative solution allows since we did the get set for title (lower case field and upper case Property)
+    System.Console.WriteLine(book1.Title);//Techinically using the undderlying Getter in this Property
+
+
+}
+public static void PracticeScopes()
+{
+   System.Console.WriteLine("Total Things Created: " + Thing.count);
+   Thing thing1= new();
+   System.Console.WriteLine("Total Things Created: " + Thing.count);
+   Thing thing2 = new();
+   System.Console.WriteLine("Total Things Created: " + Thing.count);
+
+   thing1.objectNum++;
+   thing2.objectNum--;
+
+   System.Console.WriteLine(thing1.objectNum);
+   System.Console.WriteLine(thing1.objectNum);
+
+   System.Console.WriteLine(Thing.classNum);
+   Thing.StaticMethod();
+
+}
+
+
 }
