@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\U713PY\\RevatureTraining.NET\\Revature.NetRebeccaCRepository\\Week1 -CS-Basics\\IntroToLooping\\IntroToLooping.csproj": {}
+    "C:\\Users\\U713PY\\RevatureTraining.NET\\Revature.NetRebeccaCRepository\\Week1 -CS-Basics\\IntroToLooping\\IntroToLooping.csproj": {}
   },
   "projects": {
-    "c:\\Users\\U713PY\\RevatureTraining.NET\\Revature.NetRebeccaCRepository\\Week1 -CS-Basics\\IntroToLooping\\IntroToLooping.csproj": {
+    "C:\\Users\\U713PY\\RevatureTraining.NET\\Revature.NetRebeccaCRepository\\Week1 -CS-Basics\\IntroToLooping\\IntroToLooping.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\U713PY\\RevatureTraining.NET\\Revature.NetRebeccaCRepository\\Week1 -CS-Basics\\IntroToLooping\\IntroToLooping.csproj",
+        "projectUniqueName": "C:\\Users\\U713PY\\RevatureTraining.NET\\Revature.NetRebeccaCRepository\\Week1 -CS-Basics\\IntroToLooping\\IntroToLooping.csproj",
         "projectName": "IntroToLooping",
-        "projectPath": "c:\\Users\\U713PY\\RevatureTraining.NET\\Revature.NetRebeccaCRepository\\Week1 -CS-Basics\\IntroToLooping\\IntroToLooping.csproj",
+        "projectPath": "C:\\Users\\U713PY\\RevatureTraining.NET\\Revature.NetRebeccaCRepository\\Week1 -CS-Basics\\IntroToLooping\\IntroToLooping.csproj",
         "packagesPath": "C:\\Users\\U713PY\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\U713PY\\RevatureTraining.NET\\Revature.NetRebeccaCRepository\\Week1 -CS-Basics\\IntroToLooping\\obj\\",
+        "outputPath": "C:\\Users\\U713PY\\RevatureTraining.NET\\Revature.NetRebeccaCRepository\\Week1 -CS-Basics\\IntroToLooping\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
