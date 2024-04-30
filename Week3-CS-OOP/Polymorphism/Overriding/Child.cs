@@ -1,16 +1,25 @@
-using System.ComponentModel;
-
-class Child: Parent
+class Child : Parent
 {
-    public string FavoriteGame {get;set;}
+    public string FavoriteGame { get; set; }
 
-    public static Child()
+    public Child()
     {
-        FavoriteGame ="";
+        FavoriteGame = "";
     }
 
-    public  String Play()
+    public Child(string jobTitle, string favoriteGame) : base(jobTitle)
     {
-        System.Console.WriteLine(Child.FavoriteGame);
+        FavoriteGame = favoriteGame;
+    }
+
+    public void Play()
+    {
+        System.Console.WriteLine("Playing my favorite game: " + FavoriteGame);
+    }
+
+    // This is now an overridden method which changes its implementation for this Class ONLY.
+    public override void Work()
+    {
+        System.Console.WriteLine("Doing my homework to get good grades!");
     }
 }

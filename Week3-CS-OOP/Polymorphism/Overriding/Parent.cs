@@ -1,16 +1,24 @@
 class Parent
 {
-    public string JobTitle{get; set;}
+    public string JobTitle { get; set; }
 
-       public static Parent()
-        {
-            JobTitle = "";
-        }
+    public Parent()
+    {
+        JobTitle = "";
+    }
 
-        public Parent(string JobTitle)
-        {
-            System.Console.WriteLine(Parent.JobTitle);
-        }
+    public Parent(string jobTitle)
+    {
+        JobTitle = jobTitle;
+    }
 
-    public 
+    public virtual void Work()
+    {
+        System.Console.WriteLine("Work hard all day to make money at my job as a: " + JobTitle);
+    }
+
+    public override string ToString()
+    {
+        return "{jobTitle:'" + JobTitle + "'}";
+    }
 }
