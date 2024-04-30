@@ -44,12 +44,18 @@ using System;
             System.Console.WriteLine("Dog 1 information: " +dog1);
             System.Console.WriteLine("Dog 2 information: "+ dog2);
 
+             
+            string reverse ="Revature";
+            foreach (char c in reverse)
+            {
+                reverse = c + reverse;
+            }
+            System.Console.WriteLine(reverse);
 
-
-
-
-
+            
+            int[] array= [1,2,3,4,5];
+            System.Console.WriteLine(array);
+            Array.Reverse(array);
+            System.Console.WriteLine(array);
         }
     }
-
-
