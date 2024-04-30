@@ -52,7 +52,7 @@ using System;
             }
             System.Console.WriteLine(reverse);
 
-            
+            //need to work on print out of this
             int[] array= [1,2,3,4,5];
             System.Console.WriteLine(array);
             Array.Reverse(array);
