@@ -11,7 +11,7 @@ abstract class Animal
     Two Types of Methods you can make in an Abstract Class
         -Concrete Methods - These methods have an Implementation
     */
-    public void Sleep()
+    public virtual void Sleep()
     {
         System.Console.WriteLine("Animal rest to recover energy.");
     }
@@ -22,8 +22,4 @@ abstract class Animal
     */
 
     public abstract void MakeSound(); //you can add parameters or not - each class will then have to override this method and tell it what to do.
-
-
-
-
 }

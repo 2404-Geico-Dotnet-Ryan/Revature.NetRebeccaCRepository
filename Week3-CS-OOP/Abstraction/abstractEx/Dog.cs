@@ -1,7 +1,26 @@
-class Dog : Animal
+class Dog : Animal, ICarnivore
 {
-    public override void MakeSound()
+    public string FavoriteChewToy {get;set;}
+    public int Value {get; set;}
+
+    public Dog()
     {
-        System.Console.WriteLine("Woof! Woof!");
+        FavoriteChewToy = "";
     }
+    public override void MakeSound()  // this is blank method in Base Animals MUST MAKE
+    {
+        System.Console.WriteLine("Woof! Woof! Bark! Bark!");
+    }
+
+    
+    void EatMeat()
+    {
+        System.Console.WriteLine("Eats some puppy chow.");
+    }
+
+    /*    void ICarnivore.EatMeat()
+    {
+        System.Console.WriteLine("Eats some puppy chow.");
+    }
+    */
 }
