@@ -52,10 +52,40 @@ using System;
             }
             System.Console.WriteLine(reverse);
 
-            //need to work on print out of this
-            int[] array= [1,2,3,4,5];
-            System.Console.WriteLine(array);
-            Array.Reverse(array);
-            System.Console.WriteLine(array);
+            System.Console.WriteLine("correcting the reverse");
+            string input = "Revature";
+            Char[] charArray = input.ToCharArray();
+            Array.Reverse(charArray);
+            string reversedString = new string (charArray);
+            System.Console.WriteLine(reversedString);
+
+
+            /*
+            string reverse2 = "12345";
+            for (int i = reverse2.Length -1; i>=0; i--)
+            {
+                reverse2 += reverse2;
+            }
+            System.Console.WriteLine(reverse2);
+            */
+
+            //Find max value in Array 
+            int[] num = new int [5];
+            num[0] = 25;
+            num[1] = 30;
+            num[2] = 5;
+            num[3] = 95;
+            num[4] = 75;
+
+            int max=0;
+            int maxvalue = num[0];
+            foreach (int i in num)
+            {
+                if (i > max)
+                {
+                  max = i;
+                }
+            }
+            System.Console.WriteLine("The max number is:" + max);
         }
     }
