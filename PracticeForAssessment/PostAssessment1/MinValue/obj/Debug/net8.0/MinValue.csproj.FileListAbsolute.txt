@@ -1,0 +1,5 @@
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\PracticeForAssessment\PostAssessment1\MinValue\obj\Debug\net8.0\MinValue.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\PracticeForAssessment\PostAssessment1\MinValue\obj\Debug\net8.0\MinValue.AssemblyInfoInputs.cache
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\PracticeForAssessment\PostAssessment1\MinValue\obj\Debug\net8.0\MinValue.AssemblyInfo.cs
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\PracticeForAssessment\PostAssessment1\MinValue\obj\Debug\net8.0\MinValue.csproj.CoreCompileInputs.cache
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\PracticeForAssessment\PostAssessment1\MinValue\obj\Debug\net8.0\MinValue.sourcelink.json
