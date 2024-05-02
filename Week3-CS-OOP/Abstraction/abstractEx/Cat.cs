@@ -1,4 +1,4 @@
-class Cat : Animal, ICarnivore 
+class Cat : Animal, ICarnivore,IAdorable
 {
     public int Value {get; set;}
    
@@ -14,7 +14,7 @@ class Cat : Animal, ICarnivore
         System.Console.WriteLine("Meow! Meow! Hiss! Hiss!");
     }
 
-    void EatMeat()
+    public void EatMeat()
     {
         System.Console.WriteLine("Eats some Friskies.");
     }

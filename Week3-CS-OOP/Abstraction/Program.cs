@@ -8,6 +8,7 @@ class Program
         //Animal a = new Animal();  can't do this - this abstract does not actually do anything can't create an object 
         Dog d = new Dog();
         d.MakeSound();
+        d.EatMeat();
         d.Sleep();
         d.Species ="German Sheppard";
         d.FavoriteChewToy = "Bone";
@@ -39,10 +40,27 @@ class Program
         IHerbivores b = new Bunny();
         b.EatPlant();
 
+        //start class 5/5/2024
+
+        Animal[] animals = new Animal[4]; //this can bring together all subclasses (cat, dog, etc.)
+
+        animals[0] = d;
+        animals[1] = c;
+        animals[2] = bugs;
+
+        ICarnivore[] carnivores = new ICarnivore[3];
+        carnivores[0] = d;
+        carnivores[1] = c;
+        //carnivores[2] = bugs; can't do it is not a carnivores
+        //below uses marker interface to group bugs and cats
+        IAdorable[] adorables = new IAdorable[3];
+        adorables[0] = bugs;
+        adorables[1] = c;
         
+        //shows that TeddyBear does not have to be included in Animal base class just the adorables
+        TeddyBear bear = new TeddyBear();
 
-
-
+        adorables[2] = bear;
 
 
     }

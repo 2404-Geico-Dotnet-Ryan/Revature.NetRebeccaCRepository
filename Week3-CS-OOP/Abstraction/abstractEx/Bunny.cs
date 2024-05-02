@@ -1,4 +1,4 @@
-class Bunny : Animal, IHerbivores
+class Bunny : Animal, IHerbivores, IAdorable
 {
     public override void MakeSound()
     {

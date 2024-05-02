@@ -13,7 +13,7 @@ class Dog : Animal, ICarnivore
     }
 
     
-    void EatMeat()
+    public void EatMeat()
     {
         System.Console.WriteLine("Eats some puppy chow.");
     }
