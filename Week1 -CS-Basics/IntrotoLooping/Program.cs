@@ -190,6 +190,38 @@ for(int i=1; i<=size; i++)
     System.Console.WriteLine(); //moves curser down to next row
 }   
 
+System.Console.WriteLine("=======building a rectangle+++++++++");
+int height = 5;
+int width = 8;
+
+//Builds a number of rows = height
+for (int row=1; row <= height; row++)
+{
+  //Builds ONE row 
+    for(int column=1; column<=width; column++)
+    {
+        Console.Write("O ");
+    }
+    Console.WriteLine(); //this just starts it on the next line DO NOT USE Break; that exits the loop.
+}
+
+System.Console.WriteLine("avoiding nested loops alternative solution--Linear");
+//Ryan's solution 
+string line ="";
+//Builds out a model row
+for (int i =1; i<= width; i++)
+{
+    line += "O";
+}
+//print out that number of rows
+for (int rows =1; rows <= height; rows++)
+{
+    Console.WriteLine(line):
+}
+
+
+
+
 System.Console.WriteLine("----------LEFT Facing Stairs------------");
 
 //Staicase Challenge
