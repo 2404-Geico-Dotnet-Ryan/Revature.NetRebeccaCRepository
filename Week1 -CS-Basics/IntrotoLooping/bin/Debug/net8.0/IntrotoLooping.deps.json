@@ -6,15 +6,15 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v8.0": {
-      "IntrotoLooping/1.0.0": {
+      "IntroToLooping/1.0.0": {
         "runtime": {
-          "IntrotoLooping.dll": {}
+          "IntroToLooping.dll": {}
         }
       }
     }
   },
   "libraries": {
-    "IntrotoLooping/1.0.0": {
+    "IntroToLooping/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
