@@ -1,0 +1,15 @@
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Week3-CS-OOP\PracticeForAssessment\FirstAssessment\obj\Debug\net8.0\FirstAssessment.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Week3-CS-OOP\PracticeForAssessment\FirstAssessment\obj\Debug\net8.0\FirstAssessment.AssemblyInfoInputs.cache
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Week3-CS-OOP\PracticeForAssessment\FirstAssessment\obj\Debug\net8.0\FirstAssessment.AssemblyInfo.cs
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Week3-CS-OOP\PracticeForAssessment\FirstAssessment\obj\Debug\net8.0\FirstAssessment.csproj.CoreCompileInputs.cache
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Week3-CS-OOP\PracticeForAssessment\FirstAssessment\obj\Debug\net8.0\FirstAssessment.sourcelink.json
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Week3-CS-OOP\PracticeForAssessment\FirstAssessment\bin\Debug\net8.0\FirstAssessment.exe
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Week3-CS-OOP\PracticeForAssessment\FirstAssessment\bin\Debug\net8.0\FirstAssessment.deps.json
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Week3-CS-OOP\PracticeForAssessment\FirstAssessment\bin\Debug\net8.0\FirstAssessment.runtimeconfig.json
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Week3-CS-OOP\PracticeForAssessment\FirstAssessment\bin\Debug\net8.0\FirstAssessment.dll
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Week3-CS-OOP\PracticeForAssessment\FirstAssessment\bin\Debug\net8.0\FirstAssessment.pdb
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Week3-CS-OOP\PracticeForAssessment\FirstAssessment\obj\Debug\net8.0\FirstAssessment.dll
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Week3-CS-OOP\PracticeForAssessment\FirstAssessment\obj\Debug\net8.0\refint\FirstAssessment.dll
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Week3-CS-OOP\PracticeForAssessment\FirstAssessment\obj\Debug\net8.0\FirstAssessment.pdb
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Week3-CS-OOP\PracticeForAssessment\FirstAssessment\obj\Debug\net8.0\FirstAssessment.genruntimeconfig.cache
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Week3-CS-OOP\PracticeForAssessment\FirstAssessment\obj\Debug\net8.0\ref\FirstAssessment.dll

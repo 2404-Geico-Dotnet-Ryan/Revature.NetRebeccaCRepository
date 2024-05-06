@@ -1,0 +1,18 @@
+Notes from class Ravature .Net 
+Do not have to memorize***
+Decimal: 99,999,999
+Binary: 00000000 or 11111111 
+	11111111 =255
+	100000000 = 256
+
+10101010  -1
+11111111  -1
+00000000  -1
+
+10101010 -0
+11111111 -0
+00000000 -0
+
+1 Byte -> 2 Bytes
+8 Bits -> 16 Bytes 
+256 Values -> (256)^2 (squared) -> 65536 

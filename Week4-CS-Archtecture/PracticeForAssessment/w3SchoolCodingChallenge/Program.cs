@@ -59,6 +59,11 @@ Input the third number to multiply: 6
 Expected Output:
 2 x 3 x 6 = 36
 */
+int num1 = 5;
+int num2 = 10;
+int num3 = 1; 
+System.Console.WriteLine(num1*num2*num3);
+
 
 /*
 7. Write a C# Sharp program to print on screen the output of adding, subtracting, multiplying and dividing two numbers entered by the user.
@@ -72,6 +77,8 @@ Expected Output:
 25 / 4 = 6
 25 mod 4 = 1
 */
+num4 = 25;
+num5 = 4;
 
 /*
 8. Write a C# Sharp program that prints the multiplication table of a number as input.
