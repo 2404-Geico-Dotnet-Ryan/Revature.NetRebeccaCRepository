@@ -1,0 +1,15 @@
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Week1 -CS-Basics\IntrotoLooping\bin\Debug\net8.0\IntrotoLooping.exe
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Week1 -CS-Basics\IntrotoLooping\bin\Debug\net8.0\IntrotoLooping.deps.json
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Week1 -CS-Basics\IntrotoLooping\bin\Debug\net8.0\IntrotoLooping.runtimeconfig.json
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Week1 -CS-Basics\IntrotoLooping\bin\Debug\net8.0\IntrotoLooping.dll
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Week1 -CS-Basics\IntrotoLooping\bin\Debug\net8.0\IntrotoLooping.pdb
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Week1 -CS-Basics\IntrotoLooping\obj\Debug\net8.0\IntrotoLooping.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Week1 -CS-Basics\IntrotoLooping\obj\Debug\net8.0\IntrotoLooping.AssemblyInfoInputs.cache
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Week1 -CS-Basics\IntrotoLooping\obj\Debug\net8.0\IntrotoLooping.AssemblyInfo.cs
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Week1 -CS-Basics\IntrotoLooping\obj\Debug\net8.0\IntrotoLooping.csproj.CoreCompileInputs.cache
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Week1 -CS-Basics\IntrotoLooping\obj\Debug\net8.0\IntrotoLooping.sourcelink.json
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Week1 -CS-Basics\IntrotoLooping\obj\Debug\net8.0\IntrotoLooping.dll
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Week1 -CS-Basics\IntrotoLooping\obj\Debug\net8.0\refint\IntrotoLooping.dll
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Week1 -CS-Basics\IntrotoLooping\obj\Debug\net8.0\IntrotoLooping.pdb
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Week1 -CS-Basics\IntrotoLooping\obj\Debug\net8.0\IntrotoLooping.genruntimeconfig.cache
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Week1 -CS-Basics\IntrotoLooping\obj\Debug\net8.0\ref\IntrotoLooping.dll

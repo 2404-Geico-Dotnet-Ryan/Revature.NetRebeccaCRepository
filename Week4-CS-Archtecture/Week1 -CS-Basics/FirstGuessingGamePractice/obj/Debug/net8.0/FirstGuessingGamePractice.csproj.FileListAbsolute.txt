@@ -1,0 +1,15 @@
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Week1 -CS-Basics\FirstGuessingGamePractice\bin\Debug\net8.0\FirstGuessingGamePractice.exe
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Week1 -CS-Basics\FirstGuessingGamePractice\bin\Debug\net8.0\FirstGuessingGamePractice.deps.json
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Week1 -CS-Basics\FirstGuessingGamePractice\bin\Debug\net8.0\FirstGuessingGamePractice.runtimeconfig.json
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Week1 -CS-Basics\FirstGuessingGamePractice\bin\Debug\net8.0\FirstGuessingGamePractice.dll
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Week1 -CS-Basics\FirstGuessingGamePractice\bin\Debug\net8.0\FirstGuessingGamePractice.pdb
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Week1 -CS-Basics\FirstGuessingGamePractice\obj\Debug\net8.0\FirstGuessingGamePractice.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Week1 -CS-Basics\FirstGuessingGamePractice\obj\Debug\net8.0\FirstGuessingGamePractice.AssemblyInfoInputs.cache
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Week1 -CS-Basics\FirstGuessingGamePractice\obj\Debug\net8.0\FirstGuessingGamePractice.AssemblyInfo.cs
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Week1 -CS-Basics\FirstGuessingGamePractice\obj\Debug\net8.0\FirstGuessingGamePractice.csproj.CoreCompileInputs.cache
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Week1 -CS-Basics\FirstGuessingGamePractice\obj\Debug\net8.0\FirstGuessingGamePractice.sourcelink.json
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Week1 -CS-Basics\FirstGuessingGamePractice\obj\Debug\net8.0\FirstGuessingGamePractice.dll
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Week1 -CS-Basics\FirstGuessingGamePractice\obj\Debug\net8.0\refint\FirstGuessingGamePractice.dll
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Week1 -CS-Basics\FirstGuessingGamePractice\obj\Debug\net8.0\FirstGuessingGamePractice.pdb
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Week1 -CS-Basics\FirstGuessingGamePractice\obj\Debug\net8.0\FirstGuessingGamePractice.genruntimeconfig.cache
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Week1 -CS-Basics\FirstGuessingGamePractice\obj\Debug\net8.0\ref\FirstGuessingGamePractice.dll
