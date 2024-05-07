@@ -1,0 +1,15 @@
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\PracticeForAssessment\RyansPracticeChallenges\bin\Debug\net8.0\RyansPracticeChallenges.exe
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\PracticeForAssessment\RyansPracticeChallenges\bin\Debug\net8.0\RyansPracticeChallenges.deps.json
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\PracticeForAssessment\RyansPracticeChallenges\bin\Debug\net8.0\RyansPracticeChallenges.runtimeconfig.json
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\PracticeForAssessment\RyansPracticeChallenges\bin\Debug\net8.0\RyansPracticeChallenges.dll
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\PracticeForAssessment\RyansPracticeChallenges\bin\Debug\net8.0\RyansPracticeChallenges.pdb
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\PracticeForAssessment\RyansPracticeChallenges\obj\Debug\net8.0\RyansPracticeChallenges.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\PracticeForAssessment\RyansPracticeChallenges\obj\Debug\net8.0\RyansPracticeChallenges.AssemblyInfoInputs.cache
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\PracticeForAssessment\RyansPracticeChallenges\obj\Debug\net8.0\RyansPracticeChallenges.AssemblyInfo.cs
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\PracticeForAssessment\RyansPracticeChallenges\obj\Debug\net8.0\RyansPracticeChallenges.csproj.CoreCompileInputs.cache
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\PracticeForAssessment\RyansPracticeChallenges\obj\Debug\net8.0\RyansPracticeChallenges.sourcelink.json
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\PracticeForAssessment\RyansPracticeChallenges\obj\Debug\net8.0\RyansPracticeChallenges.dll
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\PracticeForAssessment\RyansPracticeChallenges\obj\Debug\net8.0\refint\RyansPracticeChallenges.dll
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\PracticeForAssessment\RyansPracticeChallenges\obj\Debug\net8.0\RyansPracticeChallenges.pdb
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\PracticeForAssessment\RyansPracticeChallenges\obj\Debug\net8.0\RyansPracticeChallenges.genruntimeconfig.cache
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\PracticeForAssessment\RyansPracticeChallenges\obj\Debug\net8.0\ref\RyansPracticeChallenges.dll

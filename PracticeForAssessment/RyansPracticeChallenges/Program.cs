@@ -229,6 +229,7 @@
     {
         // Call method 13: CompareToOrange
         // Test 1: Ensure color properties are not compared
+        Console.WriteLine("Question 13: CompareToString");
         PracticeChallenge.Apple apple1 = new() { Weight = 100, Color = "Red" };
         PracticeChallenge.Orange orange1 = new() { Weight = 100, Variety = "Navel" };
         bool result1 = apple1.CompareToOrange(orange1);
