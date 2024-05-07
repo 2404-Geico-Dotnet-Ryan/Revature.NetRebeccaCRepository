@@ -1,0 +1,15 @@
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Week4-CS-Architecture\MovieApp1\bin\Debug\net8.0\MovieApp1.exe
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Week4-CS-Architecture\MovieApp1\bin\Debug\net8.0\MovieApp1.deps.json
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Week4-CS-Architecture\MovieApp1\bin\Debug\net8.0\MovieApp1.runtimeconfig.json
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Week4-CS-Architecture\MovieApp1\bin\Debug\net8.0\MovieApp1.dll
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Week4-CS-Architecture\MovieApp1\bin\Debug\net8.0\MovieApp1.pdb
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Week4-CS-Architecture\MovieApp1\obj\Debug\net8.0\MovieApp1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Week4-CS-Architecture\MovieApp1\obj\Debug\net8.0\MovieApp1.AssemblyInfoInputs.cache
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Week4-CS-Architecture\MovieApp1\obj\Debug\net8.0\MovieApp1.AssemblyInfo.cs
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Week4-CS-Architecture\MovieApp1\obj\Debug\net8.0\MovieApp1.csproj.CoreCompileInputs.cache
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Week4-CS-Architecture\MovieApp1\obj\Debug\net8.0\MovieApp1.sourcelink.json
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Week4-CS-Architecture\MovieApp1\obj\Debug\net8.0\MovieApp1.dll
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Week4-CS-Architecture\MovieApp1\obj\Debug\net8.0\refint\MovieApp1.dll
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Week4-CS-Architecture\MovieApp1\obj\Debug\net8.0\MovieApp1.pdb
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Week4-CS-Architecture\MovieApp1\obj\Debug\net8.0\MovieApp1.genruntimeconfig.cache
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Week4-CS-Architecture\MovieApp1\obj\Debug\net8.0\ref\MovieApp1.dll

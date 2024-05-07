@@ -20,4 +20,13 @@ class Movie
         ReturnDate = returnDate;
     }
 
+    public override string ToString() // you must have this to print out all information on a movie
+    {
+        return "{id:" + Id + 
+        ", title:" + Title + 
+        ", price: " +Price + 
+        ", available: " + Available + 
+        ", returnDate: " + ReturnDate + "}";
+    }
+
 }
