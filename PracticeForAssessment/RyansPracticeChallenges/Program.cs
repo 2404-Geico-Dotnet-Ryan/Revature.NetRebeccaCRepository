@@ -1,4 +1,4 @@
-﻿﻿class Program
+﻿﻿﻿class Program
 {
     static void Main(string[] args)
     {
@@ -228,8 +228,8 @@
     static void QuestionThirteen()
     {
         // Call method 13: CompareToOrange
+        Console.WriteLine("Question 13: CompareApplesToOranges");
         // Test 1: Ensure color properties are not compared
-        Console.WriteLine("Question 13: CompareToString");
         PracticeChallenge.Apple apple1 = new() { Weight = 100, Color = "Red" };
         PracticeChallenge.Orange orange1 = new() { Weight = 100, Variety = "Navel" };
         bool result1 = apple1.CompareToOrange(orange1);
@@ -287,7 +287,5 @@
         Console.WriteLine("Test 4: " + (result4.SetEquals([1, 2, 3]) ? "Success" : "Fail"));
         Console.WriteLine();
 
-
     }
-
 }
