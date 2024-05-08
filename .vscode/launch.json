@@ -11,15 +11,9 @@
             "request": "launch",
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
-<<<<<<< HEAD
-            "program": "${workspaceFolder}/Revature.NetRebeccaCRepository/Week1 -CS-Basics/IntroToStrings/bin/Debug/net8.0/IntroToStrings.dll",
+            "program": "${workspaceFolder}/Week4-CS-Architecture/PracticePalidrome/bin/Debug/net8.0/PracticePalidrome.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/Revature.NetRebeccaCRepository/Week1 -CS-Basics/IntroToStrings",
-=======
-            "program": "${workspaceFolder}/Week2 -CS-Fundamentals/IntroToClassesEx/bin/Debug/net8.0/IntroToClassesEx.dll",
-            "args": [],
-            "cwd": "${workspaceFolder}/Week2 -CS-Fundamentals/IntroToClassesEx",
->>>>>>> 619af84b947b502874087842ba3194e683aa4453
+            "cwd": "${workspaceFolder}/Week4-CS-Architecture/PracticePalidrome",
             // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
             "console": "internalConsole",
             "stopAtEntry": false

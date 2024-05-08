@@ -80,7 +80,9 @@ class PracticeChallenge
     // You can assume the numbers will be positive and not exceed the limit of int when added.
     public static int ReverseAndAdd(int num)
     {
-        return 0; //Placeholder return
+        int reverseNum= int.Parse(new string(num.ToString().Reverse().ToArray())); //if int need to convert to string num.ToString() string reverse is different format than this
+        return num + reverseNum;
+        
     }
 
     // 10. Convert Age into Seconds

@@ -7,11 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-<<<<<<< HEAD
-                "${workspaceFolder}/Revature.NetRebeccaCRepository/Week1 -CS-Basics/IntroToStrings/IntroToStrings.sln",
-=======
-                "${workspaceFolder}/Week2 -CS-Fundamentals/IntroToClassesEx/IntroToClassesEx.sln",
->>>>>>> 619af84b947b502874087842ba3194e683aa4453
+                "${workspaceFolder}/Week4-CS-Architecture/PracticePalidrome/PracticePalidrome.sln",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary;ForceNoAlign"
             ],
@@ -23,11 +19,7 @@
             "type": "process",
             "args": [
                 "publish",
-<<<<<<< HEAD
-                "${workspaceFolder}/Revature.NetRebeccaCRepository/Week1 -CS-Basics/IntroToStrings/IntroToStrings.sln",
-=======
-                "${workspaceFolder}/Week2 -CS-Fundamentals/IntroToClassesEx/IntroToClassesEx.sln",
->>>>>>> 619af84b947b502874087842ba3194e683aa4453
+                "${workspaceFolder}/Week4-CS-Architecture/PracticePalidrome/PracticePalidrome.sln",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary;ForceNoAlign"
             ],
@@ -41,11 +33,7 @@
                 "watch",
                 "run",
                 "--project",
-<<<<<<< HEAD
-                "${workspaceFolder}/Revature.NetRebeccaCRepository/Week1 -CS-Basics/IntroToStrings/IntroToStrings.sln"
-=======
-                "${workspaceFolder}/Week2 -CS-Fundamentals/IntroToClassesEx/IntroToClassesEx.sln"
->>>>>>> 619af84b947b502874087842ba3194e683aa4453
+                "${workspaceFolder}/Week4-CS-Architecture/PracticePalidrome/PracticePalidrome.sln"
             ],
             "problemMatcher": "$msCompile"
         }

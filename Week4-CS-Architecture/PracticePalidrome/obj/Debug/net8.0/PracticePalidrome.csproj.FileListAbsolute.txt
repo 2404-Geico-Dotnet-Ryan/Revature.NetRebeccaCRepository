@@ -1,0 +1,15 @@
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Week4-CS-Architecture\PracticePalidrome\bin\Debug\net8.0\PracticePalidrome.exe
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Week4-CS-Architecture\PracticePalidrome\bin\Debug\net8.0\PracticePalidrome.deps.json
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Week4-CS-Architecture\PracticePalidrome\bin\Debug\net8.0\PracticePalidrome.runtimeconfig.json
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Week4-CS-Architecture\PracticePalidrome\bin\Debug\net8.0\PracticePalidrome.dll
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Week4-CS-Architecture\PracticePalidrome\bin\Debug\net8.0\PracticePalidrome.pdb
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Week4-CS-Architecture\PracticePalidrome\obj\Debug\net8.0\PracticePalidrome.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Week4-CS-Architecture\PracticePalidrome\obj\Debug\net8.0\PracticePalidrome.AssemblyInfoInputs.cache
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Week4-CS-Architecture\PracticePalidrome\obj\Debug\net8.0\PracticePalidrome.AssemblyInfo.cs
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Week4-CS-Architecture\PracticePalidrome\obj\Debug\net8.0\PracticePalidrome.csproj.CoreCompileInputs.cache
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Week4-CS-Architecture\PracticePalidrome\obj\Debug\net8.0\PracticePalidrome.sourcelink.json
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Week4-CS-Architecture\PracticePalidrome\obj\Debug\net8.0\PracticePalidrome.dll
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Week4-CS-Architecture\PracticePalidrome\obj\Debug\net8.0\refint\PracticePalidrome.dll
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Week4-CS-Architecture\PracticePalidrome\obj\Debug\net8.0\PracticePalidrome.pdb
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Week4-CS-Architecture\PracticePalidrome\obj\Debug\net8.0\PracticePalidrome.genruntimeconfig.cache
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Week4-CS-Architecture\PracticePalidrome\obj\Debug\net8.0\ref\PracticePalidrome.dll
