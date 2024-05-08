@@ -7,10 +7,8 @@ class Program
     //use resource from Ryan's Class Chat
     static void Main(string[] args)
     {
-       // isStringPalidrome();
+        isStringPalidrome();
        // anotherStringPalidromeTry();
-       //reversingPalindrom();
-       
     }  
 
     
@@ -68,20 +66,4 @@ class Program
         System.Console.WriteLine("This is a palindrom");
     }
 
-     private static string reversingPalindrom()
-     {
-        
-        string orignalString = "andna";
-        string reversedString = new string(orignalString.Reverse().ToArray());
-        System.Console.WriteLine(orignalString);
-        System.Console.WriteLine(reversedString);
-        if (orignalString == reversedString)
-        {
-            System.Console.WriteLine("this is a palindrom");
-        }
-        else
-        {
-            System.Console.WriteLine("this is NOT a  palindrom");
-        }
-     }
 }
