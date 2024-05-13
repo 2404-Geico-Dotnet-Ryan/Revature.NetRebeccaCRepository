@@ -1,0 +1,21 @@
+A user can check out multiple movies and each movie is checked out by a single user 
+1 to many relationship
+there are 2 choices 
+    User could track a list of Movies they rent -> list of movies you have to manage
+    this is harder to manage especially when we move to data bases
+        OR 
+    Movies could track who is renting them  -> User only has to be managed
+
+
+
+
+
+    user    Id      userName    Password
+            1
+            2
+            3
+    Ticket  Id      Type                Cost        use whole user object     
+            1       Speeding
+            2       Parking
+            3       Reckless Driving
+            4 

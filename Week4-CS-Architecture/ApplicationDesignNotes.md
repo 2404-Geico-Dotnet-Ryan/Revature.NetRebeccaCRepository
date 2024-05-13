@@ -36,3 +36,24 @@
   - Where all data exists. Typically stored in something like a Database, or perhaps some form of a file system.
   - Represented in your Applications through: Models
     - Cars, Users, Courses, BankAccounts, Roles, etc...
+
+## Relationships between Classes 
+- Inheritance - Parent -> Child Relationship 
+  - "is-a" relationship
+  - Dog is an Animal
+- Compostition Relationship
+  - "has - a" relationship
+  -  Example
+      - House 
+      - Car
+      - Job
+      - Person
+          - name
+          - age
+          - House
+          - Car
+          - Job
+- Types of Relationship (Mulitiplicites)
+  - 1-to-1 relationship 
+  - 1-to-many relationship
+  - many-to-many relationship

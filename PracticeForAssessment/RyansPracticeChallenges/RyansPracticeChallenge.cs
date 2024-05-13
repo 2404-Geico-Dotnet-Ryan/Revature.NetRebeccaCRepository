@@ -8,10 +8,12 @@ class PracticeChallenge
     }
 
 
-    // 1. Calculate the average of all elements in an array.
+    // 1. Calculate the average of all elements in an array.  ***need to test
     // Basic formula for average is <sum of all elements> / <number of elements>
     public static double ArrayAverage(double[] arr)
+    
     {
+        
         return 0; // Placeholder return
     }
 
@@ -62,7 +64,27 @@ class PracticeChallenge
     // An anagram of a string -> contains all the same characters, just in a different order.
     public static bool IsAnagram(string str1, string str2)
     {
-        return false; // Placeholder return
+        if (str1.Length != str2.Length)
+        {
+            return false; //length is not same is not anagram
+        }
+
+        while (str1.Length >0)
+        {
+            char c = str1[0];
+            if (str2.Contains(c))
+            {
+                str1= str1.Remove(0,1); 
+                int index = str2.IndexOf(c);
+                str2= str2.Remove(index,1);
+            }
+            else //no matching letter then not an anagram
+            {
+                return false; 
+            }
+        }
+        //if you make it here every letter had a match and now there are no letters left 
+        return true; // Placeholder return
     }
 
     // 8. Count the frequency of words in a given string and return a frequency of each word.
