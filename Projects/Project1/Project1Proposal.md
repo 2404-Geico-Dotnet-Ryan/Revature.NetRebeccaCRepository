@@ -1,34 +1,32 @@
 Create an Application to manage tickets
 
 Ticket 
-        - should have an ID number to call 
-        Requestor
-        Date/Time Requested 
-        Location of Requestor
-        Job Title of Requestor
-        Urgency 
-        Problem
-        Assigned To (user id)
-        Where at in process 
+        -ticket id should have an ID number to call 
+        type of ticket
+        Cost of ticket
+        Balance of ticket
+        paid in full yes or no
+        due Date
+        Driver 
 
 People using system 
-    Requestors
+    Drivers (paying, checking balance etc) 
     Administrators 
     Example 
             User Class 
                 -id to identify the user
-                -username
+                -Driver name
                 -userpassword
-                -(pull access level from this) 
+                - role all will be drivers right now 
                 
 
 Methods
-    Open Ticket
-    Close Ticket
-    Note Ticket
-    Update Ticket
-    View Ticket with Status
-    -Service Layer Make a method: GetAllUserTickets(int userID)
+    Add Ticket
+    pay ticket
+    update ticket balance and paid in full
+    check status of a ticket
+    view all unpaid tickets 
+    
     
 
 
