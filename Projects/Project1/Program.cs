@@ -104,16 +104,14 @@ class Program
 
      private static void CheckBalanceDue()
     {
-        
+      //TODO work on this   
     }
 
     private static void PayAmountOnTicket()
     {
-
+        //TODO work on this 
     }
     
-    //TODO why not liking public or private here down
-
     static Ticket? RetrievingSpecificTicket()
     {
         Ticket? retrievedTicket = null;
