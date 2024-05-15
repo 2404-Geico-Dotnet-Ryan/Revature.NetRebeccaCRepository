@@ -1,39 +1,39 @@
 class DriverService
 {
-    DriverRepo driverr = new();
+    DriverRepo dr = new();
 
     //Register
     public Driver? Register(Driver d)
     {
-        if (d.Role != "user")
+        if (d.Role != "user")//we are only allowing User roles at this time
         {
             System.Console.WriteLine("Invalid Role - Please try again!");
             return null;
         }
 
         
-        List<Driver> allDrivers= ur.GetAllDrivers();
+        List<Driver> allDrivers= dr.GetAllDrivers();
         foreach (Driver driver in allDrivers)
         {
-            if (driver.Username == u.Username)
+            if (driverName.DriverName == d.DriverName)
             {
-                System.Console.WriteLine("Username already taken! - Please try again!");
+                System.Console.WriteLine("DriverName already taken! - Please try again!");
                 return null;
             }
         }
         
-        returndur.AddDriver(d);
+        return dr.AddDriver(d);
     }
 
     //Login
-    public Driver? Login(string username, string password)
+    public Driver? Login(string driverName, string password)
     {
         List<Driver> allDrivers = dr.GetAllDrivers();
         foreach (Diver driver in allDrivers)
         {
-            if (driver.Username == username && driver.Password == password)
+            if (driver.DriverName == driverName && driver.Password == password)
             {
-                return user; 
+                return driver; 
             }
         }
         System.Console.WriteLine("Invalid DriverName / Password combo! Please Try Again!");
