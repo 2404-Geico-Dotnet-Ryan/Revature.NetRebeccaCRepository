@@ -1,7 +1,7 @@
 class TicketStorage
 {
     public Dictionary<int, TicketStorage> ticket;
-    public ticketID= 1;
+    public int idCounter = 1;
 
 
     public TicketStorage()

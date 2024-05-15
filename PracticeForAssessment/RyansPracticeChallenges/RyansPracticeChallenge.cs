@@ -11,17 +11,25 @@ class PracticeChallenge
     // 1. Calculate the average of all elements in an array.  ***need to test
     // Basic formula for average is <sum of all elements> / <number of elements>
     public static double ArrayAverage(double[] arr)
-    
+
     {
-        
-        return 0; // Placeholder return
+        double average = arr.Average();
+        return average;
     }
 
     // 2. Count the number of passing grades.
     // 'threshold' is the cutoff for a passing grade. If they are equal, then its passing.
     public static int CountPassingGrades(double[] grades, double threshold)
     {
-        return 0; // Placeholder return
+        int countPassingGrades = 0;
+        foreach (double grade in grades)
+        {
+            if (grade >= threshold)
+            {
+                countPassingGrades = countPassingGrades += 1;
+            }
+        }
+        return countPassingGrades; // Placeholder return
     }
 
     // 3. Return true if the given number is a perfect square, otherwise false.
@@ -29,8 +37,14 @@ class PracticeChallenge
     // Example: 25 is a Perfect Square -> 5 * 5 = 25.
     public static bool IsPerfectSquare(int num)
     {
-        return false; // Placeholder return
+        for (int i = 1; i * i <= num; i++)
+        {
+            if (i * i == num)
+                return true;
+        }
+        return false;
     }
+
 
 
     // 4. Return the count of distinct characters in a given string. Case-Sensitive -> A != a
@@ -38,7 +52,31 @@ class PracticeChallenge
     // "Hello World" contains 8 distinct characters. "H,e,l,o, ,W,r,d"
     public static int CountDistinctCharacters(string str)
     {
-        return 0; // Placeholder return
+        HashSet<string> characters = new HashSet<string>();
+
+        string currentCharacter = "";
+
+        for (int i = 0; i < str.Length; ++i)
+        {
+            if (Char.IsHighSurrogate(str, i))
+            {
+                // Do not count this, next one will give the full pair
+                currentCharacter = str[i].ToString();
+                continue;
+            }
+            else if (Char.IsLowSurrogate(str, i))
+            {
+                // Our "character" is encoded as previous one plus this one
+                currentCharacter += str[i];
+            }
+            else
+                currentCharacter = str[i].ToString();
+
+            if (!characters.Contains(currentCharacter))
+                characters.Add(currentCharacter);
+        }
+
+        return characters.Count;
     }
 
 
@@ -50,14 +88,35 @@ class PracticeChallenge
     // Return empty string, otherwise.
     public static string FizzBuzz(int n)
     {
-        return ""; // Placeholder return
+        string result ="";
+       
+        if (n % 15 == 0)  //looked up and should be 15 because 3 and 5 multiplied is 15
+        {
+           result= "FizzBuzz";
+        }
+        else if (n % 5 == 0)
+        {
+            result= "Buzz";
+        }
+        else if (n % 3 == 0)
+        {
+            result="Fizz";
+        }
+        else
+        {
+        result = "";
+        }
+        
+        return result;
     }
+
 
     // 6. Return the area of a triangle given its base and height.
     // Formula is Area = (1/2) * Base * Height
     public static double AreaOfTriangle(double base1, double height)
     {
-        return 0.0; // Placeholder return
+        double area = (base1*height)/2; 
+        return area; // Placeholder return
     }
 
     // 7. Return true if the given string is an anagram of another string, otherwise false.
@@ -69,18 +128,18 @@ class PracticeChallenge
             return false; //length is not same is not anagram
         }
 
-        while (str1.Length >0)
+        while (str1.Length > 0)
         {
             char c = str1[0];
             if (str2.Contains(c))
             {
-                str1= str1.Remove(0,1); 
+                str1 = str1.Remove(0, 1);
                 int index = str2.IndexOf(c);
-                str2= str2.Remove(index,1);
+                str2 = str2.Remove(index, 1);
             }
             else //no matching letter then not an anagram
             {
-                return false; 
+                return false;
             }
         }
         //if you make it here every letter had a match and now there are no letters left 
@@ -93,7 +152,9 @@ class PracticeChallenge
     // Consider using split() method on 'sentence' to divide it into smaller strings/words.
     public static Dictionary<string, int> CountWordFrequency(string sentence)
     {
-
+        // should go through dictionary and count how many times each word is in there 
+        //have to split into smaller strings/words
+        
         return []; //Placeholder return
     }
 
@@ -102,9 +163,8 @@ class PracticeChallenge
     // You can assume the numbers will be positive and not exceed the limit of int when added.
     public static int ReverseAndAdd(int num)
     {
-        int reverseNum= int.Parse(new string(num.ToString().Reverse().ToArray())); //if int need to convert to string num.ToString() string reverse is different format than this
+        int reverseNum = int.Parse(new string(num.ToString().Reverse().ToArray())); //if int need to convert to string num.ToString() string reverse is different format than this
         return num + reverseNum;
-        
     }
 
     // 10. Convert Age into Seconds

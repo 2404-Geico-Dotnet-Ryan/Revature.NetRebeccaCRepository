@@ -2,7 +2,7 @@
     {
     public int Id { get; set; }  //Ticket number common between all
     public string Type {get; set; } // what type  of ticket (title)
-    public double Cost {get; set: } //how much ticket was for 
+    public double Cost {get; set; } //how much ticket was for 
     public double Balance {get;set; } //how much is left to pay on ticket
     public bool PaidInFull { get; set; }  // true if ticket still has balance
     public long DueDate { get; set; } //when is the ticket due
@@ -24,7 +24,7 @@
         Driver = driver;
     }
 
-    public override string ToString() // you must have this to print out all information on a movie
+    public override string ToString() 
     {
         return "{ID:" + Id + 
         ", Type:" + Type + 

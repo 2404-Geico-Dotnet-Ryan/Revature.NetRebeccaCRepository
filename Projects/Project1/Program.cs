@@ -3,14 +3,16 @@
 class Program
 {
     static TicketService ts = new();
-    static Driver? currentDriver = null;
+    //static Driver? currentDriver = null;
+    //TODO work on getting Driver in like User in Movies once we get to that
 
     static void Main(string[] args)
     {
-        DriverMenu();
+        // DriverMenu(); //TODO make sure this menu is working correctly 
         MainMenu();
     }
 
+    /*
     private static void DriverMenu()
     {
         System.Console.WriteLine("Welcome to the Ticket App!");
@@ -29,6 +31,7 @@ class Program
         }
         System.Console.WriteLine("You have successfully logged in");
     }
+    */
     private static void MainMenu()
     {
         bool keepGoing = true;
@@ -108,15 +111,12 @@ class Program
             ticket = ts.GetTicket(ticket);
             if (ticket != null)
             {
-                //print out ticket information 
-
-
+                return ticket.ToString;
+                System.Console.WriteLine(); 
             }
-
-
-
         }
 
+        /*
         private static void CheckBalanceDue()
         {
 
@@ -126,7 +126,9 @@ class Program
         {
 
         }
-
+        */
+        //TODO why not liking public or private here down
+        /*
         private static Ticket? PromptUserForTicket()
         {
             Ticket? retrievedTicket = null;
@@ -150,5 +152,6 @@ class Program
             }
             return cmd;
         }
+        */
     }
 }

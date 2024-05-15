@@ -13,12 +13,13 @@ class TicketService
             System.Console.WriteLine("Ticket currently has balance: "+ Balance);
             System.Console.WriteLine("Ticket balance is due by "+ DueDate);  
     }
-    public Ticket? Pay(ticket t)
+    public Ticket Pay(Ticket t)
     {
-        System.Console.WriteLine("The Balance on this ticket is "+ balance)
+        //TODO finish this to complete and make sure steps in this layer are right place to put this 
+        System.Console.WriteLine("The Balance on this ticket is "+ balance);
         System.Console.WriteLine("How much would you like to pay today?");
         payment = int.Parse(Console.ReadLine());
-        balance = t.balance - payment
+        balance = t.balance - payment;
         tr.UpdateTicket(t);
      
     }
@@ -31,7 +32,7 @@ class TicketService
         {
             if (t.PaidInFull == false)
             {
-                allUnpaidTickets.Add(t) 
+                allUnpaidTickets.Add(t);
             }
         }
         return allUnpaidTickets;

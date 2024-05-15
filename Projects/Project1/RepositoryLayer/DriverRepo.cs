@@ -11,7 +11,7 @@ class DriverRepo
         return d;
     }
 
-    public User GetDriver(int id)
+    public Driver GetDriver(int id)
     {
         if (driverStorage.drivers.ContainsKey(id))
         {
@@ -30,7 +30,7 @@ class DriverRepo
         return driverStorage.drivers.Values.ToList();
     }
 
-    public User UpdateDriver(Driver updatedDriver)
+    public Driver UpdateDriver(Driver updatedDriver)
     {
         try
         {
@@ -44,7 +44,7 @@ class DriverRepo
         }
     }
 
-    public User DeleteDriver(Driver d)
+    public Driver DeleteDriver(Driver d)
     {
         bool didRemove = driverStorage.drivers.Remove(d.Id);
 

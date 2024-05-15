@@ -7,7 +7,7 @@ class TicketRepo
     public Ticket AddTicket(Ticket t)
     {
         t.Id = ticketStorage.idCounter++;
-        ticketStorage.ticket.Add(t.Id, t);
+        ticketStorage.tickets.Add(t.Id, t);
         return t; 
     }
 

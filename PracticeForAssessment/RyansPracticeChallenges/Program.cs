@@ -3,37 +3,37 @@
     static void Main(string[] args)
     {
         //Calls some tests for Question 0:
-        QuestionZero();
+        //QuestionZero();/Done
         //Calls some tests for Question 1:
-        QuestionOne();
+        //QuestionOne();//Done
         //Calls some tests for Question 2:
-        QuestionTwo();
+        //QuestionTwo();//Done
         //Calls some tests for Question 3:
-        QuestionThree();
+        //QuestionThree();//Done
         //Calls some tests for Question 4:
-        QuestionFour();
+        //QuestionFour();  //Done but need to see if there is an easier way to do found this on google
         //Calls some tests for Question 5:
-        QuestionFive();
+        //QuestionFive(); //Done
         //Calls some tests for Question 6:
-        QuestionSix();
+        //QuestionSix(); //Done 
         //Calls some tests for Question 7:
-        QuestionSeven();
+        //QuestionSeven(); // Done together in class
         //Calls some tests for Question 8:
         QuestionEight();
         //Calls some tests for Question 9:
-        QuestionNine();
+        //QuestionNine(); //Done with group
         //Calls some tests for Question 10:
-        QuestionTen();
+        //QuestionTen();
         //Calls some tests for Question 11:
-        QuestionEleven();
+        //QuestionEleven();
         //Calls some tests for Question 12:
-        QuestionTwelve();
+        //QuestionTwelve();
         //Calls some tests for Question 13:
-        QuestionThirteen();
+        //QuestionThirteen();
         //Calls some tests for Question 14:
-        QuestionFourteen();
+        //QuestionFourteen();
         //Calls some tests for Question 15:
-        QuestionFifteen();
+        //QuestionFifteen();
 
     }
 
