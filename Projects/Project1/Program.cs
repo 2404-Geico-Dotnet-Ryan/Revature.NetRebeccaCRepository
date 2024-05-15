@@ -125,6 +125,7 @@ class Program
             retrievedTicket = ts.GetTicket(input);
         }
         return retrievedTicket;
+        System.Console.WriteLine(retrievedTicket);
     }
 
     //Generic Command Input Validator - assume 1-maxOption are the number of options. and 0 is an option to quit.
