@@ -15,7 +15,7 @@ class DriverRepo
     {
         if (driverStorage.drivers.ContainsKey(id))
         {
-            User selectedDriver = driverStorage.drivers[id];
+            Driver selectedDriver = driverStorage.drivers[id];
             return selectedDriver;
         }
         else

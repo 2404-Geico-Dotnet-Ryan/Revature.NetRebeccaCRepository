@@ -3,3 +3,13 @@ C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Projects\Pro
 C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Projects\Project1\obj\Debug\net8.0\Projects.AssemblyInfo.cs
 C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Projects\Project1\obj\Debug\net8.0\Projects.csproj.CoreCompileInputs.cache
 C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Projects\Project1\obj\Debug\net8.0\Projects.sourcelink.json
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Projects\Project1\bin\Debug\net8.0\Projects.exe
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Projects\Project1\bin\Debug\net8.0\Projects.deps.json
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Projects\Project1\bin\Debug\net8.0\Projects.runtimeconfig.json
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Projects\Project1\bin\Debug\net8.0\Projects.dll
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Projects\Project1\bin\Debug\net8.0\Projects.pdb
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Projects\Project1\obj\Debug\net8.0\Projects.dll
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Projects\Project1\obj\Debug\net8.0\refint\Projects.dll
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Projects\Project1\obj\Debug\net8.0\Projects.pdb
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Projects\Project1\obj\Debug\net8.0\Projects.genruntimeconfig.cache
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Projects\Project1\obj\Debug\net8.0\ref\Projects.dll

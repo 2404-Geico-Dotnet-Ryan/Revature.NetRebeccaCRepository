@@ -102,56 +102,40 @@ class Program
         System.Console.WriteLine("=================================");
     }
 
-    private static void RetrievingSpecificTicket()
+     private static void CheckBalanceDue()
     {
-        while (true)
-        {
-            Ticket? ticket = PromptUserForTicket();
-            if (ticket == null) return;
-            ticket = ts.GetTicket(ticket);
-            if (ticket != null)
-            {
-                return ticket.ToString;
-                System.Console.WriteLine(); 
-            }
-        }
-
-        /*
-        private static void CheckBalanceDue()
-        {
-
-        }
-
-        private static void PayAmountOnTicket()
-        {
-
-        }
-        */
-        //TODO why not liking public or private here down
-        /*
-        private static Ticket? PromptUserForTicket()
-        {
-            Ticket? retrievedTicket = null;
-            while (retrievedTicket == null)
-            {
-                System.Console.WriteLine("Please enter a Ticket ID (0 to Exit Process): ");
-                int input = int.Parse(Console.ReadLine() ?? "0");
-                if (input == 0) return null;
-                retrievedTicket = ts.GetTicket(input);
-            }
-            return retrievedTicket;
-        }
-
-        //Generic Command Input Validator - assume 1-maxOption are the number of options. and 0 is an option to quit.
-        private static int ValidateCmd(int cmd, int maxOption)
-        {
-            while (cmd < 0 || cmd > maxOption)
-            {
-                System.Console.WriteLine("Invalid Command - Please Enter a command 1-" + maxOption + "; or 0 to Quit");
-                cmd = int.Parse(Console.ReadLine() ?? "0");
-            }
-            return cmd;
-        }
-        */
+        
     }
+
+    private static void PayAmountOnTicket()
+    {
+
+    }
+    
+    //TODO why not liking public or private here down
+
+    static Ticket? RetrievingSpecificTicket()
+    {
+        Ticket? retrievedTicket = null;
+        while (retrievedTicket == null)
+        {
+            System.Console.WriteLine("Please enter a Ticket ID (0 to Exit Process): ");
+            int input = int.Parse(Console.ReadLine() ?? "0");
+            if (input == 0) return null;
+            retrievedTicket = ts.GetTicket(input);
+        }
+        return retrievedTicket;
+    }
+
+    //Generic Command Input Validator - assume 1-maxOption are the number of options. and 0 is an option to quit.
+    static int ValidateCmd(int cmd, int maxOption)
+    {
+        while (cmd < 0 || cmd > maxOption)
+        {
+            System.Console.WriteLine("Invalid Command - Please Enter a command 1-" + maxOption + "; or 0 to Quit");
+            cmd = int.Parse(Console.ReadLine() ?? "0");
+        }
+        return cmd;
+    }
+
 }

@@ -11,7 +11,7 @@ class TicketStorage
         Ticket ticket3 = new(3, "SeltBelt Violation", 30.85, 30.85, false, 0); ticketIdCounter++;
         tickets = new();
         tickets.Add(1, ticket1);
-        tickets.Add(ticket2.ticketId, ticket2);
-        tickets.Add(ticket3.ticketId, ticket3);
+        tickets.Add(ticket2.TicketId, ticket2);
+        tickets.Add(ticket3.TicketId, ticket3);
     }
 }

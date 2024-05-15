@@ -15,13 +15,12 @@ class DriverService
         List<Driver> allDrivers= dr.GetAllDrivers();
         foreach (Driver driver in allDrivers)
         {
-            if (driverName.DriverName == d.DriverName)
+            if (driver.DriverName == d.DriverName)
             {
                 System.Console.WriteLine("DriverName already taken! - Please try again!");
                 return null;
             }
         }
-        
         return dr.AddDriver(d);
     }
 
@@ -29,7 +28,7 @@ class DriverService
     public Driver? Login(string driverName, string password)
     {
         List<Driver> allDrivers = dr.GetAllDrivers();
-        foreach (Diver driver in allDrivers)
+        foreach (Driver driver in allDrivers)
         {
             if (driver.DriverName == driverName && driver.Password == password)
             {

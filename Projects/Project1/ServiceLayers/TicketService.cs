@@ -3,26 +3,31 @@ class TicketService
 
     TicketRepo tr = new();
 
-    public Ticket? CheckBalance(Ticket t)
+    public static Ticket? CheckBalance(Ticket t)
     {
-        if (t.PaidInFull || t.Balance == 0)
+
+        if (t.Balance == 0)
         {
             System.Console.WriteLine("This ticket is already paid in full. Thank you!");
+            return null;
         }
-        else
-            System.Console.WriteLine("Ticket currently has balance: " + Balance);
-            System.Console.WriteLine("Ticket balance is due by " + DueDate);
-    }
+            return t;
+            System.Console.WriteLine("Ticket currently has balance: " + t.Balance);
+            System.Console.WriteLine("Ticket balance is due by " + t.DueDate);
+    }    
+    
     public Ticket Pay(Ticket t)
     {
-        if (TicketService.PaidInFull == true)
+        if (t.PaidInFull == true)
         {
             System.Console.WriteLine("This ticket is already paid in full. Thank you!");
+            return null;
         }
-        System.Console.WriteLine("The Balance on this ticket is " + balance);
+        System.Console.WriteLine("The Balance on this ticket is " + t.Balance);
         System.Console.WriteLine("How much would you like to pay today?");
-        payment = int.Parse(Console.ReadLine());
-        balance = t.balance - payment;
+        double payment = double.Parse(Console.ReadLine());
+        //TODO see about implementing if over 0.00 exception handling??
+        t.Balance = t.Balance - payment;
         tr.UpdateTicket(t);
         return t;
         }
@@ -43,8 +48,8 @@ class TicketService
 
 
     //Trivial Service
-    public Ticket? GetTicket(int id)
+    public Ticket? GetTicket(int ticketId)
     {
-        return tr.GetTicket(id);
+        return tr.GetTicket(ticketId);
     }
 }

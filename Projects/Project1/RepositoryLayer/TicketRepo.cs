@@ -4,19 +4,19 @@ class TicketRepo
 
     TicketStorage ticketStorage =new();
 
-    public Ticket AddTicket(Ticket t)
+    public Ticket? AddTicket(Ticket t)
     {
-        t.Id = ticketStorage.idCounter++;
-        ticketStorage.tickets.Add(t.Id, t);
+        t.TicketId= ticketStorage.ticketIdCounter++;
+        ticketStorage.tickets.Add(t.TicketId, t);
         return t; 
     }
 
-    public Ticket? GetTicket(int id)
+    public Ticket? GetTicket(int ticketId)
     {
         // Alternative approach that breaks each step down.
-        if (ticketStorage.tickets.ContainsKey(id))
+        if (ticketStorage.tickets.ContainsKey(ticketId))
         {
-            Ticket selectedTicket = ticketStorage.tickets[id];
+            Ticket selectedTicket = ticketStorage.tickets[ticketId];
             return selectedTicket;
             // return movieStorage.movies[id];
         }
@@ -36,7 +36,7 @@ class TicketRepo
     {
         try
         {
-            ticketStorage.tickets[updatedticket.Id] = updatedTicket;
+            ticketStorage.tickets[updatedTicket.TicketId] = updatedTicket;
             return updatedTicket;
         }
         catch (Exception)
@@ -48,7 +48,7 @@ class TicketRepo
 
       public Ticket? DeleteTicket(Ticket t)
     {
-        bool didRemove = ticketStorage.tickets.Remove(t.Id);
+        bool didRemove = ticketStorage.tickets.Remove(t.TicketId);
         if (didRemove)
         {
             return t;
