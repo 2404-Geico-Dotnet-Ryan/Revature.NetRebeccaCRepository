@@ -19,7 +19,7 @@
         //Calls some tests for Question 7:
         //QuestionSeven(); // Done together in class
         //Calls some tests for Question 8:
-        QuestionEight();
+        QuestionEight(); //done with help
         //Calls some tests for Question 9:
         //QuestionNine(); //Done with group
         //Calls some tests for Question 10:

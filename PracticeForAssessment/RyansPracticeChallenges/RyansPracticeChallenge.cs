@@ -152,11 +152,40 @@ class PracticeChallenge
     // Consider using split() method on 'sentence' to divide it into smaller strings/words.
     public static Dictionary<string, int> CountWordFrequency(string sentence)
     {
-        // should go through dictionary and count how many times each word is in there 
-        //have to split into smaller strings/words
-        
-        return []; //Placeholder return
+        var Value = sentence.Split(' ');
+        Dictionary<string, int> RepeatedWordCount = new Dictionary<string, int>();
+        for (int i = 0; i < Value.Length; i++)
+        {
+            if (!string.IsNullOrWhiteSpace(Value[i]))
+            {
+                if (RepeatedWordCount.ContainsKey(Value[i]))
+                {
+                    int value = RepeatedWordCount[Value[i]];
+                    RepeatedWordCount[Value[i]] = value + 1;
+                }
+                else
+                {
+                    RepeatedWordCount.Add(Value[i], 1);
+                }
+            }
+        }
+        return RepeatedWordCount;
+        return []; 
     }
+     /*
+     can also use foreach loop - jonathans class showed me
+     var arr = sentence.Split(' ');
+     Dictionary<string, int> RepeatedWordCount = new Dictionary<string, int>();
+     foreach (var item in arr)
+     {
+        var count =0;
+        if (dict.ContainsKey(item) && !String.IsNullorEmpty(item))
+           dict[item]++;
+        else if (!String.IsNullorEmpty(item))
+        dic.Add(item, 1);
+     }
+     return dict; 
+     */
 
     // 9. Reverse a given integer and add it to the original number.
     // Example: 123 -> Reversed: 321 -> 321 + 123 = 444
@@ -166,6 +195,13 @@ class PracticeChallenge
         int reverseNum = int.Parse(new string(num.ToString().Reverse().ToArray())); //if int need to convert to string num.ToString() string reverse is different format than this
         return num + reverseNum;
     }
+    /* another way from Jonathan's class
+       int reserveNum =0;
+       var numStr = num.ToString().Reverse().ToArray();
+       int.Parse(numStri)
+       return num + reverseNum
+
+
 
     // 10. Convert Age into Seconds
     // Given an Age (in years) return how old they were on their birthday in seconds.
