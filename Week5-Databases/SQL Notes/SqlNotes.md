@@ -66,15 +66,17 @@
     - Combination of the Unique and Not Null Keys
       - JUST because something should be Unique and Not Null does NOT mean that it NEEDS to a Primary Key.
     - What makes a good Primary Key?
-      - Unique
+      - Unique - no two records should have the same primary key
       - Not Null
-      - Non-sensitive
-      - Non-volatile  //unchanging -> has no need to change.
+      - Non-sensitive  -- do not use SSN or protected information
+      - Non-volatile  //unchanging -> has no need to change. (not likely to change) Usernames debatable, emails typically 
+         eliminated here to (emails change alot these days) 
     - candidate key - something suitable for being used as a PK.
-    - surrogate key - when we create a column solely to be our PK.
+    - surrogate key - when we create a column solely to be our PK. (this is what we have done with movie id and user id) 
       - This is why/where we will opt to create columns like ID.
     - Almost all tables will likely have a Primary Key (PK).
-    - composite key - when we use two or more columns to represent a PK.
+    - composite key - when we use two or more columns to represent a PK. (the student, in specific class and that grade 
+         make it unique when combined
   - Foreign Key - FK
     - Used to establish a relationship between another table with a Primary Key
       - without duplicating any redundant data.
