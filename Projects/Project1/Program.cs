@@ -8,6 +8,7 @@ class Program
 
     static void Main(string[] args)
     {
+        System.Console.WriteLine("Welcome to the Ticket Application");
         // DriverMenu(); //TODO make sure this menu is working correctly 
         MainMenu();
     }
@@ -15,7 +16,6 @@ class Program
     /*
     private static void DriverMenu()
     {
-        System.Console.WriteLine("Welcome to the Ticket App!");
         while (keepGoing)
         {
             System.Console.WriteLine("Please Pick an Option Down Below:");
@@ -89,7 +89,7 @@ class Program
         return true;
     }
 
-    private static void RetrievingAllUnpaidTickets()
+    private static void RetrievingAllUnpaidTickets() //this works
     {
         //use our service methods now.
         List<Ticket> tickets = ts.GetUnpaidTickets();
@@ -104,17 +104,23 @@ class Program
 
      private static void CheckBalanceDue()
     {
-        //TODO 
+        System.Console.WriteLine("not done yet");
     }
 
     private static void PayAmountOnTicket()
     {
-
+        System.Console.WriteLine("not done yet");
     }
     
     //TODO why not liking public or private here down
 
-    static Ticket? RetrievingSpecificTicket()
+    static Ticket? RetrievingSpecificTicket() //This lets you pick a ticket but it does not display it
+    {
+        ts.GetTicket(int ticketId);
+    }
+
+
+    private static Ticket? PromptUserForTicket()
     {
         Ticket? retrievedTicket = null;
         while (retrievedTicket == null)
@@ -122,13 +128,12 @@ class Program
             System.Console.WriteLine("Please enter a Ticket ID (0 to Exit Process): ");
             int input = int.Parse(Console.ReadLine() ?? "0");
             if (input == 0) return null;
+
             retrievedTicket = ts.GetTicket(input);
         }
         return retrievedTicket;
-        System.Console.WriteLine(retrievedTicket);
+        
     }
-
-    //Generic Command Input Validator - assume 1-maxOption are the number of options. and 0 is an option to quit.
     static int ValidateCmd(int cmd, int maxOption)
     {
         while (cmd < 0 || cmd > maxOption)

@@ -13,12 +13,12 @@ class TicketRepo
 
     public Ticket? GetTicket(int ticketId)
     {
-        // Alternative approach that breaks each step down.
         if (ticketStorage.tickets.ContainsKey(ticketId))
         {
             Ticket selectedTicket = ticketStorage.tickets[ticketId];
             return selectedTicket;
-            // return movieStorage.movies[id];
+            System.Console.WriteLine(selectedTicket);
+            
         }
         else
         {
