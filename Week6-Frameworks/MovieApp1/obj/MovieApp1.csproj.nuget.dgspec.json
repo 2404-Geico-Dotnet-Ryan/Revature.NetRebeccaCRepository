@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\U713PY\\RevatureTraining.NET\\Revature.NetRebeccaCRepository\\Week5-Databases\\MovieApp1\\MovieApp1.csproj": {}
+    "C:\\Users\\U713PY\\RevatureTraining.NET\\Revature.NetRebeccaCRepository\\Week6-Frameworks\\MovieApp1\\MovieApp1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\U713PY\\RevatureTraining.NET\\Revature.NetRebeccaCRepository\\Week5-Databases\\MovieApp1\\MovieApp1.csproj": {
+    "C:\\Users\\U713PY\\RevatureTraining.NET\\Revature.NetRebeccaCRepository\\Week6-Frameworks\\MovieApp1\\MovieApp1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\U713PY\\RevatureTraining.NET\\Revature.NetRebeccaCRepository\\Week5-Databases\\MovieApp1\\MovieApp1.csproj",
+        "projectUniqueName": "C:\\Users\\U713PY\\RevatureTraining.NET\\Revature.NetRebeccaCRepository\\Week6-Frameworks\\MovieApp1\\MovieApp1.csproj",
         "projectName": "MovieApp1",
-        "projectPath": "C:\\Users\\U713PY\\RevatureTraining.NET\\Revature.NetRebeccaCRepository\\Week5-Databases\\MovieApp1\\MovieApp1.csproj",
+        "projectPath": "C:\\Users\\U713PY\\RevatureTraining.NET\\Revature.NetRebeccaCRepository\\Week6-Frameworks\\MovieApp1\\MovieApp1.csproj",
         "packagesPath": "C:\\Users\\U713PY\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\U713PY\\RevatureTraining.NET\\Revature.NetRebeccaCRepository\\Week5-Databases\\MovieApp1\\obj\\",
+        "outputPath": "C:\\Users\\U713PY\\RevatureTraining.NET\\Revature.NetRebeccaCRepository\\Week6-Frameworks\\MovieApp1\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -49,6 +49,12 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Net.Code.ADONet": {
+              "target": "Package",
+              "version": "[5.0.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
