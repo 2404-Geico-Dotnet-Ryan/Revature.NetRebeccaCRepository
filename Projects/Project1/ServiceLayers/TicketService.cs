@@ -1,3 +1,4 @@
+
 class TicketService
 {
 
@@ -16,7 +17,7 @@ class TicketService
             System.Console.WriteLine("Ticket balance is due by " + t.DueDate);
     }    
     
-    public Ticket Pay(Ticket t)
+    public Ticket? Pay(Ticket t)
     {
         if (t.PaidInFull == true)
         {
@@ -26,7 +27,6 @@ class TicketService
         System.Console.WriteLine("The Balance on this ticket is " + t.Balance);
         System.Console.WriteLine("How much would you like to pay today?");
         double payment = double.Parse(Console.ReadLine());
-        //TODO see about implementing if over 0.00 exception handling??
         t.Balance = t.Balance - payment;
         tr.UpdateTicket(t);
         return t;
@@ -51,5 +51,10 @@ class TicketService
     public Ticket? GetTicket(int ticketId)
     {
         return tr.GetTicket(ticketId);
+    }
+
+    internal Ticket? CheckBalance(int input)
+    {
+        throw new NotImplementedException();
     }
 }

@@ -30,7 +30,7 @@ class DriverRepo
         return driverStorage.drivers.Values.ToList();
     }
 
-    public Driver UpdateDriver(Driver updatedDriver)
+    public Driver? UpdateDriver(Driver updatedDriver)
     {
         try
         {
@@ -44,7 +44,7 @@ class DriverRepo
         }
     }
 
-    public Driver DeleteDriver(Driver d)
+    public Driver? DeleteDriver(Driver d)
     {
         bool didRemove = driverStorage.drivers.Remove(d.Id);
 
