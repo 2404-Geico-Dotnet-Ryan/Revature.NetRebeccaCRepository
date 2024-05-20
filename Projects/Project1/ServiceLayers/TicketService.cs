@@ -13,8 +13,10 @@ class TicketService
             return null;
         }
             return t;
-            System.Console.WriteLine("Ticket currently has balance: " + t.Balance);
-            System.Console.WriteLine("Ticket balance is due by " + t.DueDate);
+#pragma warning disable CS0162 // Unreachable code detected
+        System.Console.WriteLine("Ticket currently has balance: " + t.Balance);
+#pragma warning restore CS0162 // Unreachable code detected
+        System.Console.WriteLine("Ticket balance is due by " + t.DueDate);
     }    
     
     public Ticket? Pay(Ticket t)
