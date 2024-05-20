@@ -3,13 +3,23 @@ using System.ComponentModel;
 
 class Program
 {
-    static MovieService ms = new();  //your main method can have fields too dont have be inside main methods
-    //This has to have static because the main method is static
-    static User? currentUser = null;  // **** need to check****
+    static MovieService ms;  
+    static UserService us;
+    static User? currentUser = null;
     
     static void Main(string[] args)
     {
-        MainMenu();
+        //strings with an @ in front provide you with additional flexiblity when creating strings.
+        string path = @"c:\Users\U713PY\RevatureTraining.NET\MovieAppDBConnections.txt";
+        string connectionString = File.ReadAllText(path);
+        System.Console.WriteLine(connectionString);// this is just for confirmation - you have to remove this later 
+        
+        UserRepo ur= new(connectionString);
+        us= new(ur);
+
+        //UserMenu(); // this still needs to be added 
+        //MainMenu(); //this will have to be rebranded we just do not need it this minute 
+
     }
     private static void MainMenu()
     {
