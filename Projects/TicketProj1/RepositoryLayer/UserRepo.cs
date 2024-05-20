@@ -1,60 +1,60 @@
-class DriverRepo
+class UserRepo
 {
 
-    DriverStorage driverStorage = new();
+    UserStorage userStorage = new();
 
     //add, get-one, get-all, update, and delete
-    public Driver AddDriver(Driver d)
+    public User? AddUser(User u)
     {
-        d.Id = driverStorage.idCounter++;
-        driverStorage.drivers.Add(d.Id, d);
-        return d;
+        u.Id = userStorage.idCounter++;
+        userStorage.users.Add(u.userId, u);
+        return u;
     }
 
-    public Driver? GetDriver(int id)
+    public User? GetUser(int userId)
     {
-        if (driverStorage.drivers.ContainsKey(id))
+        if (userStorage.users.ContainsKey(userId))
         {
-            Driver selectedDriver = driverStorage.drivers[id];
-            return selectedDriver;
+            User selectedUser = userStorage.users[userId];
+            return selectedUser;
         }
         else
         {
-            System.Console.WriteLine("Invalid Driver ID - Please Try Again");
+            System.Console.WriteLine("Invalid User ID - Please Try Again");
             return null;
         }
     }
 
-    public List<Driver> GetAllDrivers()
+    public List<User> GetAllUsers()
     {
-        return driverStorage.drivers.Values.ToList();
+        return userStorage.users.Values.ToList();
     }
 
-    public Driver UpdateDriver(Driver updatedDriver)
+    public User UpdateUser(User updatedUser)
     {
         try
         {
-            driverStorage.drivers[updatedDriver.Id] = updatedDriver;
-            return updatedDriver;
+            userStorage.users[updatedUser.Id] = updatedUser;
+            return updatedUser;
         }
         catch (Exception)
         {
-            System.Console.WriteLine("Invalid Driver ID - Please Try Again");
+            System.Console.WriteLine("Invalid User ID - Please Try Again");
             return null;
         }
     }
 
-    public Driver DeleteDriver(Driver d)
+    public User DeleteUser(user u)
     {
-        bool didRemove = driverStorage.drivers.Remove(d.Id);
+        bool didRemove = userStorage.users.Remove(u.userId);
 
         if (didRemove)
         {
-            return d;
+            return u;
         }
         else
         {
-            System.Console.WriteLine("Invalid Driver ID - Please Try Again");
+            System.Console.WriteLine("Invalid User ID - Please Try Again");
             return null;
         }
     }
