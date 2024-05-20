@@ -17,8 +17,7 @@ class TicketRepo
         {
             Ticket selectedTicket = ticketStorage.tickets[ticketId];
             return selectedTicket;
-            System.Console.WriteLine(selectedTicket);
-            
+            System.Console.WriteLine(selectedTicket);  
         }
         else
         {

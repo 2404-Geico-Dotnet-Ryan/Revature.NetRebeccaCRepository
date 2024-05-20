@@ -3,7 +3,7 @@
 class Program
 {
     static TicketService ts = new();
-    //static Driver? currentDriver = null;
+    static Driver? currentDriver = null;
     //TODO work on getting Driver in like User in Movies once we get to that
 
     static void Main(string[] args)
@@ -102,46 +102,65 @@ class Program
         System.Console.WriteLine("=================================");
     }
 
-     private static void CheckBalanceDue()
+    private static void CheckBalanceDue()
     {
-        System.Console.WriteLine("not done yet");
+        while (true)
+        {
+            Ticket? ticket = PromptUserForTicket();
+            if (ticket == null) return;
+            ticket = ts.CheckBalanceDue(Ticket);
+        }
+
     }
 
     private static void PayAmountOnTicket()
     {
         System.Console.WriteLine("not done yet");
     }
-    
+
     //TODO why not liking public or private here down
 
-    static Ticket? RetrievingSpecificTicket() //This lets you pick a ticket but it does not display it
-    {
-        ts.GetTicket(int ticketId);
-    }
-
-
-    private static Ticket? PromptUserForTicket()
-    {
-        Ticket? retrievedTicket = null;
-        while (retrievedTicket == null)
+    static Ticket RetrievingSpecificTicket() //This lets you pick a ticket but it does not display it
         {
-            System.Console.WriteLine("Please enter a Ticket ID (0 to Exit Process): ");
-            int input = int.Parse(Console.ReadLine() ?? "0");
-            if (input == 0) return null;
-
-            retrievedTicket = ts.GetTicket(input);
+            while (true)
+            {
+            Ticket? ticket = PromptUserForTicket();
+            if (ticket == null) return;
+            ticket = ts.GetTicket(ticketid);
+            if (Ticket != null)
+            {
+                System.Console.WriteLine("Ticket Information: " + ticket);
+                break;
+            }
+            else
+            {
+                System.Console.WriteLine("Please Try Another Ticket.");
+            }
         }
-        return retrievedTicket;
-        
-    }
+
+
+    static Ticket? PromptUserForTicket()
+        {
+            Ticket? retrievedTicket = null;
+            while (retrievedTicket == null)
+            {
+                System.Console.WriteLine("Please enter a Ticket ID (0 to Exit Process): ");
+                int input = int.Parse(Console.ReadLine() ?? "0");
+                if (input == 0) return null;
+
+                retrievedTicket = ts.GetTicket(input);
+            }
+            return retrievedTicket;
+
+        }
     static int ValidateCmd(int cmd, int maxOption)
-    {
-        while (cmd < 0 || cmd > maxOption)
         {
-            System.Console.WriteLine("Invalid Command - Please Enter a command 1-" + maxOption + "; or 0 to Quit");
-            cmd = int.Parse(Console.ReadLine() ?? "0");
+            while (cmd < 0 || cmd > maxOption)
+            {
+                System.Console.WriteLine("Invalid Command - Please Enter a command 1-" + maxOption + "; or 0 to Quit");
+                cmd = int.Parse(Console.ReadLine() ?? "0");
+            }
+            return cmd;
         }
-        return cmd;
     }
-
 }
