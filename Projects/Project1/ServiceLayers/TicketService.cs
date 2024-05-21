@@ -3,7 +3,11 @@
 class TicketService
 {
 
-    TicketRepo tr = new();  
+    TicketRepo tr;  
+    public TicketService(TicketRepo tr)
+    {
+        this.tr = tr;
+    }
     
     public Ticket? Pay(Ticket t)
     {
