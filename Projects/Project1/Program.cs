@@ -21,8 +21,6 @@ class Program
 
         TicketRepo tr = new(); //need to update with ticket repo soon
         ts = new(tr);
-
-        //MainMenu();
     }
 
 
