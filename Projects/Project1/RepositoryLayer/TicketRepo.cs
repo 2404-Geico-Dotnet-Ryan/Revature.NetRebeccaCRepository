@@ -17,7 +17,23 @@ class TicketRepo
         {
             Ticket selectedTicket = ticketStorage.tickets[ticketId];
             return selectedTicket;
-            System.Console.WriteLine(selectedTicket);  
+            System.Console.WriteLine(selectedTicket); //ask Jennifer about  
+        }
+        else
+        {
+            System.Console.WriteLine("Invalid Ticket ID - Please Try Again");
+            return null;
+        }
+    }
+
+       public Ticket? GetBalance(int ticketId)
+    {
+        if (ticketStorage.tickets.ContainsKey(ticketId))
+        {
+            Ticket selectedTicket = ticketStorage.tickets[ticketId];
+            return selectedTicket;
+            
+            //System.Console.WriteLine("This ticket has a balance of: "+selectedTicket.Balance + "due on: " + selectedTicket.DueDate + ".");  
         }
         else
         {

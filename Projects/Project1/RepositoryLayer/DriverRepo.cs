@@ -1,16 +1,49 @@
+using Microsoft.Data.SqlClient;
+
 class DriverRepo
 {
 
-    DriverStorage driverStorage = new();
-
-    //add, get-one, get-all, update, and delete
-    public Driver AddDriver(Driver d)
+    private readonly string _connectionString;
+    public DriverRepo(string connString)
     {
-        d.Id = driverStorage.idCounter++;
-        driverStorage.drivers.Add(d.Id, d);
-        return d;
+        _connectionString = connString;
     }
 
+    public Driver? AddDriver(Driver d)
+    {
+        //Set up DB Connection
+        using SqlConnection connection = new(_connectionString);
+        connection.Open();
+
+        //Create the SQL String
+        string sql = "INSERT INTO DRIVER OUTPUT inserted.* VALUES (@Drivername, @Password, @Role)";
+
+        
+        using SqlCommand cmd = new(sql, connection);
+        cmd.Parameters.AddWithValue("@Drivername", d.DriverName);
+        cmd.Parameters.AddWithValue("@Password", d.Password);
+        cmd.Parameters.AddWithValue("@Role", d.Role);
+
+        using SqlDataReader reader = cmd.ExecuteReader();
+
+        //Extract te Results
+        if (reader.Read())
+        {
+            Driver newDriver = new();
+            newDriver.Id = (int)reader["Id"];
+            newDriver.DriverName = (string)reader["Username"];
+            newDriver.Password = (string)reader["Password"];
+            newDriver.Role = (string)reader["Role"];
+
+            return newDriver;
+        }
+        else
+        {
+            return null;
+        }
+    }
+    
+    /* here down needs new methods - was told not to start yet though
     public Driver? GetDriver(int id)
     {
         if (driverStorage.drivers.ContainsKey(id))
@@ -58,4 +91,5 @@ class DriverRepo
             return null;
         }
     }
+    */
 }

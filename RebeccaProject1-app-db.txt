@@ -1,0 +1,1 @@
+Data Source=GEIC08M7G3;Initial Catalog=RebeccaProject1;Integrated Security=False;User Id=sa;Password=*Chevy2016;MultipleActiveResultSets=True;TrustServerCertificate=True;

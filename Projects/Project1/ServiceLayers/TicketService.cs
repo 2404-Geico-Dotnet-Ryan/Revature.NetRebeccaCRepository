@@ -1,23 +1,9 @@
 
+
 class TicketService
 {
 
-    TicketRepo tr = new();
-
-    public static Ticket? CheckBalance(Ticket t)
-    {
-
-        if (t.Balance == 0)
-        {
-            System.Console.WriteLine("This ticket is already paid in full. Thank you!");
-            return null;
-        }
-            return t;
-#pragma warning disable CS0162 // Unreachable code detected
-        System.Console.WriteLine("Ticket currently has balance: " + t.Balance);
-#pragma warning restore CS0162 // Unreachable code detected
-        System.Console.WriteLine("Ticket balance is due by " + t.DueDate);
-    }    
+    TicketRepo tr = new();  
     
     public Ticket? Pay(Ticket t)
     {
@@ -28,7 +14,7 @@ class TicketService
         }
         System.Console.WriteLine("The Balance on this ticket is " + t.Balance);
         System.Console.WriteLine("How much would you like to pay today?");
-        double payment = double.Parse(Console.ReadLine());
+        double payment = double.Parse(Console.ReadLine()); //ask Jennifer about
         t.Balance = t.Balance - payment;
         tr.UpdateTicket(t);
         return t;
@@ -55,8 +41,9 @@ class TicketService
         return tr.GetTicket(ticketId);
     }
 
-    internal Ticket? CheckBalance(int input)
+    internal Ticket? CheckBalance(int ticketId)
     {
-        throw new NotImplementedException();
+        return tr.GetBalance(ticketId);
+                  
     }
 }

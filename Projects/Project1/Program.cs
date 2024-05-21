@@ -3,22 +3,31 @@ using Microsoft.IdentityModel.Tokens;
 
 class Program
 {
-    static TicketService ts = new();
-    static DriverService ds = new();
-    static Driver? currentDriver = null;
+    static TicketService ts;
+    static DriverService ds;
+    static Driver? currentDriver = null; //this is not used yet..need to figure out if it is needed
 
 
     static void Main(string[] args)
     {
         System.Console.WriteLine("Welcome to the Ticket Application");
-        LoginMenu();
-        MainMenu();
+        string path = @"C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\RebeccaProject1-app-db.txt";
+        string connectionString = File.ReadAllText(path);
+
+        System.Console.WriteLine(connectionString); //need to delete later 
+
+        DriverRepo dr = new(connectionString);
+        ds = new(dr);
+
+        TicketRepo tr = new(); //need to update with ticket repo soon
+        ts = new(tr);
+
+        //MainMenu();
     }
 
 
     private static void LoginMenu()
     {
-
         bool keepGoing = true;
         while (keepGoing)
         {
@@ -31,7 +40,7 @@ class Program
 
             int input = int.Parse(Console.ReadLine() ?? "0");
             input = ValidateCmd(input, 2);
-            keepGoing = DecideNextOption(input);
+            keepGoing = DecideUserOption(input);
         }
         System.Console.WriteLine("You have successfully logged in");
     }
@@ -55,8 +64,23 @@ class Program
             input = ValidateCmd(input, 4);
 
             //Extracted to method - uses switch case to determine what to do next.
-            keepGoing = DecideNextOption(input);
+            keepGoing = DecideUserOption(input);
         }
+    }
+    private static bool DecideUserOption(int input)
+    {
+        switch (input)
+        {
+            case 1:
+                Register(); break;
+            case 2:
+                Login(); break;
+            case 0:
+            default:
+                return false;
+        }
+
+        return true;
     }
 
  
@@ -95,7 +119,44 @@ class Program
         return true;
     }
 
-    private static void RetrievingAllUnpaidTickets() //this works
+     private static void Register()
+    {
+        System.Console.WriteLine("Please Enter Your UserName as your first and last name: ");
+        string username = Console.ReadLine() ?? "";
+
+        System.Console.WriteLine("Please Enter a Password for your accout: ");
+        string password = Console.ReadLine() ?? "";
+        Driver? newDriver = new(0, username, password, "user");
+        newDriver = ds.Register(newDriver); 
+        if (newDriver != null)
+        {
+            System.Console.WriteLine("New Driver Registered!");
+        }
+        else
+        {
+            System.Console.WriteLine("Registration Failed! Please Try Again!");
+        }
+    }
+
+    private static void Login()
+    {
+        while (currentDriver == null)
+        {
+            System.Console.WriteLine("Please Enter Your Username: ");
+            string username = Console.ReadLine() ?? "";
+
+            System.Console.WriteLine("Please Enter Your Password: ");
+            string password = Console.ReadLine() ?? "";
+
+            //Setting the currentUser variable signifies Logging in. If Login() fails it will remain null.
+            currentDriver = ds.Login(username, password);
+            if (currentDriver == null)
+                System.Console.WriteLine("Login Failed. Please Try Again.");
+        }
+        MainMenu();
+    }
+   
+    static void RetrievingAllUnpaidTickets() //this works
     {
         List<Ticket> tickets = ts.GetUnpaidTickets();
 
@@ -165,5 +226,6 @@ class Program
             }
             return retrievedTicket;
         }       
-}
+    }
+
 
