@@ -12,8 +12,9 @@ For this individual project, you'll create a console application, where the appl
 - The application should allow for multiple users to log in and persist their data
 - The application should demonstrate good input validation
 - The application should persist data to a SQL Server DB
-- The application should communicate to DB via ADO.NET or Entity Framework Core
-- The application should have unit tests
+- The application should communicate to DB via ADO.NET or Entity Framework Core (ADO.Net)
+- The application should have unit tests (this was removed as requirement on the 16th)
+
 
 ## Nice to Have
 
