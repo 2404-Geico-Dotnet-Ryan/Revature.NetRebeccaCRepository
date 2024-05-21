@@ -42,54 +42,161 @@ class DriverRepo
             return null;
         }
     }
-    
-    /* here down needs new methods - was told not to start yet though
     public Driver? GetDriver(int id)
     {
-        if (driverStorage.drivers.ContainsKey(id))
+        try
         {
-            Driver selectedDriver = driverStorage.drivers[id];
-            return selectedDriver;
+            using SqlConnection connection = new(_connectionString);
+            connection.Open();
+
+            string sql = "SELECT * FROM dbo.Driver WHERE Id = @Id";
+
+            using SqlCommand cmd = new(sql, connection);
+            cmd.Parameters.AddWithValue("@Id", id);
+
+            using var reader = cmd.ExecuteReader();
+
+            if (reader.Read())
+            {
+                Driver newDriver = BuildUser(reader);
+                return newDriver;
+            }
+
+            return null; 
+
         }
-        else
+        catch (Exception e)
         {
-            System.Console.WriteLine("Invalid Driver ID - Please Try Again");
+            System.Console.WriteLine(e.Message);
+            System.Console.WriteLine(e.StackTrace);
             return null;
         }
     }
 
-    public List<Driver> GetAllDrivers()
+    public List<Driver>? GetAllDrivers()
     {
-        return driverStorage.drivers.Values.ToList();
+        List<Driver> drivers = [];
+
+        try
+        {
+            using SqlConnection connection = new(_connectionString);
+            connection.Open();
+
+            string sql = "SELECT * FROM dbo.Driver";
+
+            //Set up SqlCommand Object
+            using SqlCommand cmd = new(sql, connection);
+
+            //Execute the Query
+            using var reader = cmd.ExecuteReader(); //flexing options here with the use of var.
+
+            //Extract the Results
+            while (reader.Read())
+            {
+                //for each iteration -> extract the results to a User object -> add to list.
+                Driver newDriver = BuildUser(reader);
+
+                //don't return! Instead Add to List!
+                drivers.Add(newDriver);
+            }
+
+            return drivers;
+        }
+        catch (Exception e)
+        {
+            System.Console.WriteLine(e.Message);
+            System.Console.WriteLine(e.StackTrace);
+            return null;
+        }
     }
 
     public Driver? UpdateDriver(Driver updatedDriver)
     {
         try
         {
-            driverStorage.drivers[updatedDriver.Id] = updatedDriver;
-            return updatedDriver;
+            //Set up DB Connection
+            using SqlConnection connection = new(_connectionString);
+            connection.Open();
+
+            //Create the SQL String
+            string sql = "UPDATE dbo.Driver SET Username = @Drivername, Password = @Password, Role = @Role OUTPUT inserted.* WHERE Id = @Id";
+
+            //Set up SqlCommand Object
+            using SqlCommand cmd = new(sql, connection);
+            cmd.Parameters.AddWithValue("@Id", updatedDriver.Id);
+            cmd.Parameters.AddWithValue("@Drivername", updatedDriver.DriverName);
+            cmd.Parameters.AddWithValue("@Password", updatedDriver.Password);
+            cmd.Parameters.AddWithValue("@Role", updatedDriver.Role);
+
+            //Execute the Query
+            using var reader = cmd.ExecuteReader();
+
+            //Extract the Results
+            if (reader.Read())
+            {
+                //for each iteration -> extract the results to a User object -> add to list.
+                Driver newDriver = BuildUser(reader);
+                return newDriver;
+            }
+
+            return null; //Didnt find anyone :(
+
         }
-        catch (Exception)
+        catch (Exception e)
         {
-            System.Console.WriteLine("Invalid Driver ID - Please Try Again");
+            System.Console.WriteLine(e.Message);
+            System.Console.WriteLine(e.StackTrace);
             return null;
         }
     }
 
     public Driver? DeleteDriver(Driver d)
     {
-        bool didRemove = driverStorage.drivers.Remove(d.Id);
+        try
+        {
+            //Set up DB Connection
+            using SqlConnection connection = new(_connectionString);
+            connection.Open();
 
-        if (didRemove)
-        {
-            return d;
+            //Create the SQL String
+            string sql = "DELETE FROM dbo.Driver OUTPUT deleted.* WHERE Id = @Id";
+
+            //Set up SqlCommand Object
+            using SqlCommand cmd = new(sql, connection);
+            cmd.Parameters.AddWithValue("@Id", d.Id);
+
+            //Execute the Query
+            using var reader = cmd.ExecuteReader();
+
+            //Extract the Results
+            if (reader.Read())
+            {
+                //for each iteration -> extract the results to a User object -> add to list.
+                Driver newDriver = BuildUser(reader);
+                return newDriver;
+            }
+
+            return null; //Didnt find anyone :(
+
         }
-        else
+        catch (Exception e)
         {
-            System.Console.WriteLine("Invalid Driver ID - Please Try Again");
+            System.Console.WriteLine(e.Message);
+            System.Console.WriteLine(e.StackTrace);
             return null;
         }
     }
-    */
+
+
+    //Helper Method
+    private static Driver BuildUser(SqlDataReader reader)
+    {
+        Driver newDriver = new();
+        newDriver.Id = (int)reader["Id"];
+        newDriver.DriverName = (string)reader["Drivername"];
+        newDriver.Password = (string)reader["Password"];
+        newDriver.Role = (string)reader["Role"];
+
+        return newDriver;
+    }
 }

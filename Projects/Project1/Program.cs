@@ -3,8 +3,8 @@ using Microsoft.IdentityModel.Tokens;
 
 class Program
 {
-    static TicketService? ts;
-    static DriverService? ds;
+    static TicketService ts;
+    static DriverService ds;
     static Driver? currentDriver = null; 
 
 
@@ -14,13 +14,14 @@ class Program
         string path = @"C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\RebeccaProject1-app-db.txt";
         string connectionString = File.ReadAllText(path);
 
-        System.Console.WriteLine(connectionString); //need to delete later 
+        //System.Console.WriteLine(connectionString); //need to delete later 
 
         DriverRepo dr = new(connectionString);
         ds = new(dr);
 
-        TicketRepo tr = new(); //need to update with ticket repo soon
+        TicketRepo tr = new(connectionString);
         ts = new(tr);
+        LoginMenu();
     }
 
 
@@ -58,11 +59,11 @@ class Program
             System.Console.WriteLine("=================================");
 
             int input = int.Parse(Console.ReadLine() ?? "0");
-            //Same Validation method copied over
+
             input = ValidateCmd(input, 4);
 
             //Extracted to method - uses switch case to determine what to do next.
-            keepGoing = DecideUserOption(input);
+            keepGoing = DecideNextOption(input);
         }
     }
     private static bool DecideUserOption(int input)
@@ -166,18 +167,18 @@ class Program
         System.Console.WriteLine("=================================");
     }
 
-    private static Ticket? CheckBalanceDue()
+    private static double CheckBalanceDue()
     {
         Ticket? retrievedTicket = null;
             while (retrievedTicket == null)
             {
                 System.Console.WriteLine("Please enter a Ticket ID (0 to Exit Process): ");
                 int input = int.Parse(Console.ReadLine() ?? "0");
-                if (input == 0) return null;
+                if (input == 0) return .0;
 
                 retrievedTicket = ts.CheckBalance(input);
             }
-            return retrievedTicket;
+            return retrievedTicket.Balance;
     }
 
     private static Ticket? PromptUserForTicket()

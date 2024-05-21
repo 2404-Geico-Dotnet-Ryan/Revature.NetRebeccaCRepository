@@ -8,10 +8,10 @@
     public long DueDate { get; set; } //when is the ticket due
     public string Driver { get; set; } //which user got the ticket
 
-    public Ticket(int v)
+    public Ticket()
     {
         Type = "";
-        Driver = "";
+        Driver = "";  
     }
 
     public Ticket (int ticketId, string type, double cost, double balance, bool paidinfull, long duedate, string driver)

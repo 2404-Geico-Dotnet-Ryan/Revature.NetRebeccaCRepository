@@ -20,7 +20,12 @@ class MovieService
             - finalize check out
     */
 
-    MovieRepo mr = new();
+    MovieRepo mr;
+
+    public MovieService(MovieRepo mr)
+    {
+        this.mr = mr;
+    }
 
     public Movie? CheckOut(Movie movie) //m is the movie we want to attempt to check out 
     {
@@ -81,6 +86,8 @@ class MovieService
                 availableMovies.Add(movie); //then add to new list for available movies 
             }
         }
+
+        
         //another way to do this 
         /*
             see recording to see his display of how to do differently 
@@ -93,6 +100,24 @@ class MovieService
         return availableMovies;
     }
 
+    public List<Movie> CheckedOutMovies(User u)
+    {
+        List<Movie> allMovies = mr.GetAllMovies();
+
+        //Similar process to GetAvailableMovies
+        List<Movie> filteredMovies = [];
+
+        foreach (Movie movie in allMovies)
+        {
+            //Using the Id values over the Whole User object is just a bit better/easier to compare.
+            if (movie.Renter?.Id == u.Id) //Refresher: why '?.' Hmmmmm... 
+            {
+                filteredMovies.Add(movie);
+            }
+        }
+
+        return filteredMovies;
+    }
     public Movie? GetMovie(int id)
     {
         return mr.GetMovie(id);

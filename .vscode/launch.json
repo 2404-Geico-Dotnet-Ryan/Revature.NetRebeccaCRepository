@@ -11,9 +11,9 @@
             "request": "launch",
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceFolder}/Week4-CS-Architecture/PracticePalidrome/bin/Debug/net8.0/PracticePalidrome.dll",
+            "program": "${workspaceFolder}/Projects/Project1/bin/Debug/net8.0/Projects.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/Week4-CS-Architecture/PracticePalidrome",
+            "cwd": "${workspaceFolder}/Projects/Project1",
             // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
             "console": "internalConsole",
             "stopAtEntry": false
