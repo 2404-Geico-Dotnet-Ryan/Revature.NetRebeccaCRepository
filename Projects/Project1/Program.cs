@@ -3,9 +3,9 @@ using Microsoft.IdentityModel.Tokens;
 
 class Program
 {
-    static TicketService ts;
-    static DriverService ds;
-    static Driver? currentDriver = null; //this is not used yet..need to figure out if it is needed
+    static TicketService? ts;
+    static DriverService? ds;
+    static Driver? currentDriver = null; 
 
 
     static void Main(string[] args)
