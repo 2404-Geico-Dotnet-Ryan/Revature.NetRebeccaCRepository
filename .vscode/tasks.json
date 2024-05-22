@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/Projects/Project1/Project1.sln",
+                "${workspaceFolder}/Week6-Frameworks/MovieEFApp/MovieEFApp.sln",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary;ForceNoAlign"
             ],
@@ -19,7 +19,7 @@
             "type": "process",
             "args": [
                 "publish",
-                "${workspaceFolder}/Projects/Project1/Project1.sln",
+                "${workspaceFolder}/Week6-Frameworks/MovieEFApp/MovieEFApp.sln",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary;ForceNoAlign"
             ],
@@ -33,7 +33,7 @@
                 "watch",
                 "run",
                 "--project",
-                "${workspaceFolder}/Projects/Project1/Project1.sln"
+                "${workspaceFolder}/Week6-Frameworks/MovieEFApp/MovieEFApp.sln"
             ],
             "problemMatcher": "$msCompile"
         }

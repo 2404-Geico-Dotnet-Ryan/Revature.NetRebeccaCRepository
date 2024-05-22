@@ -159,11 +159,13 @@ class TicketRepo
     {
         Ticket newTicket = new();
         newTicket.TicketId = (int)reader["TicketId"];
-        newTicket.Cost = (double)reader["Cost"];
-        newTicket.Balance = (double)reader["Balance"];
+        newTicket.Cost = (decimal)reader["Cost"];
+        newTicket.Balance = (decimal)reader["Balance"];
         newTicket.PaidInFull = (bool)reader["PaidInFull"];
         newTicket.DueDate = (long)reader["DueDate"];
-        newTicket.Driver = (string)reader["Driver"];
+        int Id = (int)reader["Id"];
+        newTicket.Driver = dr.GetDriver(Id); //need to add driver repo object to ticket repo
+        
 
         return newTicket;
     }

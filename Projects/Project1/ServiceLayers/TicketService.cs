@@ -2,7 +2,6 @@
 
 class TicketService
 {
-
     TicketRepo tr;  
     public TicketService(TicketRepo tr)
     {
@@ -18,7 +17,7 @@ class TicketService
         }
         System.Console.WriteLine("The Balance on this ticket is " + t.Balance);
         System.Console.WriteLine("How much would you like to pay today?");
-        double payment = double.Parse(Console.ReadLine()); //ask Jennifer about
+        decimal payment = decimal.Parse(Console.ReadLine()); //ask Jennifer about
         t.Balance = t.Balance - payment;
         tr.UpdateTicket(t);
         return t;

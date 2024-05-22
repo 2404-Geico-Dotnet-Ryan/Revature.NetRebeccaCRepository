@@ -19,7 +19,15 @@ Create Table Ticket
 	Constraint FK_Ticket_Driver Foreign Key (DriverID) references driver(Id)
 );
 
+Insert Into Driver values ('Rebeccca', 'pass1', 'admin');
+Insert Into Driver values ('Scott', 'pass2', 'user');
+Insert Into Driver values ('Jennifer', 'pass1', 'user');
 
 
-
+Insert Into Ticket Values ('Speeding', 250.00, 150.00, default, default, 1);
+Insert Into Ticket Values ('Sealtbelt', 250.00, 250.00, default, default, 2);
+Insert Into Ticket Values ('Cell Phone', 100.00, 100.00, default, default, 3);
+Insert Into Ticket Values ('Failure to Yield', 150.00, 75.00, default, default, 1);
+Insert Into Ticket Values ('Reckless Driving', 500.00, 350.00, default, default, 2);
+Insert Into Ticket Values ('DUI', 750.00, 550.00, default, default, 3);
 

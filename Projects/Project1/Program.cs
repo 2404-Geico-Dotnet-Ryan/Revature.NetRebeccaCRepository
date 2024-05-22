@@ -174,7 +174,7 @@ class Program
             {
                 System.Console.WriteLine("Please enter a Ticket ID (0 to Exit Process): ");
                 int input = int.Parse(Console.ReadLine() ?? "0");
-                if (input == 0) return .0;
+                if (input == 0) return 0;
 
                 retrievedTicket = ts.CheckBalance(input);
             }

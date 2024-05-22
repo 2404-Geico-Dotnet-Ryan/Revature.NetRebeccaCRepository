@@ -11,9 +11,9 @@
             "request": "launch",
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceFolder}/Projects/Project1/bin/Debug/net8.0/Projects.dll",
+            "program": "${workspaceFolder}/Week6-Frameworks/MovieEFApp/bin/Debug/net8.0/MovieEFApp.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/Projects/Project1",
+            "cwd": "${workspaceFolder}/Week6-Frameworks/MovieEFApp",
             // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
             "console": "internalConsole",
             "stopAtEntry": false
