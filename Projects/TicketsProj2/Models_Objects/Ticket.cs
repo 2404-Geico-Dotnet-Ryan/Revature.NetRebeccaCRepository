@@ -16,26 +16,31 @@
         EmployeeID = "";  
     }
 
-    public Ticket (int ticketId, string type, double cost, double balance, bool paidinfull, long duedate, string driver)
+    public Ticket (int ticketId, string type, string openedby, string deptartment, bool avialable, bool completed, long duedate, long completeddate, string employee)
     {
         TicketId = ticketId;
         Type = type;
-        Cost = cost;
-        Balance = balance;
-        PaidInFull = paidinfull;
+        OpenedBy = openedby;
+        Department = Department;
+        Available = available;
+        Completed = completed;
         DueDate = duedate;
-        Driver = driver;
+        CompletedDate = completeddate;
+        Employee = employee;
     }
 
     public override string ToString() 
     {
         return "{Ticket ID:" + TicketId + 
         ", Type:" + Type + 
-        ", Cost: " + Cost + 
-        ", Balance: " + Balance + 
-        ", PaidInFull: " + PaidInFull +
+        ", Cost: " + Cost +
+        ", Opened By: " + OpenedBy +
+        ", Department: " + Department + 
+        ", Available for pick up:" + Available +
+        ", Completed: " + Completed +
         ", DueDate: " + DueDate +
-        ", Driver: " + Driver.ToString() + "}";
+        ", Completed Date: " + CompletedDate +
+        ", Employee: " + Employee.ToString() + "}";
     }
 
 }
