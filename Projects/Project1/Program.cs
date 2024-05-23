@@ -232,7 +232,37 @@ class Program
             cmd = int.Parse(Console.ReadLine() ?? "0");
         }
         return cmd;
-    }    
+    }
+
+    //maybe modify and allow this item 
+    /*
+    private static void AddNewTicket()
+    {
+        System.Console.WriteLine("Let's add a new ticket for your account!");
+        System.Console.WriteLine();
+        System.Console.WriteLine("What type of Ticket do you need to add?");
+        string accountName = Console.ReadLine() ?? "";
+        System.Console.WriteLine();
+        System.Console.WriteLine("Please enter the Cost of this ticket: Formatting should be 250.00M");
+        decimal cost = decimal.Parse(Console.ReadLine() ?? "0");
+        decimal balance = cost;
+        System.Console.WriteLine();
+        int DriverId = currentUser.DriverId;
+
+        Ticket? ticket = new(0, type, cost, balance, userId);
+
+        ticket = ts.NewTicket(ticket);
+        
+        if (ticket != null)
+        {
+            System.Console.WriteLine("Newly Added Ticket: " + ticket);    
+        }
+        else
+        {
+            System.Console.WriteLine("Failed to create ticket, please try again");
+        }
+    }
+    */
 }
   
 
