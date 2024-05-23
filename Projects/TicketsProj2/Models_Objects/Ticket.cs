@@ -8,7 +8,9 @@
     public bool Completed { get; set; } //only marked true when completed
     public long DueDate {get; set;} //date ticket should be completed by 
     public long CompletedDate {get; set;} //date ticket was completed 
+    public decimal Cost {get; set} //how much working the ticket cost
     public string EmployeeID { get; set; } //which user got the ticket
+
 
     public Ticket()
     {
@@ -16,7 +18,7 @@
         EmployeeID = "";  
     }
 
-    public Ticket (int ticketId, string type, string openedby, string deptartment, bool avialable, bool completed, long duedate, long completeddate, string employee)
+    public Ticket (int ticketId, string type, string openedby, string deptartment, bool avialable, bool completed, long duedate, long completeddate, decimal cost, string employee)
     {
         TicketId = ticketId;
         Type = type;
@@ -26,6 +28,7 @@
         Completed = completed;
         DueDate = duedate;
         CompletedDate = completeddate;
+        Cost = cost;
         Employee = employee;
     }
 
@@ -40,6 +43,7 @@
         ", Completed: " + Completed +
         ", DueDate: " + DueDate +
         ", Completed Date: " + CompletedDate +
+        ", Cost: "+ Cost +
         ", Employee: " + Employee.ToString() + "}";
     }
 

@@ -4,18 +4,21 @@ class TicketRepo
 {
 
     private readonly string _connectionString;
-    public TicketRepo(string connString)
+    private readonly DriverRepo dr;
+    public TicketRepo(string connectionString, DriverRepo driverRepo)
     {
-        _connectionString = connString;
+        _connectionString = connectionString;
+        dr = driverRepo;
     }
 
+    
     public Ticket? AddTicket(Ticket t)
     {
 
         using SqlConnection connection = new(_connectionString);
         connection.Open();
 
-        string sql = "INSERT INTO dbo.Ticket OUTPUT inserted.* VALUES (@Type, @Cost, @Balance, @PaidInFull, @DueDate, @Driver)";
+        string sql = "INSERT INTO dbo.Ticket OUTPUT inserted.* VALUES (@Type, @Cost, @Balance, @PaidInFull, @DueDate, @DriverID)";
 
         //Set up SqlCommand Object and use its methods to modify the Parameterized Values
         using SqlCommand cmd = new(sql, connection);
@@ -24,7 +27,7 @@ class TicketRepo
         cmd.Parameters.AddWithValue("@Balance", t.Balance);
         cmd.Parameters.AddWithValue("@PaidInFull", t.PaidInFull);
         cmd.Parameters.AddWithValue("@DueDate", t.DueDate);
-        cmd.Parameters.AddWithValue("@Driver", t.Driver);
+        cmd.Parameters.AddWithValue("@DriverID", t.DriverId);
 
         //Execute the Query
         // cmd.ExecuteNonQuery(); //This executes a non-select SQL statement (inserts, updates, deletes)
@@ -117,7 +120,7 @@ class TicketRepo
             using SqlConnection connection = new(_connectionString);
             connection.Open();
 
-            string sql = "UPDATE dbo.Ticket SET Type = @Type, Cost = @Cost, Balance = @Balance, PaidInFull = @PaidInFull, DueDate = @DueDate, Driver = @Driver OUTPUT inserted.* WHERE TicketId = @TicketId";
+            string sql = "UPDATE dbo.Ticket SET Type = @Type, Cost = @Cost, Balance = @Balance, PaidInFull = @PaidInFull, DueDate = @DueDate, DriverId = @DriverID OUTPUT inserted.* WHERE TicketId = @TicketId";
 
             using SqlCommand cmd = new(sql, connection);
             cmd.Parameters.AddWithValue("@Type", updatedTicket.Type);
@@ -125,7 +128,7 @@ class TicketRepo
             cmd.Parameters.AddWithValue("@Balance", updatedTicket.Balance);
             cmd.Parameters.AddWithValue("@PaidInFull", updatedTicket.PaidInFull);
             cmd.Parameters.AddWithValue("@DueDate", updatedTicket.DueDate);
-            cmd.Parameters.AddWithValue("@Driver", updatedTicket.Driver);
+            cmd.Parameters.AddWithValue("@DriverID", updatedTicket.DriverId);
 
             using var reader = cmd.ExecuteReader();
 
@@ -155,7 +158,7 @@ class TicketRepo
 
 
 
-    private static Ticket BuildTicket(SqlDataReader reader)
+    private Ticket BuildTicket(SqlDataReader reader)
     {
         Ticket newTicket = new();
         newTicket.TicketId = (int)reader["TicketId"];
@@ -163,10 +166,7 @@ class TicketRepo
         newTicket.Balance = (decimal)reader["Balance"];
         newTicket.PaidInFull = (bool)reader["PaidInFull"];
         newTicket.DueDate = (long)reader["DueDate"];
-        int Id = (int)reader["Id"];
-        newTicket.Driver = dr.GetDriver(Id); //need to add driver repo object to ticket repo
-        
-
+        newTicket.DriverId = (int)reader["DriverId"];
         return newTicket;
     }
 

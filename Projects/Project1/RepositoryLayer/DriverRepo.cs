@@ -30,8 +30,8 @@ class DriverRepo
         if (reader.Read())
         {
             Driver newDriver = new();
-            newDriver.Id = (int)reader["Id"];
-            newDriver.DriverName = (string)reader["Username"];
+            newDriver.DriverId = (int)reader["DriverId"];
+            newDriver.DriverName = (string)reader["DriverName"];
             newDriver.Password = (string)reader["Password"];
             newDriver.Role = (string)reader["Role"];
 
@@ -42,17 +42,17 @@ class DriverRepo
             return null;
         }
     }
-    public Driver? GetDriver(int id)
+    public Driver? GetDriver(int DriverId)
     {
         try
         {
             using SqlConnection connection = new(_connectionString);
             connection.Open();
 
-            string sql = "SELECT * FROM dbo.Driver WHERE Id = @Id";
+            string sql = "SELECT * FROM dbo.Driver WHERE DriverId = @DriverId";
 
             using SqlCommand cmd = new(sql, connection);
-            cmd.Parameters.AddWithValue("@Id", id);
+            cmd.Parameters.AddWithValue("@DriverId", DriverId);
 
             using var reader = cmd.ExecuteReader();
 
@@ -119,11 +119,11 @@ class DriverRepo
             connection.Open();
 
             //Create the SQL String
-            string sql = "UPDATE dbo.Driver SET Username = @Drivername, Password = @Password, Role = @Role OUTPUT inserted.* WHERE Id = @Id";
+            string sql = "UPDATE dbo.Driver SET Username = @Drivername, Password = @Password, Role = @Role OUTPUT inserted.* WHERE DriverId = @DriverId";
 
             //Set up SqlCommand Object
             using SqlCommand cmd = new(sql, connection);
-            cmd.Parameters.AddWithValue("@Id", updatedDriver.Id);
+            cmd.Parameters.AddWithValue("@DriverId", updatedDriver.DriverId);
             cmd.Parameters.AddWithValue("@Drivername", updatedDriver.DriverName);
             cmd.Parameters.AddWithValue("@Password", updatedDriver.Password);
             cmd.Parameters.AddWithValue("@Role", updatedDriver.Role);
@@ -159,11 +159,11 @@ class DriverRepo
             connection.Open();
 
             //Create the SQL String
-            string sql = "DELETE FROM dbo.Driver OUTPUT deleted.* WHERE Id = @Id";
+            string sql = "DELETE FROM dbo.Driver OUTPUT deleted.* WHERE DriverId = @DriverId";
 
             //Set up SqlCommand Object
             using SqlCommand cmd = new(sql, connection);
-            cmd.Parameters.AddWithValue("@Id", d.Id);
+            cmd.Parameters.AddWithValue("@DriverId", d.DriverId);
 
             //Execute the Query
             using var reader = cmd.ExecuteReader();
@@ -192,7 +192,7 @@ class DriverRepo
     private static Driver BuildUser(SqlDataReader reader)
     {
         Driver newDriver = new();
-        newDriver.Id = (int)reader["Id"];
+        newDriver.DriverId = (int)reader["DriverId"];
         newDriver.DriverName = (string)reader["Drivername"];
         newDriver.Password = (string)reader["Password"];
         newDriver.Role = (string)reader["Role"];

@@ -11,9 +11,9 @@ class DriverStorage
         Driver driver3 = new(idCounter, "Derrick", "pass3", "user"); idCounter++;
 
         drivers = [];
-        drivers.Add(driver1.Id, driver1);
-        drivers.Add(driver2.Id, driver2);
-        drivers.Add(driver3.Id, driver3);
+        drivers.Add(driver1.DriverId, driver1);
+        drivers.Add(driver2.DriverId, driver2);
+        drivers.Add(driver3.DriverId, driver3);
     }
     
 

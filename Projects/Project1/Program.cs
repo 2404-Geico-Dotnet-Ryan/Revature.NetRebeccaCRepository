@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Data.Common;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.VisualBasic;
 
 class Program
 {
@@ -19,7 +21,7 @@ class Program
         DriverRepo dr = new(connectionString);
         ds = new(dr);
 
-        TicketRepo tr = new(connectionString);
+        TicketRepo tr = new(connectionString, dr);
         ts = new(tr);
         LoginMenu();
     }
@@ -118,7 +120,7 @@ class Program
         return true;
     }
 
-     private static void Register()
+    private static void Register()
     {
         System.Console.WriteLine("Please Enter Your UserName as your first and last name: ");
         string username = Console.ReadLine() ?? "";
@@ -167,33 +169,57 @@ class Program
         System.Console.WriteLine("=================================");
     }
 
-    private static double CheckBalanceDue()
+    private static void RetrievingSpecificTicket() // this one is not returning details in console I know this has to do with return but not console writeline but dont know how to fix 
     {
-        Ticket? retrievedTicket = null;
-            while (retrievedTicket == null)
-            {
-                System.Console.WriteLine("Please enter a Ticket ID (0 to Exit Process): ");
-                int input = int.Parse(Console.ReadLine() ?? "0");
-                if (input == 0) return 0;
+        Ticket? retrievedTicket = PromptUserForTicket();
+        TicketList<Ticket> = new();
+        while (retrievedTicket == null)
+        {
+            System.Console.WriteLine("Please enter a Ticket ID (0 to Exit Process): ");
+            int input = int.Parse(Console.ReadLine() ?? "0");
+            TicketList<Ticket> = ts.GetSpecificTicket(input); 
+        }
+            Console.WriteLine(retrievedTicket);
 
-                retrievedTicket = ts.CheckBalance(input);
-            }
-            return retrievedTicket.Balance;
+    }
+    private static decimal CheckBalance()
+    {
+        Ticket? retrievedticket = PromptUserForTicket();
+        decimal TicketBalance = retrievedticket
+        long TicketDueDate = retrievedticket.DueDate;
+        if (TicketBalance == 0)
+        {
+            System.Console.WriteLine("This ticket is paid in full. Thank you. ");
+        }
+        else
+        {
+        System.Console.WriteLine("Ticket Balance: " + TicketBalance+ "and is due on " + TicketDueDate);
+        }
     }
 
+    private static void PayAmountOnTicket()
+    {
+        throw new NotImplementedException();
+    }
     private static Ticket? PromptUserForTicket()
-      {
-            Ticket? retrievedTicket = null;
-            while (retrievedTicket == null)
-            {
-                System.Console.WriteLine("Please enter a Ticket ID (0 to Exit Process): ");
-                int input = int.Parse(Console.ReadLine() ?? "0");
-                if (input == 0) return null;
+   {
+        
+        Ticket? retrievedTicket = null;
+        while (retrievedTicket == null)
+        {
+            System.Console.WriteLine("Please enter a Ticket ID (0 to Exit Process): ");
+            int input = int.Parse(Console.ReadLine() ?? "0");
+            
+            if (input == 0) return null;
 
-                retrievedTicket = ts.GetTicket(input);
-            }
-            return retrievedTicket;
+            retrievedTicket = ts.GetTicket(input); 
+        }
+        
+        return retrievedTicket;
 
+        
+        
+        
     }
 
  private static int ValidateCmd(int cmd, int maxOption)
@@ -207,24 +233,29 @@ class Program
         //if input was already valid - it skips the if statement and just returns the value.
         return cmd;
     }
-    private static void PayAmountOnTicket()
-    {
-        System.Console.WriteLine("not done yet");
-    }
 
-    static Ticket? RetrievingSpecificTicket() //This lets you pick a ticket but it does not display it
+    //
+    /*    private static void PayAmountOnTicket()
     {
-        Ticket? retrievedTicket = null;
-            while (retrievedTicket == null)
-            {
-                System.Console.WriteLine("Please enter a Ticket ID (0 to Exit Process): ");
-                int input = int.Parse(Console.ReadLine() ?? "0");
-                if (input == 0) return null;
+    private static void WithdrawalMoney()
+    {
+        // Need to create code block to remove $$ from existing balance
+        Account? account = PromptUserForAccount();
+        if (account == null) return;
 
-                retrievedTicket = ts.GetTicket(input);
-            }
-            return retrievedTicket;
-        }       
+        System.Console.WriteLine("Please enter the amount you would like to withdrawal from your account: " + account.AccountName);
+        double withdrawal = double.Parse(Console.ReadLine() ?? "0");
+
+        accountServices.MakeWithdrawal(account, withdrawal);
+
+        System.Console.WriteLine("The new balance for " + account.AccountName + " is: " + account.Balance);
+        System.Console.WriteLine();
+        
     }
+    }
+    */  
+    
+}   
+    
 
 

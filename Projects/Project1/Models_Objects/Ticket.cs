@@ -6,15 +6,14 @@
     public decimal Balance {get;set; } //how much is left to pay on ticket
     public bool PaidInFull { get; set; }  // true if ticket still has balance
     public long DueDate { get; set; } //when is the ticket due
-    public int Driver.Id { get; set; } //which user got the ticket
+    public int DriverId { get; set; } //which user got the ticket
 
     public Ticket()
     {
-        Type = "";
-        Driver = "";  
+        Type = ""; 
     }
 
-    public Ticket (int ticketId, string type, decimal cost, decimal balance, bool paidinfull, long duedate, string driver)
+    public Ticket (int ticketId, string type, decimal cost, decimal balance, bool paidinfull, long duedate, int driverid)
     {
         TicketId = ticketId;
         Type = type;
@@ -22,7 +21,7 @@
         Balance = balance;
         PaidInFull = paidinfull;
         DueDate = duedate;
-        Driver = driver;
+        DriverId = driverid;
     }
 
     public override string ToString() 
@@ -33,7 +32,7 @@
         ", Balance: " + Balance + 
         ", PaidInFull: " + PaidInFull +
         ", DueDate: " + DueDate +
-        ", Driver: " + Driver.ToString() + "}";
+        ", Driver ID: " + DriverId + "}";
     }
 
 }

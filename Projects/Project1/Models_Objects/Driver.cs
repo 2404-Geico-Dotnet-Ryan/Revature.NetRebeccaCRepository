@@ -1,6 +1,6 @@
 class Driver
 {
-    public int Id { get; set; }
+    public int DriverId { get; set; }
     public string DriverName { get; set; }
     public string Password { get; set; }
     public string Role { get; set; }
@@ -12,9 +12,9 @@ class Driver
         Role = "";
     }
 
-    public Driver (int id, string drivername, string password, string role)
+    public Driver (int driverid, string drivername, string password, string role)
     {
-        Id = id;
+        DriverId = DriverId;
         DriverName = drivername;
         Password = password;
         Role = role;
@@ -22,7 +22,7 @@ class Driver
 
     public override string ToString()
     {
-        return "{id:" + Id
+        return "{Driver Id:" + DriverId
         + ", Driver Name:'" + DriverName
         + "', password:'" + Password
         + "', role:'" + Role + "'}";
