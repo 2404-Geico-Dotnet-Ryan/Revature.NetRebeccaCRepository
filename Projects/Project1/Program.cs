@@ -189,9 +189,8 @@ class Program
     {
         Ticket? retrievedTicket = PromptUserForTicket();
         decimal ticketBalance = retrievedTicket.Balance;
-        long ticketDueDate = retrievedTicket.DueDate;
 
-        System.Console.WriteLine("Ticket Balance: " + ticketBalance+ "and is due on " + ticketDueDate);
+        System.Console.WriteLine("Ticket Balance: " + ticketBalance);
         System.Console.WriteLine();
     }
 
@@ -221,13 +220,8 @@ class Program
             if (input == 0) return null;
 
             retrievedTicket = ts.GetTicket(input); 
-        }
-        
-        return retrievedTicket;
-
-        
-        
-        
+        }  
+        return retrievedTicket;    
     }
 
     static int ValidateCmd(int cmd, int maxOption)
@@ -239,10 +233,8 @@ class Program
         }
         return cmd;
     }
-
-    //maybe modify and allow this item 
     
-    private static void AddTicket()
+    private static void AddTicket()//this works
     {
         System.Console.WriteLine("Let's add a new ticket for your account!");
         System.Console.WriteLine();
