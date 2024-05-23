@@ -11,6 +11,7 @@ class TicketService
         this.tr = tr;
     }
     
+    
     public Ticket? Pay(Ticket t)
     {
         if (t.PaidInFull == true)
@@ -40,20 +41,7 @@ class TicketService
         return allUnpaidTickets;
     }
 
-    public List<Ticket> GetSpecificTicket(int id)
-    {
-        List<Ticket> allTickets = tr.GetAllTickets();
-        List<Ticket> SpecificTicket= new();
-
-        foreach (Ticket t in allTickets)
-        {
-            if (t.TicketId == id)
-            {
-                SpecificTicket.Add(t);
-            }
-        }
-        return SpecificTicket;
-    }
+    
     //Trivial Service
     public Ticket? GetTicket(int ticketId)
     {

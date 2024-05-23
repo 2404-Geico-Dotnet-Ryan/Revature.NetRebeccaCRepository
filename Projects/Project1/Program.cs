@@ -169,22 +169,29 @@ class Program
         System.Console.WriteLine("=================================");
     }
 
-    private static void RetrievingSpecificTicket() // this one is not returning details in console I know this has to do with return but not console writeline but dont know how to fix 
+    static void RetrievingSpecificTicket() // this one is not returning details in console I know this has to do with return but not console writeline but dont know how to fix 
     {
-        Ticket? retrievedTicket = PromptUserForTicket();
-        TicketList<Ticket> = new();
+        System.Console.WriteLine("Please enter a Ticket ID (0 to Exit Process): ");
+        int input = int.Parse(Console.ReadLine() ?? "0");
+        int retrievedticket = ts.GetTicket(input);
+
+        System.Console.WriteLine("=== Specific Tickets ===");
+        System.Console.WriteLine(retrievedticket);
+        System.Console.WriteLine("=================================");
+    }
+    private static decimal CheckBalance()//Stll needs work
+    {
+        Ticket? retrievedTicket = null;
         while (retrievedTicket == null)
         {
             System.Console.WriteLine("Please enter a Ticket ID (0 to Exit Process): ");
             int input = int.Parse(Console.ReadLine() ?? "0");
-            TicketList<Ticket> = ts.GetSpecificTicket(input); 
-        }
-            Console.WriteLine(retrievedTicket);
+            
+            if (input == 0) return null;
 
-    }
-    private static decimal CheckBalance()
-    {
-        Ticket? retrievedticket = PromptUserForTicket();
+            retrievedTicket = ts.GetTicket(input); 
+        }
+        //       return retrievedTicket;
         decimal TicketBalance = retrievedticket
         long TicketDueDate = retrievedticket.DueDate;
         if (TicketBalance == 0)

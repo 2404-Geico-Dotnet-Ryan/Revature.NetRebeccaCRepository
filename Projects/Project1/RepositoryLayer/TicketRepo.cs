@@ -29,20 +29,15 @@ class TicketRepo
         cmd.Parameters.AddWithValue("@DueDate", t.DueDate);
         cmd.Parameters.AddWithValue("@DriverID", t.DriverId);
 
-        //Execute the Query
-        // cmd.ExecuteNonQuery(); //This executes a non-select SQL statement (inserts, updates, deletes)
         using SqlDataReader reader = cmd.ExecuteReader();
 
-        //Extract the Results
         if (reader.Read())
         {
-            //If Read() found data -> then extract it.
-            Ticket newTicket = BuildTicket(reader); //Helper Method for doing that repetitive task
+            Ticket newTicket = BuildTicket(reader); 
             return newTicket;
         }
         else
         {
-            //Else Read() found nothing -> Insert Failed. :(
             return null;
         }
     }
@@ -63,8 +58,8 @@ class TicketRepo
 
             if (reader.Read())
             {
-                Ticket newTicket = BuildTicket(reader);
-                return newTicket;
+                Ticket getTicket = BuildTicket(reader);
+                return getTicket;
             }
 
             return null;
