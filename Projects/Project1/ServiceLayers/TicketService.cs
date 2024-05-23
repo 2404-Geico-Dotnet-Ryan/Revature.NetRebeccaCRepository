@@ -12,19 +12,13 @@ class TicketService
     }
     
     
-    public Ticket? Pay(Ticket t)
+    public Ticket? MakeAPay(Ticket ticket, decimal pay)
     {
-        if (t.PaidInFull == true)
-        {
-            System.Console.WriteLine("This ticket is already paid in full. Thank you!");
-            return null;
-        }
-        System.Console.WriteLine("The Balance on this ticket is " + t.Balance);
-        System.Console.WriteLine("How much would you like to pay today?");
-        decimal payment = decimal.Parse(Console.ReadLine()); //ask Jennifer about
-        t.Balance -= payment;
-        tr.UpdateTicket(t);
-        return t;
+        ticket.Balance -= pay;
+
+        tr.UpdateTicket(ticket);
+
+        return ticket;
         }
     public List<Ticket> GetUnpaidTickets()
     {

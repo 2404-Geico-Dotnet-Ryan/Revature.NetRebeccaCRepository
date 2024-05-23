@@ -169,47 +169,42 @@ class Program
         System.Console.WriteLine("=================================");
     }
 
-    static void RetrievingSpecificTicket() // this one is not returning details in console I know this has to do with return but not console writeline but dont know how to fix 
+    static void RetrievingSpecificTicket() // this has been fixed and works 
     {
         System.Console.WriteLine("Please enter a Ticket ID (0 to Exit Process): ");
         int input = int.Parse(Console.ReadLine() ?? "0");
-        int retrievedticket = ts.GetTicket(input);
+        var retrievedticket = ts.GetTicket(input);
 
         System.Console.WriteLine("=== Specific Tickets ===");
         System.Console.WriteLine(retrievedticket);
         System.Console.WriteLine("=================================");
     }
-    private static decimal CheckBalance()//Stll needs work
+    private static void CheckBalanceDue()
     {
-        Ticket? retrievedTicket = null;
-        while (retrievedTicket == null)
-        {
-            System.Console.WriteLine("Please enter a Ticket ID (0 to Exit Process): ");
-            int input = int.Parse(Console.ReadLine() ?? "0");
-            
-            if (input == 0) return null;
+        Ticket? retrievedTicket = PromptUserForTicket();
+        decimal ticketBalance = retrievedTicket.Balance;
+        long ticketDueDate = retrievedTicket.DueDate;
 
-            retrievedTicket = ts.GetTicket(input); 
-        }
-        //       return retrievedTicket;
-        decimal TicketBalance = retrievedticket
-        long TicketDueDate = retrievedticket.DueDate;
-        if (TicketBalance == 0)
-        {
-            System.Console.WriteLine("This ticket is paid in full. Thank you. ");
-        }
-        else
-        {
-        System.Console.WriteLine("Ticket Balance: " + TicketBalance+ "and is due on " + TicketDueDate);
-        }
+        System.Console.WriteLine("Ticket Balance: " + ticketBalance+ "and is due on " + ticketDueDate);
+        System.Console.WriteLine();
     }
 
-    private static void PayAmountOnTicket()
+    static void PayAmountOnTicket()
     {
-        throw new NotImplementedException();
+        Ticket? ticket = PromptUserForTicket();
+        if (ticket == null) return;
+
+        System.Console.WriteLine("Please enter the amount you would like to pay on your ticket: " + ticket.TicketId);
+        decimal payment = Decimal.Parse(Console.ReadLine() ?? "0");
+
+        ts.MakeAPay(ticket, payment);
+
+        System.Console.WriteLine("The new balance for " + ticket.TicketId + " is: " + ticket.Balance);
+        System.Console.WriteLine();
     }
-    private static Ticket? PromptUserForTicket()
-   {
+    
+    static Ticket? PromptUserForTicket()
+    {
         
         Ticket? retrievedTicket = null;
         while (retrievedTicket == null)
@@ -229,40 +224,16 @@ class Program
         
     }
 
- private static int ValidateCmd(int cmd, int maxOption)
+    static int ValidateCmd(int cmd, int maxOption)
     {
         while (cmd < 0 || cmd > maxOption)
         {
             System.Console.WriteLine("Invalid Command - Please Enter a command 1-" + maxOption + "; or 0 to Quit");
             cmd = int.Parse(Console.ReadLine() ?? "0");
         }
-
-        //if input was already valid - it skips the if statement and just returns the value.
         return cmd;
-    }
-
-    //
-    /*    private static void PayAmountOnTicket()
-    {
-    private static void WithdrawalMoney()
-    {
-        // Need to create code block to remove $$ from existing balance
-        Account? account = PromptUserForAccount();
-        if (account == null) return;
-
-        System.Console.WriteLine("Please enter the amount you would like to withdrawal from your account: " + account.AccountName);
-        double withdrawal = double.Parse(Console.ReadLine() ?? "0");
-
-        accountServices.MakeWithdrawal(account, withdrawal);
-
-        System.Console.WriteLine("The new balance for " + account.AccountName + " is: " + account.Balance);
-        System.Console.WriteLine();
-        
-    }
-    }
-    */  
-    
-}   
-    
+    }    
+}
+  
 
 

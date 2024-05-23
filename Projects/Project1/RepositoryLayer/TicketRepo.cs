@@ -144,15 +144,6 @@ class TicketRepo
         }
     }
 
-     public Ticket? GetBalance(int ticketId)
-    {
-        return null; //not done yet 
-    }
-
-
-
-
-
     private Ticket BuildTicket(SqlDataReader reader)
     {
         Ticket newTicket = new();
@@ -165,24 +156,8 @@ class TicketRepo
         return newTicket;
     }
 
-    /* replacing most of this with ADO.Net methods -- keeping to make sure I get all Methods done
-    
-       public Ticket? GetBalance(int ticketId)
-    {
-        if (ticketStorage.tickets.ContainsKey(ticketId))
-        {
-            Ticket selectedTicket = ticketStorage.tickets[ticketId];
-            return selectedTicket;
-            
-            //System.Console.WriteLine("This ticket has a balance of: "+selectedTicket.Balance + "due on: " + selectedTicket.DueDate + ".");  
-        }
-        else
-        {
-            System.Console.WriteLine("Invalid Ticket ID - Please Try Again");
-            return null;
-        }
-    }
-
+    /* unsure if I even want this option
+ 
     public Ticket? DeleteTicket(Ticket t)
     {
         bool didRemove = ticketStorage.tickets.Remove(t.TicketId);
