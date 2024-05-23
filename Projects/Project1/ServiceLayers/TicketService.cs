@@ -2,16 +2,16 @@
 
 class TicketService
 {
-    TicketRepo tr;  
+    TicketRepo tr;
     private readonly string _connectionString;
     private DriverRepo dr;
-     
+
     public TicketService(TicketRepo tr)
     {
         this.tr = tr;
     }
-    
-    
+
+
     public Ticket? MakeAPay(Ticket ticket, decimal pay)
     {
         ticket.Balance -= pay;
@@ -19,7 +19,7 @@ class TicketService
         tr.UpdateTicket(ticket);
 
         return ticket;
-        }
+    }
     public List<Ticket> GetUnpaidTickets()
     {
         List<Ticket> allTickets = tr.GetAllTickets();
@@ -35,7 +35,7 @@ class TicketService
         return allUnpaidTickets;
     }
 
-    
+
     //Trivial Service
     public Ticket? GetTicket(int ticketId)
     {
@@ -45,5 +45,5 @@ class TicketService
     {
         return tr.AddTicket(ticket);
     }
-    
+
 }

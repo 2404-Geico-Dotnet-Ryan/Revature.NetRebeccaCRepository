@@ -203,6 +203,7 @@ class Program
         decimal payment = Decimal.Parse(Console.ReadLine() ?? "0");
 
         ts.MakeAPay(ticket, payment);
+        
 
         System.Console.WriteLine("The new balance for " + ticket.TicketId + " is: " + ticket.Balance);
         System.Console.WriteLine();

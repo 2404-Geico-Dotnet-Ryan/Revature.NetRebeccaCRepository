@@ -118,6 +118,7 @@ class TicketRepo
             string sql = "UPDATE dbo.Ticket SET Type = @Type, Cost = @Cost, Balance = @Balance, PaidInFull = @PaidInFull, DueDate = @DueDate, DriverId = @DriverID OUTPUT inserted.* WHERE TicketId = @TicketId";
 
             using SqlCommand cmd = new(sql, connection);
+            cmd.Parameters.AddWithValue("@TicketId", updatedTicket.TicketId);
             cmd.Parameters.AddWithValue("@Type", updatedTicket.Type);
             cmd.Parameters.AddWithValue("@Cost", updatedTicket.Cost);
             cmd.Parameters.AddWithValue("@Balance", updatedTicket.Balance);
