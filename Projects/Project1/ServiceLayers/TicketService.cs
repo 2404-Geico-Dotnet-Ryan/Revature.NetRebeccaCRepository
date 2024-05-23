@@ -41,6 +41,9 @@ class TicketService
     {
         return tr.GetTicket(ticketId);
     }
-
+    public Ticket? AddTicket(Ticket ticket)
+    {
+        return tr.AddTicket(ticket);
+    }
     
 }

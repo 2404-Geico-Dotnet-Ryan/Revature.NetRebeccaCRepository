@@ -55,14 +55,15 @@ class Program
             System.Console.WriteLine("=================================");
             System.Console.WriteLine("[1] View All Unpaid Tickets");
             System.Console.WriteLine("[2] View a specific Ticket");
-            System.Console.WriteLine("[3] Check Balance/Due Date on Ticket");
-            System.Console.WriteLine("[4] Pay (partial/full) amount on Ticket");
+            System.Console.WriteLine("[3] Check Balance on a Specific Ticket");
+            System.Console.WriteLine("[4] Pay amount on Ticket");
+            System.Console.WriteLine("[5] Add a ticket to a newly created account");
             System.Console.WriteLine("[0] Quit");
             System.Console.WriteLine("=================================");
 
             int input = int.Parse(Console.ReadLine() ?? "0");
 
-            input = ValidateCmd(input, 4);
+            input = ValidateCmd(input, 5);
 
             //Extracted to method - uses switch case to determine what to do next.
             keepGoing = DecideNextOption(input);
@@ -102,7 +103,7 @@ class Program
                 }
             case 3:
                 {
-                    CheckBalanceDue();
+                    CheckBalance();
                     break;
                 }
             case 4:
@@ -110,6 +111,11 @@ class Program
                     PayAmountOnTicket();
                     break;
                 }
+            case 5:
+            {
+                AddTicket();
+                break;
+            }
             case 0:
             default:
                 {
@@ -179,7 +185,7 @@ class Program
         System.Console.WriteLine(retrievedticket);
         System.Console.WriteLine("=================================");
     }
-    private static void CheckBalanceDue()
+    private static void CheckBalance()
     {
         Ticket? retrievedTicket = PromptUserForTicket();
         decimal ticketBalance = retrievedTicket.Balance;
@@ -235,23 +241,25 @@ class Program
     }
 
     //maybe modify and allow this item 
-    /*
-    private static void AddNewTicket()
+    
+    private static void AddTicket()
     {
         System.Console.WriteLine("Let's add a new ticket for your account!");
         System.Console.WriteLine();
         System.Console.WriteLine("What type of Ticket do you need to add?");
-        string accountName = Console.ReadLine() ?? "";
+        string type = Console.ReadLine() ?? "";
         System.Console.WriteLine();
         System.Console.WriteLine("Please enter the Cost of this ticket: Formatting should be 250.00M");
         decimal cost = decimal.Parse(Console.ReadLine() ?? "0");
         decimal balance = cost;
+        bool paidInFull = false;
+        long dueDate = 0;
         System.Console.WriteLine();
-        int DriverId = currentUser.DriverId;
+        int DriverId = currentDriver.DriverId;
 
-        Ticket? ticket = new(0, type, cost, balance, userId);
+        Ticket? ticket = new(0, type, cost, balance, paidInFull, dueDate, DriverId);
 
-        ticket = ts.NewTicket(ticket);
+        ticket = ts.AddTicket(ticket);
         
         if (ticket != null)
         {
@@ -262,7 +270,7 @@ class Program
             System.Console.WriteLine("Failed to create ticket, please try again");
         }
     }
-    */
+    
 }
   
 
