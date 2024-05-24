@@ -15,13 +15,13 @@ class TicketService
     public Ticket? MakeAPay(Ticket ticket, decimal pay)
     {
         ticket.Balance -= pay;
+
         if (ticket.Balance == 0)
         {
             ticket.PaidInFull = true;
         }
-        tr.UpdateTicket(ticket);
-        
 
+        tr.UpdateTicket(ticket);
         return ticket;
     }
     public List<Ticket> GetUnpaidTickets()

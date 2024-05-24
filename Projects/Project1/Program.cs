@@ -201,8 +201,8 @@ class Program
         Ticket? ticket = PromptUserForTicket();
         if (ticket == null) return;
         System.Console.WriteLine("Please enter the amount you would like to pay on your ticket: " + ticket.TicketId);
-        decimal payment = Decimal.Parse(Console.ReadLine() ?? "0");          
-
+        decimal pay = Decimal.Parse(Console.ReadLine() ?? "0");          
+        ts.MakeAPay(ticket, pay);
         System.Console.WriteLine("The new balance for " + ticket.TicketId + " is: " + ticket.Balance);
         System.Console.WriteLine();
     }

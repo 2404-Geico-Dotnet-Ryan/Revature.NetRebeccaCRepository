@@ -133,7 +133,6 @@ class TicketRepo
                 Ticket newTicket = BuildTicket(reader);
                 return newTicket;
             }
-
             return null;
 
         }
