@@ -53,6 +53,10 @@ class Program
         bool keepGoing = true;
         while (keepGoing)
         {
+            System.Console.WriteLine("Reminder: ");
+            System.Console.WriteLine("If you are a new user or returning customer with a new ticket,");
+            System.Console.WriteLine("Please remember to add the ticket before trying the other functions.");
+            System.Console.WriteLine(" ");
             System.Console.WriteLine("Please Pick an Option Down Below:");
             System.Console.WriteLine("=================================");
             System.Console.WriteLine("[1] View All Unpaid Tickets");
