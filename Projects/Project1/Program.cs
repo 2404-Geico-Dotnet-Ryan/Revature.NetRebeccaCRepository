@@ -43,7 +43,8 @@ class Program
             input = ValidateCmd(input, 2);
             keepGoing = DecideUserOption(input);
         }
-        System.Console.WriteLine("You have successfully logged in");
+        System.Console.WriteLine("You have successfully logged in.");
+        System.Console.WriteLine("Reminder if you are a new user to the system or you have recieved a new ticket you will need to add them before you can view the ticket or make a payment.");
     }
 
     private static void MainMenu()
@@ -138,6 +139,7 @@ class Program
         if (newDriver != null)
         {
             System.Console.WriteLine("New Driver Registered!");
+            System.Console.WriteLine("You can now log in and will then add your ticket next!");
         }
         else
         {
@@ -203,6 +205,7 @@ class Program
         decimal payment = Decimal.Parse(Console.ReadLine() ?? "0");
 
         ts.MakeAPay(ticket, payment);
+        
         
 
         System.Console.WriteLine("The new balance for " + ticket.TicketId + " is: " + ticket.Balance);

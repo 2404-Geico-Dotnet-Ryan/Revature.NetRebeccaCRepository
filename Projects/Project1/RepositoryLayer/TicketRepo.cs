@@ -149,6 +149,7 @@ class TicketRepo
     {
         Ticket newTicket = new();
         newTicket.TicketId = (int)reader["TicketId"];
+        newTicket.Type = (string)reader["Type"];
         newTicket.Cost = (decimal)reader["Cost"];
         newTicket.Balance = (decimal)reader["Balance"];
         newTicket.PaidInFull = (bool)reader["PaidInFull"];
