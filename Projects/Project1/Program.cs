@@ -29,6 +29,7 @@ class Program
 
     private static void LoginMenu()
     {
+        Console.Clear();
         bool keepGoing = true;
         while (keepGoing)
         {
@@ -43,12 +44,12 @@ class Program
             input = ValidateCmd(input, 2);
             keepGoing = DecideUserOption(input);
         }
-        System.Console.WriteLine("You have successfully logged in.");
-        System.Console.WriteLine("Reminder if you are a new user to the system or you have recieved a new ticket you will need to add them before you can view the ticket or make a payment.");
+        
     }
 
     private static void MainMenu()
     {
+        
         bool keepGoing = true;
         while (keepGoing)
         {
