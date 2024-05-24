@@ -16,7 +16,7 @@ Create Table Ticket
 	PaidInFull Bit default 0,
 	DueDate BigInt default 0,
 	DriverID int,
-	Constraint FK_Ticket_Driver Foreign Key (DriverID) references driver(Id)
+	Constraint FK_Ticket_Driver Foreign Key (DriverID) references driver(DriverId)
 );
 --drop table ticket;
 Insert Into Driver values ('Rebeccca', 'pass1', 'admin');
