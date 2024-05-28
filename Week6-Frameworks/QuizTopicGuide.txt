@@ -1,0 +1,57 @@
+Topics good to review for Quiz:
+
+	- Classes vs Objects? Do you understand the difference?
+		- Parts of a Class
+	- What is OOP?
+	- What are the Pillars of OOP?
+		- Abstraction
+			- Abstract Classes
+			- Abstract Methods
+			- Interfaces
+		- Polymorphism
+			- overloading vs overriding
+		- Inheritance
+		- Encapsulation
+			- Access Modifiers
+	- Constructors
+	- Generics (those <> things...)
+	- Collections
+		- basic syntax for creating one
+		- Lists
+		- Dictionaries
+		- (Psst - Stacks)
+	- Control Flow
+		- For/While Loop syntax
+			- Understand nested loops
+		- Conditional Statements
+			- mostly just if/else statements
+	- implicit vs explicit conversion
+	- an expression vs a block of code
+
+	- Git
+		- Basics of what a branch would be for
+		- basics of what the process of working with git looks like
+
+	- SQL
+		- Basics of the Sublanguages
+			- Knowing which basic cmds go to which sublanguage
+		- Basic syntax of most common cmds - CRUD operations - basic DDL statements, etc.
+		- Look up the basics of Joins - (difference between INNER and OUTER Join)
+		- Basics of Constraints (definitely Primary Key)
+
+	- ADO.NET
+		- Not too many here. Just the basics.
+
+	- EF Core
+		- What is it?
+		- ORM
+		- (EF is a part of ADO.NET)
+		- DbContext
+		- Basics of Code First vs Scaffold
+			- (As a bonus - consider looking up Enable-Migrations)
+			- How/When to create/update Migrations/your DB
+
+	- Extra
+		- Basics of Dependency Injection
+		- purpose of .csproj
+		- (Look up the purpose of xUnit - trying to get these filtered out - but just in case)

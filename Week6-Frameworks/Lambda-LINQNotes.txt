@@ -1,0 +1,37 @@
+Lambda Expression
+
+	- num => num * 7  --->	given an input 'num' perform (num * 7)
+
+	- num is a placeholder name for  "Whatever input is recieved"
+
+	public static void AddTwoNumbers(int num1, int num2)
+	{
+		return num1 + num2;
+	}
+
+	AddTwoNumbers(5, 7);
+
+	
+	- When are Lambda Expressions going to be used?
+
+	- Often times methods are already built to take in Lamdbas
+	as an easier way to essentially pass in functionality into
+	another method.
+
+	- This will happen often when working with sets/collections of data.
+	There are often several methods that will perform an operation over
+	every value (like a loop).
+
+
+	- LINQ -> Language Integrated Query -> used for simplifying querying
+	or manipulating collections.
+		- It offers some methods for performing operations on our
+		collections that feel more like SQL Querying.
+
+	SELECT * FROM User WHERE Id = 5;
+	- LINQ:	filteredMovies = allMovies.Where(x => x.Price < 5);
+
+	Console.WriteLine(AddTwoNumbers(5, 7));
+	Console.WriteLine(AddTwoNumbers);
+
+	
