@@ -1,0 +1,6 @@
+@Week7_ASP.Net_In_Memory_HostAddress = http://localhost:5063
+
+GET {{Week7_ASP.Net_In_Memory_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

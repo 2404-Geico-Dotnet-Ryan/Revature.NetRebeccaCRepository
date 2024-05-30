@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\Week7-ASP.Net_In_Memory.props" />
+</Project>
