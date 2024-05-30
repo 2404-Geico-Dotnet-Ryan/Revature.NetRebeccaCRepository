@@ -51,8 +51,8 @@ public class VehicleController : ControllerBase
         //we have an array and we want to filter thorugh that array and grad the first thing that matches that correct id 
         // we have created a LINQ onto the vehicles array that will filter through each of the vehicles and chek to see if the VehicleId matches the ID that was passed in 
         //if it matches , then it will return the vehicle
-        Vehicle vehicle = Vehicles.Find(v => v.VehicleId == Id);
-        /*foreach(Vehicle vehicle in Vehicles)
+        //Vehicle vehicle = Vehicles.Find(v => v.VehicleId == Id);
+        foreach(Vehicle vehicle in Vehicles)
         {
             if(vehicle.VehicleId == Id)
             {
@@ -60,9 +60,9 @@ public class VehicleController : ControllerBase
             }
         }
                 return NotFound();       
-        */
+        
         //System.Console.WriteLine(Id);
-        return Ok(vehicle);
+        //return Ok(vehicle);
     }
     
     // Post a new Vehicle
@@ -100,7 +100,7 @@ public class VehicleController : ControllerBase
     {
         foreach(Vehicle vehicle in Vehicles)
         {
-            if(vehicle.VehicleId == 0)
+            if(vehicle.VehicleId == Id)
             {
                 Vehicles.Remove(vehicle);
                 return Ok();
