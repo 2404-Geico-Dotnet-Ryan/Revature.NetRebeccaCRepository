@@ -1,0 +1,49 @@
+- Two Frameworks that we worked with.
+		- Library vs Framework??
+	- Database Connectivity / Communication
+	- What Layer is mostly affected by the introduction of ADO.NET/EF Core?
+		- Data Layer was no needed -> moving to DBs
+		- Repository Layer -> is reimplemented to work now with ADO.NET/EF Core
+
+	ADO.NET
+		- A lot more manual work.
+		- SqlConnection - to tell it connect to a DB
+		- Write out our SQL Statement
+		- SqlCommand Class - to manage the SQL string we want
+		to send our DB
+			- AddWithValue() to sanitize and set Params for
+			the SQL string.
+		- Execute the Query
+			- ExecuteNonQuery() - dont care about returns
+			- ExecuteReader() - care about returns
+				- returns a SqlDataReader Object for us to
+				read through the data returned
+
+	EF Core
+		- ORM -> Object Relational Mapping (Framework)
+		- Built on top of ADO.NET
+		- Code First vs Scaffold (Database First)
+		- Abstracts away the ADO.NET work/implementation
+			- Dont have to most of the repetitive work with
+			ADO.NET - like writing out the SQL string.
+		- Migrations
+			- are used to map our Models to our Databases
+			- Can then be used to update our Tables
+			- Each Migration is a Snapshot of all of our 
+			Models (Entities) - at a particular moment in time.
+		- DbContext
+			- IS the bridge from our Application and our DB.
+			- It outlines the mapping our our Models to a Table
+			through the DbSet
+			- By extension it also behaves as a new stepping stone.
+			We interact with just the DbContext and at some point
+			the DbContext interacts with the DB.
+			- Also manages our DB connection string
+				- Happened in the OnConfiguring()
+			- Also manages additional configurations that
+			we want to put upon our model
+				- Happened in the OnModelCreating()
+				- Adding FKs
+				- Adding other constraints
+				
+			

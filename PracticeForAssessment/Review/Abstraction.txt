@@ -1,0 +1,34 @@
+Abstraction
+
+	- hiding the main functionality behind what occurs.
+		- you dont HAVE to know how something works to use it.
+
+	
+	Console.WriteLine(); -> I feed this method something 
+				and it spits it out to my console.
+
+	- Intention Over Implementation
+
+	- So then how does the idea of AC and Interfaces
+	relate to this fundamental idea?
+
+	- AC and Interfaces outline an INTENTION
+		- By Extension any variable typed to at least
+		the AC/Interface has a given level of known Intention.
+
+	
+	- Abstract Class
+		- you can inherit only one (abstract) class.
+		- ACs has Abstract and Concrete Methods.
+		- Constructors
+
+	- Interface
+		- you can inherit (implement) as many interfaces as you want.
+		- Traditionally, interfaces had only Abstract Methods
+			- By traditional assumption, Interfaces didnt
+			have to state that they were abstract (nor public)
+			bc it was assumed.
+			- Later version of C#, gave Interfaces the means to create
+			Concrete Methods. (default keyword to do so).
+		- public static readonly variables -> field
+			- If working with a Property -> was able to get around this.

@@ -1,0 +1,41 @@
+- Implicit Conversion
+		- implied
+		- Done for us
+		- Changing from one state to another
+		automatically or at least without us having
+		to say so.
+
+
+	- Explicit Conversion
+		- explained/exact/defined
+		- We state that we want to happen
+		- Changing from one state to another
+		wherein we specifically tell it to do so.
+
+
+	- C#
+
+
+	int num1 = 15;
+	double num2 = num1;
+
+	Converting from int to double is done implicitly
+
+	double num1 = 15.5;
+	int num2 = (int) num1;
+
+	Converting from double too int (in this case) is done explicitly.
+
+	
+	- C# is a Strong Typed Language
+		- There is no implicit conversion of Types. :O
+
+
+	Console.WriteLine("My number is: " + 5);
+	Python: print("My number is: " + str(5))
+
+	string input = "123";
+	int result = int.Parse(int.ToString(123)); //silly code dont try at home.
+
+
+	

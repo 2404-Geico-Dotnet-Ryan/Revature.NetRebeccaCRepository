@@ -1,0 +1,55 @@
+Dependency Injection
+
+	- The Set Up: According to the SRP - Each part
+	of our app should be responsible for accomplishing
+	one idea.
+
+	- A Problem: If we have several Classes 
+	(Repos, Services, Controllers) that strictly provide
+	functionality to our app, why ever need more than
+	one functioning copy floating our app at any given time?
+	
+	- If some part of code needs a UserRepo, why not
+	just 1) have a UserRepo that exists (for the whole app)
+	and 2) have it use that one, when it needs it.
+
+	- How can we achieve steps 1 and 2 above?
+
+	- Step 1 - Make the Object at the Highest Layer of your
+	App / Backend
+	- Step 2 - Feed it into each of the Objects that need
+	said other Object.
+		- For Example if both MovieService and UserService
+		need a UserRepo:
+			- Make one UserRepo (perhaps in Main())
+			- Feed that UserRepo into (perhaps) the
+			constructor of each of those Services.
+				- Constructor Injection
+
+	class MovieService
+	{
+		UserRepo ur;
+
+		public MovieService(UserRepo userRepo)
+		{
+			ur = userRepo;
+		}
+	}
+
+	class UserService
+	{
+		UserRepo ur;
+
+		public UserService(UserRepo userRepo)
+		{
+			ur = userRepo;
+		}
+	}
+
+	public static void Main()
+	{
+		UserRepo ur = new();
+		UserService us = new(ur);
+		MovieService ms = new(ur);
+	}
+	
