@@ -19,15 +19,14 @@ namespace EFCoreExample.Services
    */
     public class UserService : IUserService
     {
-        // Constructor to inject the database context
         private readonly AppDbContext _context;
-        // Method to create a new user based on the provided UserDTO 
+        // Constructor to inject the database context 
         public UserService(AppDbContext context)
         {
             _context = context;
         }
 
-        // Constructor to inject the database context
+        // Method to get a list of all users
         public IEnumerable<UserDTO> GetAllUsers()
         {
             var users = _context.Users
@@ -43,12 +42,19 @@ namespace EFCoreExample.Services
         public UserDTO GetUserByID(int UserId)
         {
             var user = _context.Users.Find(UserId);
-            var userDto = new UserDTO
+            if (user != null)
             {
-                Name = user.Name,
-                UserId = user.UserId
-            };
+                var userDto = new UserDTO
+                {
+                    Name = user.Name,
+                    UserId = user.UserId
+                };
             return userDto;
+            }
+            else
+            {
+                throw new Exception("User not found");
+            }
         }
 
         // Method to create a new user based on the provided UserDTO
@@ -81,21 +87,37 @@ namespace EFCoreExample.Services
             else return true;
         }
 
+        // Method to update an existing user based on their ID and the provided updated UserDTO
         public void UpdateUser(int UserId, UserDTO UpdatedUser)
         {
             var user = _context.Users.FirstOrDefault(u => u.UserId == UserId);
 
-            user.Name = UpdatedUser.Name;
+            if (user != null)
+            {
+                user.Name = UpdatedUser.Name;
 
-            _context.Users.Update(user);
-            _context.SaveChanges();
+                _context.Users.Update(user);
+                _context.SaveChanges();
+            }
+            else
+            {
+                throw new Exception("User not found");
+            }
         }
 
+        // Method to delete a user based on their ID
         public void DeleteUser(int UserId)
         {
             var user = _context.Users.FirstOrDefault(u => u.UserId == UserId);
+            if (user != null)
+            {
             _context.Users.Remove(user);
             _context.SaveChanges();
+            }
+            else
+            {
+                throw new Exception("User not found");
+            }
         }
     }
 }
