@@ -1,0 +1,108 @@
+<!--Declares teh document type and version of the html -->
+<!DOCTYPE html>
+<!-- this is not programming 
+    Root element of the HTML document-->
+<html>
+<!-- this is the opening tag and contains the meta information about the document -->
+
+<head>
+    <!-- Title not displayed -->
+    <title>My Profile</title>
+</head>
+
+<body>
+    <!-- displayed on the website --Displays the content of the document-->
+    <h1>Welcome to My Profile</h1>
+    <!-- 1-6 1 begining largest and 6 being smallest -->
+    <!-- right click and reveal in  File Explorer-->
+    <!-- then click on profile and it opens in a webbrowser right click on this and chose inspect and it will show you your code-->
+    <!-- HTML elements are the basic building blocks of web pages
+         An element has a starting tag, content, and then an end tag
+        Attrubutes provide additional information about elements and are included in the start tag
+        The class attribute is used to group elements together  -->
+    <p class="information"> Hello! My name is Rebecca!</p>
+    <!-- this is a paragraph element 
+        you can add classes to the header and this helps group your elements-->
+    <!-- Inline and Block elements
+            HTML elements can either be inline or block elements
+            inline elements do not start on a new line and only take up as much width as neccessary <span>, <a>, <img>
+            
+            Block elements start on a new line and take up the full width available
+        Examples include <div>, <h1>-<h6>, <p>-->
+    <span> Hello I am a inline element</span>
+    <span> Hello I am a inline element</span>
+    <span> Hello I am a inline element</span>
+
+    <!--  Common Tags 
+        <h1> -->
+
+    <h2> Rebecca C</h2>
+    <p> Hello my name is Rebecca and I work at GEICO.</p>
+    <a href="https://google.com"> Visit my website https://google.com</a>
+    <br>
+    <br>
+    <!-- <br> this is formatting to give new line in the website -->
+    <img src="C:\Users\U713PY\OneDrive - Government Employees Insurance Company\Pictures\thumbnail For Sharepoint.jfif">
+
+    <!-- tables can be formatted in many ways to organize your data in a tabular fashion 
+            <tr> is for a table row
+            <th> is for a table header
+            <td> is for a table division (entry)
+               
+            -->
+    <table>
+        <tr>
+            <th>Company</th>
+            <th>Contact</th>
+            <th>Country</th>
+        </tr>
+        <tr>
+            <td>Alfreds Futterkiste</td>
+            <td>Maria Anders</td>
+            <td>Germany</td>
+        </tr>
+        <tr>
+            <td>Centro comercial Moctezuma</td>
+            <td>Francisco Chang</td>
+            <td>Mexico</td>
+        </tr>
+    </table>
+
+    <!-- Forms -->
+
+    <form action="http://localhost:2525/profiles">
+        <!-- this will send the data to a specific place -->
+        <label for ="name"> Name:</label>
+        <input type ="text" id="name" name="name">
+        <label for ="email"> Email:</label>
+        <input type="email" id="email" name="email">
+
+        <input type="submit" vales ="Submit"> 
+        <input type="reset" vales ="Reset"> 
+        <input type="button" vales ="This is a button"> 
+        <!--  the second value is what shows up in the form on the webpage -->
+    </form>
+
+    <!--  select and multi selects  -->
+    <form action ="http://localhost:2525/hobbies">
+        <select id= "hobbies" name ="hobbies" multiple>
+            <!-- showing multiple options -->
+            <option value = "coding">Coding</option>
+            <option value = "reading">Reading</option>
+            <option value = "gaming">Gaming</option>
+            <option value = "travel">Travel</option>
+            <option value = "cooking">Cooking</option>
+        </select> 
+
+        <select id= "hobbies" name ="hobbies">
+            <!-- showing  only one at a time  -->
+            <option value = "coding">Coding</option>
+            <option value = "reading">Reading</option>
+            <option value = "gaming">Gaming</option>
+            <option value = "travel">Travel</option>
+            <option value = "cooking">Cooking</option>
+        </select> 
+    </form>
+</body>
+</html>
+<!--This is the closing tag -->
