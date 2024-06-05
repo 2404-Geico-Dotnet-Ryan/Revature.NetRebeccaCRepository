@@ -12,8 +12,58 @@ body
             color: red;
             font-size: 60px;
         }
-#Title
+#Title:active
 /* this takes first priority as it is an ID */
     {
         font-size: 100px;
+        width: fit-content;
     }
+
+a:visited 
+{
+    color: black;
+}
+/* Box Model 
+    Margin- 
+        this is the outermost part of the box model
+        it references how elements nest next to each other
+    Border- 
+        thisis the boundary between the padding and margin
+        this is used to introduce some kind of visual boundary
+    Padding
+        this is the space between the content and the border
+    Content
+        this is the content of the element itself
+        
+    most of the time it is not a good idea to use teh fixed widths or sizes 
+    this is because most 
+    */
+#Title
+    {
+        width: 500px;
+        border-color: rgb(165, 132, 42);
+        border-style: dotted;
+        border-width: 30px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        padding: 20px 20px 20px 20px;
+        /* this can easily not work and need to use the grids to center things on the page */
+        text-align: center;
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+
+    /* Responsive Web Design
+        as CSS developer, you need to be aware of the screens that your website is being developed for. 
+        GET rest of notes
+         */
+    @media only screen and (max-width: 600px) 
+        {
+        body 
+            { 
+             background-color: lightblue;   
+            }
+      }
+
+      /* look into grids https://www.w3schools.com/css/css_grid.asp  */
+      /* this is a better way to center things so th */

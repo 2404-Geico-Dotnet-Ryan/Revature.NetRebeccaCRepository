@@ -1,0 +1,14 @@
+body
+    {
+    background-color: green;
+    color: #fff; 
+    }
+.intro
+        {
+            color: red;
+            font-size: 60px;
+        }
+#Title
+    {
+        font-size: 100px;
+    }
