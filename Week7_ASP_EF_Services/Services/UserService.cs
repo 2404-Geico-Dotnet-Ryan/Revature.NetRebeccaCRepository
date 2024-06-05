@@ -78,13 +78,10 @@ namespace EFCoreExample.Services
             }
         }
 
-        private bool ValidateNewUser(UserDTO userDto)
+        //this needs to be private as you only want to use this in the service the controller should not be using this  
+        private bool ValidateNewUser(UserDTO UserDto)
         {
-            if (userDto.Name.Trim().Length == 0)
-            {
-                return false;
-            }
-            else return true;
+            return !string.IsNullOrWhiteSpace(UserDto.Name);
         }
 
         // Method to update an existing user based on their ID and the provided updated UserDTO

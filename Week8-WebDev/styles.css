@@ -1,0 +1,19 @@
+body
+/* use this sparingly  
+ This is lowest priority */
+    {
+    background-color: green;
+    color: #fff; 
+    /* these numbers relate to a color- you do not need to memorize codes -- 000 is black fff is white- do not need to memorize them */
+    }
+.intro
+ /*this will take medium priority after ID  */
+        {
+            color: red;
+            font-size: 60px;
+        }
+#Title
+/* this takes first priority as it is an ID */
+    {
+        font-size: 100px;
+    }

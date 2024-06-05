@@ -4,6 +4,7 @@ using EFCoreExample.DTOs;
 using EFCoreExample.Models;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
+using EFCoreExample.Services;
 
 namespace EFCoreExample.Controllers
 {
@@ -11,37 +12,24 @@ namespace EFCoreExample.Controllers
     [ApiController]
     public class CategoriesController : ControllerBase
     {
-        private readonly AppDbContext _context;
-
-        public CategoriesController(AppDbContext context)
+         private readonly ICategoryService _categoryService;
+         public CategoriesController(ICategoryService categoryService)
         {
-            _context = context;
+            _categoryService = categoryService;
+
         }
 
         [HttpGet]
-        public ActionResult<IEnumerable<CategoryDTO>> GetCategories()
+        public ActionResult<IEnumerable<CategoryDTO>> GetAllCategories()
         {
-            var categories = _context.Categories
-                .Include(c => c.Products)
-                .Select(c => new CategoryDTO
-                {
-                    Name = c.Name,
-                }).ToList();
-
-            return categories;
+            var categories = _categoryService.GetAllCategories();
+            return Ok(categories);
         }
 
         [HttpPost]
         public ActionResult<CategoryDTO> PostCategory(CategoryDTO categoryDto)
         {
-            var category = new Category
-            {
-                Name = categoryDto.Name,
-                Products = []
-            };
-
-            _context.Categories.Add(category);
-            _context.SaveChanges();
+            var category = _categoryService.CreateCategory(categoryDto);
 
             return CreatedAtAction(nameof(GetCategories), new { CategoryId = category.CategoryId }, categoryDto);
         }

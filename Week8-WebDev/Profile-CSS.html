@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+
+<html>
+
+
+<head>
+    
+    <title>My Profile</title>
+    <!-- internal -->
+    <style>
+        p 
+        {
+            font-size: xx-large;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        .intro 
+        {
+            color: red;
+            font-size: 60px;
+        }
+
+    </style>
+    <!-- external  meaning that it is in the styles.css file -->
+    <link rel="stylesheet" type = "text/css" href="styles.css">
+</head>
+
+<body>
+    
+    <h1 id="Title">Welcome to My Profile</h1>
+        <!-- InLine CSS -->
+        <p class="intro" style="color: rgb(64, 64, 198); font-size: 20px; background-color: chartreuse;">Hello! My name is Rebecca!</p>
+        <p class="intro"> Hello again!</p>
+    
+    <span> Hello I am a inline element</span>
+    <span> Hello I am a inline element</span>
+    <span> Hello I am a inline element</span>
+
+    <h2> Rebecca C</h2>
+    <p> Hello my name is Rebecca and I work at GEICO.</p>
+    <a href="https://google.com"> Visit my website https://google.com</a>
+    <br>
+    <br>
+    
+    <img src="C:\Users\U713PY\OneDrive - Government Employees Insurance Company\Pictures\thumbnail For Sharepoint.jfif">
+
+    
+    <table>
+        <tr>
+            <th>Company</th>
+            <th>Contact</th>
+            <th>Country</th>
+        </tr>
+        <tr>
+            <td>Alfreds Futterkiste</td>
+            <td>Maria Anders</td>
+            <td>Germany</td>
+        </tr>
+        <tr>
+            <td>Centro comercial Moctezuma</td>
+            <td>Francisco Chang</td>
+            <td>Mexico</td>
+        </tr>
+    </table>
+
+   
+    <form action="http://localhost:2525/profiles">
+        
+        <label for ="name"> Name:</label>
+        <input type ="text" id="name" name="name">
+        <label for ="email"> Email:</label>
+        <input type="email" id="email" name="email">
+
+        <input type="submit" vales ="Submit"> 
+        <input type="reset" vales ="Reset"> 
+        <input type="button" vales ="This is a button"> 
+        
+    </form>
+
+    
+    <form action ="http://localhost:2525/hobbies">
+        <select id= "hobbies" name ="hobbies" multiple>
+            
+            <option value = "coding">Coding</option>
+            <option value = "reading">Reading</option>
+            <option value = "gaming">Gaming</option>
+            <option value = "travel">Travel</option>
+            <option value = "cooking">Cooking</option>
+        </select> 
+
+        <select id= "hobbies" name ="hobbies">
+          
+            <option value = "coding">Coding</option>
+            <option value = "reading">Reading</option>
+            <option value = "gaming">Gaming</option>
+            <option value = "travel">Travel</option>
+            <option value = "cooking">Cooking</option>
+        </select> 
+    </form>
+</body>
+</html>
