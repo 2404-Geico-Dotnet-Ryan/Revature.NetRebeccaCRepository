@@ -1,4 +1,5 @@
-# Exercise 4: Basic Git Commands
+# Exercise 4: Basic Git Commands-- completed but need more practice
+
 
 **Objective:** Get started with Git by initializing a repository and making a simple commit.
 
@@ -15,6 +16,7 @@
    git status
    ```
 4. **Add `notes.txt` to the staging area.**
+
    ```bash
    git add notes.txt
    ```

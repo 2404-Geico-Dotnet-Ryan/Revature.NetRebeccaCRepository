@@ -2,7 +2,7 @@
 
 **Objective:** Get practice working with Git commands using an online learning tool
 
-1. **Go to https://learngitbranching.js.org/**
+1. **Go to https://learngitbranching.js.org/** --currently working on this portion
     - Go to the website and start the first set of exercises
 2. **Repeat the exercises**
     - On completing an exercise, repeat it to see if you can do it with less commands

@@ -1,4 +1,4 @@
-# Exercise 2: File Management
+# Exercise 2: File Management-- done but will need to practice more
 
 **Objective:** Learn basic file management commands in Git Bash.
 

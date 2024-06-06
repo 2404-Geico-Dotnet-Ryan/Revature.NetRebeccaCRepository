@@ -1,11 +1,11 @@
 body
     {
-    background-color: green;
+    background-color: rgb(39, 22, 107);
     color: #fff; 
     }
 .intro
         {
-            color: red;
+            color: whitesmoke;
             font-size: 60px;
         }
 #Title

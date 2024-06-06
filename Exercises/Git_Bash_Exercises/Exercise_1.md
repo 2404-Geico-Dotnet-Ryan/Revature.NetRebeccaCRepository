@@ -1,4 +1,5 @@
-# Exercise 1: Basic Navigation
+# Exercise 1: Basic Navigation - completed but still need to practice ongoing to learn
+
 
 **Objective:** Learn to navigate the file system using Git Bash.
 

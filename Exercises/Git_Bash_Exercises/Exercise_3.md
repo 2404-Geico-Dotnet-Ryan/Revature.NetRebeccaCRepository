@@ -1,4 +1,4 @@
-# Exercise 3: Viewing and Editing Files
+# Exercise 3: Viewing and Editing Files -finished but need more practice
 
 **Objective:** Learn to view and edit files using basic commands.
 
