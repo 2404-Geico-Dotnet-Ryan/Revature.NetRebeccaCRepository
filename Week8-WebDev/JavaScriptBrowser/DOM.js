@@ -3,7 +3,7 @@
     This acts as an object representation of the HTML document so that we can programmatically interact with the webpage
 
     This is essentially an interface that lets us use interact, manipulate, remove, or add things to the document structure, style, and content.
-    The DOM 
+    The DOM is a tree like structure, where every node represents an element or a piece of content in the document
 */
 console.log(document);
 
@@ -33,7 +33,7 @@ const allParagraphs = document.querySelectorAll('p');
 
 
 //DOM Manipulation 
-//Once we have selected an element, you can manipulate 
+//Once we have selected an element, you can manipulate it by changing its properties, attributes, and content
 
 //change content
 header.textContent= 'Hello World!' //this overwrites the index header that was there
