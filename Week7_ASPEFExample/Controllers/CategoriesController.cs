@@ -1,49 +1,39 @@
-using Microsoft.AspNetCore.Mvc;
 using EFCoreExample.Data;
 using EFCoreExample.DTOs;
 using EFCoreExample.Models;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using System.Linq;
 
 namespace EFCoreExample.Controllers
 {
-    [Route("[controller]")]
     [ApiController]
+    [Route("[controller]")]
     public class CategoriesController : ControllerBase
     {
+        // This appdbcontext is used to interact with our database
+        // The constructor is used by our dependency manager to inject it into our class
+        // We do not have to instantiate the controller or provide the app db context into the constructor
+        // this is managed for us by the Dependency Injection Container
         private readonly AppDbContext _context;
 
         public CategoriesController(AppDbContext context)
         {
             _context = context;
         }
-
-        [HttpGet]
-        public ActionResult<IEnumerable<CategoryDTO>> GetCategories()
-        {
-            var categories = _context.Categories
-                .Include(c => c.Products)
-                .Select(c => new CategoryDTO
-                {
-                    Name = c.Name,
-                }).ToList();
-
-            return categories;
-        }
-
+        
         [HttpPost]
-        public ActionResult<CategoryDTO> PostCategory(CategoryDTO categoryDto)
+        public ActionResult<CategoryDTO> PostCategory(CategoryDTO categoryDTO)
         {
             var category = new Category
             {
-                Name = categoryDto.Name,
-                Products = []
+                Name = categoryDTO.Name,
+                Products = new List<Product>()
             };
 
             _context.Categories.Add(category);
             _context.SaveChanges();
 
-            return CreatedAtAction(nameof(GetCategories), new { CategoryId = category.CategoryId }, categoryDto);
+            return Created();
         }
     }
 }

@@ -1,0 +1,13 @@
+using LoginAPI.Models;
+using Microsoft.EntityFrameworkCore;
+
+namespace LoginAPI.Data;
+
+public class AppDbContext : DbContext
+{
+    public AppDbContext(DbContextOptions<AppDbContext> option) : base(option){}
+
+    public DbSet<User> Users {get;set;}
+
+    // If you have additional models that have some kind of relationship to each other, you would have to override the model creator and establish those behaviors
+}
