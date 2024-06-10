@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/csharpquiz/csharpquiz.sln",
+                "${workspaceFolder}/Project1/Project1.sln",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary;ForceNoAlign"
             ],
@@ -19,7 +19,7 @@
             "type": "process",
             "args": [
                 "publish",
-                "${workspaceFolder}/csharpquiz/csharpquiz.sln",
+                "${workspaceFolder}/Project1/Project1.sln",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary;ForceNoAlign"
             ],
@@ -33,7 +33,7 @@
                 "watch",
                 "run",
                 "--project",
-                "${workspaceFolder}/csharpquiz/csharpquiz.sln"
+                "${workspaceFolder}/Project1/Project1.sln"
             ],
             "problemMatcher": "$msCompile"
         }

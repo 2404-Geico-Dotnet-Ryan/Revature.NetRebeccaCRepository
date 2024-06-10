@@ -1,4 +1,22 @@
 // I am going for an SPA (Single Page Application)
+
+/*
+    It is helpful to organize your function into two types
+
+        - Communication with your API
+            - This things like your specific endpoints
+            - all the CRUD operations for your api should be established and tested first in your script before you go ahead and start using them
+        - Manipulating your DOM
+            - Generating and tearing down components
+
+
+*/
+
+const BASE_URL = "http://localhost:5236";
+
+let current_user = {};
+
+
 // This means I need functions that can be run to create entire components on the fly, and tear them down once I am done with them
 
 // I want to do this, so that I can keep track of the users' information on the same script
@@ -69,9 +87,44 @@ function GetLoginInformation() {
 }
 
 // Function to log in the user
+
+/*
+    This is a combination of Async Await and the Fetch API
+
+    The Fetch API is dedicated to doing asynchronous network requests
+    By default the Fetch API will be doing GET requests to a specific endpoint
+
+    The syntax of a fetch request looks like this:
+
+
+    fetch("URL", {REQUEST DATA BODY})
+
+    for example a GET Request would look like this:
+
+    fetch("URL"); // this is because by default the Fetch API will do a get request so you do not have to provide a request body
+
+
+    For a post request, and any request other than a GET request, you have to provide the request body object
+
+
+    First thing you need, is the URL that you want to communicate with. For this example, we are attempting to login to our database, and so we are communicating the the User controller, with the login action that is routed to /login
+
+    so the URL for that specific action is POST : http://localhost:5236/Users/login
+
+    To make a fetch request a POST request, the second parameter to the fetch() call is an object that defines the request
+
+    {
+        method: "POST",
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({JS Object})
+    }
+
+*/
 async function LoginUser(username, password) {
     try {
-        let response = await fetch('http://localhost:5236/Users/login', {
+        let response = await fetch(`${BASE_URL}/Users/login`, {
             method: "POST",
             headers: {
                 'Content-Type': "application/json" // Corrected the content type to 'application/json'
@@ -83,7 +136,12 @@ async function LoginUser(username, password) {
         });
 
         let data = await response.json();
-        console.log(data);
+        current_user = data;
+
+        console.log(current_user);
+        TeardownLoginContainer()
+        generateHomePageContainer(data);
+        // console.log(data);
     } catch (e) {
         console.error('Error logging in:', e); // Added error logging
     }
@@ -92,3 +150,65 @@ async function LoginUser(username, password) {
 // Generate and tear down a login component
 GenerateLoginContainer();
 // TeardownLoginContainer(); // Uncomment this line to tear down the login component
+
+
+
+// Generate a homepage for the user
+
+function generateHomePageContainer(userData){
+    let homePageContainer = document.querySelector("#home-page-container");
+
+    while(homePageContainer.firstChild){
+        homePageContainer.firstChild.remove();
+    }
+
+    let userHeader = document.createElement("h2");
+    let emailHeader = document.createElement("h3");
+
+    userHeader.textContent = userData.username;
+    emailHeader.textContent = userData.email;
+
+    homePageContainer.appendChild(userHeader);
+    homePageContainer.appendChild(emailHeader);
+
+}
+
+function tearDownHomePageContainer(){
+    while(homePageContainer.firstChild){
+        homePageContainer.firstChild.remove();
+    }
+}
+
+
+// teardown the homepage for the user
+
+
+
+
+// User Controller Functions
+
+async function GetAllUsers(){
+    try{
+        let response = await fetch(`${BASE_URL}/Users`);
+        let data = await response.json();
+        console.log(data);
+        return data;
+    }catch(Error){
+        console.error(Error);
+    }
+}
+
+async function GetUserById(id){
+    try{
+        let response = await fetch(`${BASE_URL}/Users/${id}`);
+        let data = await response.json();
+        console.log(data);
+        return data;
+    }catch(Error){
+        console.error(Error);
+    }
+}
+
+// Test these API calls as you are making them so that you can verify that it works inside your script before you actually use them in your website
+// GetAllUsers();
+// GetUserById(1);

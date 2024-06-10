@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Mvc.Infrastructure;
 
 namespace LoginAPI.Controllers;
 
+// http://localhost:2392/Users
+
 [ApiController]
 [Route("[controller]")]
 public class UsersController : ControllerBase
@@ -93,14 +95,35 @@ public class UsersController : ControllerBase
     // POST: /Users/login
     // Logs in a user
     [HttpPost("login")]
-    public async Task<ActionResult<UserDTO>> Login(UserLoginDTO userLogin)
+    public async Task<ActionResult<LoginResponseDTO>> Login(UserLoginDTO userLogin)
     {
         var user = await _userService.LoginUser(userLogin);
 
+        // if the username or password was not valid, we will get back a null user
+        // based on that, we can send back a response telling the client that it was invalid
         if (user == null)
         {
-            return Unauthorized();
+            return Ok("Invalid Login, please try again!");
         }
-        return user;
+
+        // When a user logs in, if you have some kind of role property, this is where you would add it
+        // Since I do not have it, I'm going to hard code it
+        // Response.Headers.Append("Authorization", "Admin"); first attempt, we cannot access custom headers in cors responses
+        // Instead, we will add it to the response body
+        
+        return new LoginResponseDTO{
+            Username = user.Value.Username,
+            Authorization = "Admin"
+        };
+    }
+
+    [HttpGet("protected")]
+    public async Task<IActionResult> ProtectedEndpoint([FromHeader] string Authorization)
+    {
+        if(Authorization == "Admin"){
+            return Ok("Hi there admin!");
+        }else{
+            return Unauthorized("You are not an admin!");
+        }
     }
 }
