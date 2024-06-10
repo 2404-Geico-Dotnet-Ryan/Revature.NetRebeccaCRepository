@@ -286,6 +286,68 @@ public class UsersController : ControllerBase
 In some cases, you might need to create custom model binders to handle complex binding scenarios. ASP.NET Core allows you to create and register custom model binders to handle these cases.
 
 
+## Paramter Binding
+
+Parameter binding in ASP.NET is when incoming HTTP request data is mapped to the parameters of an action method in a controller. It simplifies handling input data, as it is automatically converted and assigned to the request data in the method parameter.
+
+### How it works
+
+1. Request data source
+    - Query Strings `?Name=Mike`
+    - Request headers `Content-Type: text/JSON`
+    - Route data `{id}`
+    - request body
+    - etc
+2. Binding Process
+    - When an HTTP request is received, ASP.NET inspects the action method's parameter and looks for a matching source in the request data
+    - It then converts the request data to the appropriate parameter type
+3. Data Annotations
+    - You can use data annotations toa dd validation rules to the parameters
+
+### Examples
+
+#### Query String
+
+```csharp
+[HttpGet]
+public IActionResult GetProduct(string category, bool? ascending)
+{
+    // category will be bound from the query string
+    // e.g. /Products?category=Phone&ascending=false
+    return Ok();
+}
+```
+
+#### Route Data
+
+```csharp
+[HttpGet("{id}")]
+public IActionResult GetProductById(int id)
+{
+    // id will be bound from the route
+    // /Products/1
+    return Ok();
+}
+```
+
+#### From Headers
+```csharp
+[HttpGet]
+public IActionResult ProtectedEndpoint([FromHeader] string authorization)
+{
+    // authorization will be bound from the request header
+    if(authorization == "admin")
+    {
+        // do admin things
+    }else if(authorization == "user")
+    {
+        // do user things
+    }else{
+        return Unauthorized();
+    }
+}
+```
+
 ## Services
 
 Services in ASP.NET Core are classes that contain the business logic of your application. They encapsulate the data access logic and other operations required by your application, separating these concerns from the controllers. This separation promotes a cleaner, more maintainable, and testable codebase.
@@ -502,6 +564,19 @@ namespace EFCoreExample.Controllers
 - **Testability**: Services can be easily tested in isolation from the controllers.
 - **Maintainability**: Separating concerns makes the codebase more manageable and easier to maintain.
 
+
+## Routing
+
+Routing is the process of mapping URLs to specific controlelrs and actions in your ASP.NET application. It allows you to define URL patterns that are used to route HTTP requests to their appropriate handler.
+
+### How Routing Works
+
+1. Route Definition
+    - This can be done in the `program.cs` or the controllers, or the actions themselves
+2. Route Matching
+    - This is when an HTTP request is received, ASP.NET looks for a route that matches the URL pattern of the request it receives
+3. Routing to Handler
+    - If a match is found, the request is routed to the corresponding controller and action
 
 ## Filters and Middleware
 
