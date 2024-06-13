@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    // This specifies the output language level
+    // EcmaScript6 
+    "target": "ES6",
+    // Specifying the module code generation method
+    "module": "commonjs",
+    // Directory for compiled output
+    "outDir": "./dist",
+    "strict": true
+  },
+  "exclude": ["node_modules"]
+}
