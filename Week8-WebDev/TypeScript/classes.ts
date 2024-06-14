@@ -94,3 +94,76 @@ interface Employee {
 type OfficeWorker = Person & Employee;
 
 let worker: OfficeWorker = {firstName: "John", lastName: "Doe", employeeId: 1123};
+
+
+// Literal Types
+// This lets you specify exact values a variable can be
+
+type Direction = "north" | "south" | "east" | "west";
+
+let move: Direction;
+move = "north";
+// move = "up"; // error
+
+
+// Type Guards
+function isNumber(value: any): boolean {
+    return typeof value === "number";
+}
+
+function printValue(value: string | number) {
+    if (isNumber(value)) {
+        console.log((value as number).toFixed(2)); // TypeScript knows `value` is a number here
+    } else {
+        console.log((value as string).toUpperCase()); // TypeScript knows `value` is a string here
+    }
+}
+
+
+
+
+//Generics
+/*
+     Generics provide a way to create reusable components that work with a variety of types.
+
+     These can be functions, classes, methods, etc.
+
+*/
+
+//simple example 
+//Through convention <T> it stands for type but this could be anything - then goes to U then V
+//for pairs it would be K and V (key and Value)
+// this is a placeholder for them to provide a type of data
+function identity<T>(arg: T): T {
+    return arg;
+}
+
+let output1 = identity<string>("Hello");
+let output2 = identity<number>(35);
+
+class Box<T> {
+    private field: T;
+    constructor (field :T)
+    {
+        this.field = field;
+    }
+}
+
+// console.log(output1); // Output: Hello
+// console.log(output2); // Output: 42
+
+//Array Generics
+//Generics can also be used with arrays to ensure type safety.
+
+function getArraySorted<T>(items: T[]): T[] {
+    return new Array<T>().concat(items);
+}
+
+let numArray = getArraySorted<number>([134, 2342, 32, 124]);
+let strArray = getArraySorted<string>(["ass", "ber", "casdf"]);
+
+// numArray.push(5); // OK --- did not due in class
+// strArray.push("d"); // OK -- did not due in class
+
+console.log(numArray);
+console.log(strArray); 

@@ -1,0 +1,15 @@
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\PracticeForAssessment\Codenga.com\obj\Debug\net8.0\Codenga.com.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\PracticeForAssessment\Codenga.com\obj\Debug\net8.0\Codenga.com.AssemblyInfoInputs.cache
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\PracticeForAssessment\Codenga.com\obj\Debug\net8.0\Codenga.com.AssemblyInfo.cs
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\PracticeForAssessment\Codenga.com\obj\Debug\net8.0\Codenga.com.csproj.CoreCompileInputs.cache
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\PracticeForAssessment\Codenga.com\obj\Debug\net8.0\Codenga.com.sourcelink.json
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\PracticeForAssessment\Codenga.com\bin\Debug\net8.0\Codenga.com.exe
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\PracticeForAssessment\Codenga.com\bin\Debug\net8.0\Codenga.com.deps.json
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\PracticeForAssessment\Codenga.com\bin\Debug\net8.0\Codenga.com.runtimeconfig.json
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\PracticeForAssessment\Codenga.com\bin\Debug\net8.0\Codenga.com.dll
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\PracticeForAssessment\Codenga.com\bin\Debug\net8.0\Codenga.com.pdb
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\PracticeForAssessment\Codenga.com\obj\Debug\net8.0\Codenga.com.dll
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\PracticeForAssessment\Codenga.com\obj\Debug\net8.0\refint\Codenga.com.dll
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\PracticeForAssessment\Codenga.com\obj\Debug\net8.0\Codenga.com.pdb
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\PracticeForAssessment\Codenga.com\obj\Debug\net8.0\Codenga.com.genruntimeconfig.cache
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\PracticeForAssessment\Codenga.com\obj\Debug\net8.0\ref\Codenga.com.dll
