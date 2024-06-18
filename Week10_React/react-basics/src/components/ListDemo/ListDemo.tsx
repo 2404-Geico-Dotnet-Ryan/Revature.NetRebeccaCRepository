@@ -32,7 +32,7 @@ function ListDemo() {
 
             people.map((obj, index)=> {
                 return(
-                    <div key ={index}>
+                    <div className ="name-div" key ={index}>
                         <h1>{obj.firstName}</h1>
                         {obj.lastName}
                     </div>

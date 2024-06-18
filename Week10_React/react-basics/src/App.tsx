@@ -5,6 +5,9 @@ import ComponentTwo from './components/ComponentTwo/ComponentTwo';
 import ComponentThree from './components/ComponentThree/ComponentThree';
 import ListDemo from './components/ListDemo/ListDemo';
 import EventsDemo from './components/EventsDemo/EventsDemo';
+import ParentComponent from './components/Props/ParentComponent/ParentComponent';
+import { Route, Routes } from 'react-router-dom';
+import NavBar from './components/NavBar/NavBar';
 
 /*
   We work with Functional Components for the most part in React, although there are Class Components.
@@ -44,11 +47,23 @@ function App() : React.JSX.Element {
       Whatever we return, it has to be a root element. Meaning, you cannot have any siblings inside the return, they have to be nested inside a parent.
     */
     <div className="App">
-        <ComponentTwo/>
+        {/* <ComponentTwo/>
         <ComponentOne/>
         <ComponentTwo/>
         <EventsDemo/>
         <ListDemo/>
+        <ParentComponent/> */}
+        {/* 
+        add notes
+        
+        */}
+        <NavBar/>
+        <Routes>
+          <Route path="/" element={<ComponentOne/>}></Route>
+          <Route path="/events" element={<EventsDemo/>}></Route>
+          <Route path="/lists" element={<ListDemo/>}></Route>
+          <Route path="/props" element={<ParentComponent/>}></Route>
+        </Routes>
     </div>
   );
 }
