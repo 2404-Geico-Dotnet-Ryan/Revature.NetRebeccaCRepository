@@ -2,13 +2,12 @@ import React from 'react';
 import './App.css';
 import ComponentOne from './components/ComponentOne/ComponentOne';
 import ComponentTwo from './components/ComponentTwo/ComponentTwo';
-import ComponentThree from './components/ComponentThree/ComponentThree';
-import ListDemo from './components/ListDemo/ListDemo';
 import EventsDemo from './components/EventsDemo/EventsDemo';
+import ListDemo from './components/ListDemo/ListDemo';
 import ParentComponent from './components/Props/ParentComponent/ParentComponent';
 import { Route, Routes } from 'react-router-dom';
 import NavBar from './components/NavBar/NavBar';
-
+import Hooks from './components/Hooks/Hooks';
 /*
   We work with Functional Components for the most part in React, although there are Class Components.
 
@@ -54,8 +53,10 @@ function App() : React.JSX.Element {
         <ListDemo/>
         <ParentComponent/> */}
         {/* 
-        add notes
         
+          Routes is a specific component that will check the URL of the webpage to decide what component to display
+
+          If you wanted a component to show all throughout your application, no matter what page or path they are on then you would put it in the App.tsx next to the Routes.
         */}
         <NavBar/>
         <Routes>
@@ -63,6 +64,7 @@ function App() : React.JSX.Element {
           <Route path="/events" element={<EventsDemo/>}></Route>
           <Route path="/lists" element={<ListDemo/>}></Route>
           <Route path="/props" element={<ParentComponent/>}></Route>
+          <Route path="/hooks" element={<Hooks/>}></Route>
         </Routes>
     </div>
   );

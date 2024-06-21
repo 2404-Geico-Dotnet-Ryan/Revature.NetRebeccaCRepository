@@ -1,0 +1,9 @@
+.fruit-container {
+    background-color: cadetblue;
+    color: rgb(134, 36, 38)
+}
+
+.fruit-name {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 40px;
+}

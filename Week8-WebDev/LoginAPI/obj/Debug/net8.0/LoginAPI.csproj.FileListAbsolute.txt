@@ -1,0 +1,8 @@
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Week8-WebDev\LoginAPI\obj\Debug\net8.0\LoginAPI.csproj.AssemblyReference.cache
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Week8-WebDev\LoginAPI\obj\Debug\net8.0\LoginAPI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Week8-WebDev\LoginAPI\obj\Debug\net8.0\LoginAPI.AssemblyInfoInputs.cache
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Week8-WebDev\LoginAPI\obj\Debug\net8.0\LoginAPI.AssemblyInfo.cs
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Week8-WebDev\LoginAPI\obj\Debug\net8.0\LoginAPI.csproj.CoreCompileInputs.cache
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Week8-WebDev\LoginAPI\obj\Debug\net8.0\LoginAPI.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Week8-WebDev\LoginAPI\obj\Debug\net8.0\LoginAPI.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\U713PY\RevatureTraining.NET\Revature.NetRebeccaCRepository\Week8-WebDev\LoginAPI\obj\Debug\net8.0\LoginAPI.sourcelink.json
