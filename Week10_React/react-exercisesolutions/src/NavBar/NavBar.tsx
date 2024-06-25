@@ -12,17 +12,14 @@ function NavBar() {
             <Link className="nav-link" to="/events">
               Events
             </Link>
-            <Link className="nav-link" to="/lists">
+            <Link className="nav-link" to="/list">
               Lists
             </Link>
-            <Link className="nav-link" to="/props">
-              Props
+            <Link className="nav-link" to="/listandkeys">
+              ListandKeys
             </Link>
-            <Link className="nav-link" to="/hooks">
-              Hooks
-            </Link>
-            <Link className="nav-link" to="/refs">
-              Refs
+            <Link className="nav-link" to="/productcomponent">
+              Product
             </Link>
           </div>
       </div>

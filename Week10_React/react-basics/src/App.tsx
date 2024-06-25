@@ -8,6 +8,7 @@ import ParentComponent from './components/Props/ParentComponent/ParentComponent'
 import { Route, Routes } from 'react-router-dom';
 import NavBar from './components/NavBar/NavBar';
 import Hooks from './components/Hooks/Hooks';
+import Refs from './components/Refs/Refs';
 /*
   We work with Functional Components for the most part in React, although there are Class Components.
 
@@ -65,6 +66,7 @@ function App() : React.JSX.Element {
           <Route path="/lists" element={<ListDemo/>}></Route>
           <Route path="/props" element={<ParentComponent/>}></Route>
           <Route path="/hooks" element={<Hooks/>}></Route>
+          <Route path="/refs" element={<Refs/>}></Route>
         </Routes>
     </div>
   );
