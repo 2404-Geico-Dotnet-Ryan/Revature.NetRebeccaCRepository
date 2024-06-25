@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
-import ComponentOne from './Components/ComponentOne';
+import ComponentOne from './Components/ComponentOne/ComponentOne';
 import Events from './Events/Events';
 import {Route, Routes} from 'react-router-dom';
 import NavBar from './NavBar/NavBar';
